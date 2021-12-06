@@ -2,10 +2,12 @@ import React from "react";
 import { Provider, useSelector } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "animate.css";
+
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 /*css */
 import './styles.css'
 import './animated.css'
+import './icon.css'
 
 
 /*avatar */
@@ -23,6 +25,7 @@ import { getCourses } from "./store/actions/courseActions";
 import Managecourse from "./components/courses/ManageCourse";
 import Courses from './components/courses/Course'
 import ViewCourse from './components/courses/ViewCourse'
+import UpdateCourse from "./components/courses/UpdateCourse"; 
 
 
 
@@ -42,6 +45,7 @@ import ViewCourse from './components/courses/ViewCourse'
 /*初始化数据 一定要按顺序 students-class-courses*/ 
 store.dispatch(getStudents())
 store.dispatch(getCourses())
+
 
 
 
@@ -99,6 +103,7 @@ function App() {
           <Route path="/create-course" exact component={Managecourse} />
           <Route path="/about-course/:cno" exact component={ViewCourse} />
           <Route path="/courses" exact component={Courses} />
+          <Route path="/course/update/:cno" exact component={UpdateCourse} />
           <Route component={HomeComponet} />
         </Switch>
       </Router>

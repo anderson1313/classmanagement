@@ -1,47 +1,50 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { deleteCourse } from "../../store/actions/classActions";
+import { useSelector, useDispatch } from "react-redux";
+import { createCourse } from '../../store/actions/courseActions'
+import { deleteCourse } from '../../store/actions/courseActions'
 import Avatar, { genConfig } from 'react-nice-avatar'
 const config = genConfig({
     'hairStyle': 'normal',
     'sex': 'man',
     'eyeStyle': 'oval'
 })
-const ViewCourse = () => {
-    const dispatch = useDispatch();
-    let { cno: cno } = useParams();
+
+function ViewCourse() {
+    let { cno: cpara } = useParams();
+    console.log(cpara);
     const { courses, deleted } = useSelector((state) => state.cou);
-    const courseDetail = courses.filter(({ cno }) => cno == cno)[0];
+    const courseDetail = courses.filter(({ cno }) => cno == cpara)[0];
     const { students } = useSelector((state) => state.stu);
     const [courseStudents, setCourseStudents] = useState("");
+    const dispatch=useDispatch()
     const onDelete = (id) => dispatch(deleteCourse(id));
+    // dispatch(deleteCourse(38))
+    
+    // dispatch(createCourse({ name: 'TEST4', credit: 3 }));
+   
+
     useEffect(() => {
         if (courseDetail) {
-            const studentList = students.map(({ scourses,sname }) => {
+            const studentList = students.map(({ scourses, sname }) => {
                 if (scourses.includes(courseDetail.cno)) {
                     return sname;
                 }
-            }).filter((student) => student!=undefined)
-            setCourseStudents(studentList);   
+            }).filter((student) => student != undefined)
+            setCourseStudents(studentList);
         }
-       
     }, [courseDetail]);
     console.log(courseStudents)
-    
     useEffect(() => {
         if (deleted) {
             window.location.href = "/courses";
         }
     }, [deleted]);
 
-    //提交
-
-
+    
     return (
-
         <div className='container'>
-            <div className='wrapper_left '>
+            <div className='wrapper_left course_left'>
                 <div className='content'>
                     <div className='webname'>课程管理系统</div>
                     <div className='avatarbox  '>
@@ -60,7 +63,45 @@ const ViewCourse = () => {
 
             <div className='courseinfowrapper'>
                 <div className='courseinfocon'>
+                    {courseDetail ? (<>
+                        <div className='up'>
+                            <div className='title  animated fadeInLeft'>{courseDetail.cname}</div>
+                            <div className='functions animated fadeInLeft'>
+                                <Link to={`/course/update/${courseDetail.cno}`} className='updatecourse'>
+                                    更新课程
+                                </Link>
+                                <button
+                  className="deletecourse"
+                  onClick={() => onDelete(courseDetail.cno)}
+                >
+                  删除课程
+                </button>
+                                {/* <button className='deletecourse' onClick={()=>onDelete(courseDetail.cno)}>删除课程</button> */}
+                            </div>
+                        </div>
+                        <div className='basicinfo'>
+                            <div className='title'>
+                                <div className='iconfont icon-xuexiao_xuesheng'></div>
+                                <div>课程学生</div>
 
+                            </div>
+                            {courseStudents.length > 0 ? (
+                                <div className='studentscon  '>
+                                    {courseStudents.map((c) => (
+                                        <div className='eachs animated flipInX'>{c}</div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <div className='errcon'>
+                                    <div className='err'>你还未添加任何学生</div>
+                                </div>
+                            )}
+
+                        </div>
+                        <div className='otherinfo'>
+
+                        </div>
+                    </>) : (<div className='infonotused'>课程信息不可用</div>)}
 
                 </div>
 
@@ -69,7 +110,7 @@ const ViewCourse = () => {
             </div>
         </div>
 
-    )
+    );
 
 }
 export default ViewCourse;

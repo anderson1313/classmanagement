@@ -128,10 +128,7 @@ a{
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    align-items: center;
-   
-    
-    
+    align-items: center;    
 }
 .submitwrapper .createcon{
     display: flex;
@@ -203,8 +200,9 @@ a{
 }
 .submitwrapper form .err-msgs,
 .submitwrapper form .suc-msgs{
-    font-family: "font2";
-    color: #E05D5D;
+   
+    color: black;
+    font-weight: bold;
 }
 
 
@@ -283,8 +281,120 @@ a{
     animation-iteration-count:1, infinite;
     animation-fill-mode:forwards, forwards;
     animation-direction:normal, alternate;
-  
     font-size: 15px;
+}
+.nocoursecon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(125deg,#D3E4CD,#E2C2B9);  background-size: 400%;
+    /* background-image: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad); */
+    animation:  bganimation 6s infinite;
+    height: 100vh;
+
+}
+/* viewcourses */
+.course_left{
+   background: rgba(96, 163, 188,1.0) ;
+}
+.courseinfowrapper{
+    width: 70%;
+    height: 100vh;
+    background: rgba(248, 239, 186,.5);
+}
+
+.up{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 150px;
+    position: relative;
+    font-size: 45px; 
+}
+.up .updatecourse{
+    margin: 0 5px;
+    padding: 5px;
+    border: none;
+    font-size: 10px;
+    color: rgba(12, 36, 97,1.0);
+     background-color: rgba(56, 173, 169,.5);
+     border-radius: 4px;
+    /* border: none;
+    background: none; */
+}
+.up .functions{
+    margin-left: 200px;
+}
+.up .deletecourse{
+    margin: 0 5px;
+    padding: 5px;
+    border: none;
+    font-size: 10px;
+    color: rgba(12, 36, 97,1.0);
+     background-color: rgba(229, 80, 57,.3);
+     border-radius: 4px;
+
+}
+.up:after{
+    position: absolute;
+     bottom: 30px;
+     left: 50px;
+     right: 1px;
+     height: 1px;
+     width: 500px;
+     content: '';
+     -webkit-transform: scaleY(.5);
+     transform: scaleY(.5);
+     background-color: rgba(202, 211, 200,1.0);       
+
+}
+.basicinfo {
+    overflow: hidden;
+  
+}
+.courseinfocon .title{
+    margin-left: 50px;
+    font-family: "font2";
+    
+}
 
 
+.basicinfo .title{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    
+}
+.basicinfo .iconfont{
+    font-size: 18px;
+    margin-right: 10px;
+    
+}
+.studentscon,.errcon
+{
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 75%;
+    padding: 10px 30px;
+    background: tan;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+}
+.eachs{
+    padding: 4px;
+    margin: 0 5px;
+    border-radius: 2px;
+    background: rgba(223, 228, 234,.6);
+
+}
+.infonotused{
+    text-align: center;
+    margin: 90px;
+    font-size: 30px;
+    font-weight: bold;
 }
