@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { createCourse } from '../../store/actions/courseActions'
 
 /*avatar */
 import Avatar, { genConfig } from 'react-nice-avatar'
-
-
 
 
 
@@ -17,9 +16,10 @@ const config = genConfig({
 
 
 const Courses = () => {
+    const dispatch=useDispatch()
+    // dispatch(createCourse({ name: 'TEST2', credit: 3 }));
     const { courses } = useSelector((state) => state.cou);
     console.log(courses)
-
     return (
         <div className="container">
 
@@ -43,15 +43,14 @@ const Courses = () => {
 
             <div className='courses_wrapper'>
          
-
                 {courses.length > 0 ? (
                     <div className='allcoursescon'>
                            <div className='coursestitle animated fadeInLeft '>你的课程</div>
                            <div className='allcourses'>              
                         {courses.map((item,index)=>{
                             return(
-                                <Link to='`/about-course/${item.cno}`'>
-                                     <div key={index} className='eachcourse animated  '>{item.cname}</div>
+                                <Link to={`/about-course/${item.cno}`}>
+                                     <div key={index} className='eachcourse animated'>{item.cname}</div>
                                 </Link>
                             )
                         })}
@@ -60,18 +59,17 @@ const Courses = () => {
                     
                    
                 ) :
-                    (<div className='content'>
+                    (<div className='nocoursecon'>
+                        <div className='content'>
                         <div className='tip animated bounce '>你还未建立任何课程</div>
                         <Link to="/create-course">
                             <div className='tocreate animated pulse infinite'>建立课程</div>
                         </Link>
                     </div>
+                    </div>
+                    
 
                     )}
-
-
-
-
             </div>
 
 

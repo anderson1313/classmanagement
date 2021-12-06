@@ -22,7 +22,7 @@ router.post('/create', (req, res) => {
 	let sqlInsert = `INSERT INTO courses SET ?`
 	pool.query(sqlCheck, name, (err, course) => {
 		if (course.length > 0) {
-			return res.status(400).json({ msg: "课程已存在a" })
+			return res.status(400).json({ msg: "课程已存在" })
 		}
 		const data = {
 			ccredit: fcredit,//ccredit是数据库属性，fcredit是json属性
@@ -53,14 +53,14 @@ router.get('/', (req, result) => {
 router.delete("/", (req, res) => {
 	//解构赋值
 	const { cno } = req.body;
-	let delQuery1 = "DELETE FROM sc WHERE cno = ?";
-	pool.query(delQuery1, [cno], (err, result) => {
-		if (err) {
-			res.send(err).status(400);
-		} else {
-			res.json({ success: true }).status(200);
-		}
-	});
+	// let delQuery1 = "DELETE FROM sc WHERE cno = ?";
+	// pool.query(delQuery1, [cno], (err, result) => {
+	// 	if (err) {
+	// 		res.send(err).status(400);
+	// 	} else {
+	// 		res.json({ success: true }).status(200);
+	// 	}
+	// });
 
 	let delQuery2 = "DELETE FROM courses WHERE cno = ?";
 	pool.query(delQuery2, [cno], (err, result) => {

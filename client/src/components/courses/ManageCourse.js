@@ -11,17 +11,13 @@ const config = genConfig({
 const Managecourse = () => {
     const dispatch = useDispatch();
     const [courseName, setCourseName] = useState("");
-    
+
     const [courseCredit, setcourseCredit] = useState("");
     const { msg: errMsg, id: errID } = useSelector((state) => state.error)
     
     const { msg: sucMsg, id: sucID ,created} = useSelector((state) => state.cou)
-    const xx= useSelector((state) => state.cou)
-    const yy =useSelector((state) => state.error)
-    console.log(xx)
-    console.log(yy)
-    console.log(errMsg)
-
+  
+    // dispatch(createCourse({ name: 'TEST2', credit: 3 }));
    
 
     //跳转
