@@ -1,0 +1,290 @@
+
+
+@font-face {
+    font-family:"font1" ;
+    src: url(./font1.ttf);
+}
+@font-face {
+    font-family:"font2" ;
+    src: url(./font2.otf);
+}
+/* app.js*/
+body{
+    padding: 0;
+    margin: 0;
+}
+@keyframes bganimation {
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.wrapper_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    width: 30%;
+    background: bisque;
+    height: 100vh;
+
+}
+.wrapper_left .content{
+    
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+
+.webname{
+    margin-bottom: 80PX;
+    font-size: 25PX;
+    color: #66806A;
+    font-family:"font1" ;
+}
+.stufflist{
+    margin: 60PX 0;
+}
+.stufflist .title{
+    font-size: 20px;
+    font-family: "font1";
+}
+.stufflist li{
+    font-family: "font1";
+    margin: 10px 0;
+    color: #533535;
+}
+.wrapper_right{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    background-image: linear-gradient(125deg,#D3E4CD,#E2C2B9);  background-size: 400%;
+    /* background-image: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad); */
+    animation:  bganimation 6s infinite;
+    height: 100vh;
+
+}
+a{
+    text-decoration: none;
+
+}
+.wrapper_right .content{
+    flex-direction: column;
+    padding: 40px 0;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tip{
+    font-size: 30px;
+    margin-bottom: 100px;
+    font-family: "font2";
+
+}
+.tocreate{
+    padding: 0 50PX;
+    margin: 0;
+    text-align: center;
+    
+    height: 50px;
+    font-size: 25px;
+    color: #000957;
+    background: rgba(255, 255, 255, .2);
+    line-height: 50px;
+    border-radius: 10px;
+    font-family: "font2";
+
+}
+
+
+/* createcourse*/
+.submitwrapper{
+    background-image: linear-gradient(125deg,#FEA47F,#82589F);  background-size: 400%;
+    /* background-image: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad); */
+    animation:  bganimation 15s infinite;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+   
+    
+    
+}
+.submitwrapper .createcon{
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    margin: 150px 0;
+
+}
+.submitwrapper .createcon .title{
+    font-size: 50px;
+    font-family: "font2";
+    margin-bottom: 50px;
+
+}
+
+.submitwrapper form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+
+.submitwrapper form .form-group .subname,
+.submitwrapper form .form-group .subcredit{
+    margin: 30px 0;
+
+}
+.submitwrapper form .form-group .labelname{
+    font-family: 'font2';
+    font-size: 15px;
+    width: 70px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+    color: #1E3163;
+    font-weight: bold;
+}
+
+.submitwrapper form .form-group input{
+    margin: 0 20px;
+    background:none;  
+	outline:none;  
+	border:none;
+    background: rgba(255, 255, 255, .5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    
+}
+.submitwrapper form button{
+    display: inline-block;
+    background:none;  
+	outline:none;  
+	border:none;
+    border-radius: 5px;
+    color: white;
+    background: rgba(56,163,165,.4);
+    background: #3B3B98;
+    padding: 10px 100px;
+    font-family: "font2";
+    margin-top: 20px;
+    margin: 10px 0;
+
+}
+.submitwrapper form .err-msgs,
+.submitwrapper form .suc-msgs{
+    font-family: "font2";
+    color: #E05D5D;
+}
+
+
+
+/* courses*/
+
+@-webkit-keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+.courses_wrapper{
+    height: 100vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background: #F7F6F2;
+    animation: none;
+   
+    
+    
+    align-items: center;
+  
+}
+
+
+.courses_wrapper .coursestitle{
+    font-size: 50px;
+    font-family: "font2";
+    margin-bottom: 50px;
+   
+
+}
+.courses_wrapper .allcoursescon{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.courses_wrapper .eachcourse{
+
+    text-align: center;
+    color: #297F87;
+    margin: 30px 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-image: linear-gradient(125deg,#D3E4CD,#E2C2B9);  background-size: 400%;
+    animation-name:fadeInLeft, bganimation;
+    animation-duration:1s, 3s;
+    animation-timing-function:linear, linear;
+    animation-delay:0, 2s;
+    animation-iteration-count:1, infinite;
+    animation-fill-mode:forwards, forwards;
+    animation-direction:normal, alternate;
+  
+    font-size: 15px;
+
+
+}
