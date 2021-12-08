@@ -11,21 +11,20 @@ const config = genConfig({
 const Managecourse = () => {
     const dispatch = useDispatch();
     const [courseName, setCourseName] = useState("");
-
     const [courseCredit, setcourseCredit] = useState("");
     const { msg: errMsg, id: errID } = useSelector((state) => state.error)
-    
-    const { msg: sucMsg, id: sucID ,created} = useSelector((state) => state.cou)
-  
+
+    const { msg: sucMsg, id: sucID, created } = useSelector((state) => state.cou)
+
     // dispatch(createCourse({ name: 'TEST2', credit: 3 }));
-   
+
 
     //跳转
     useEffect(() => {
         if (created) {
-          window.location.href = "/courses";
+            window.location.href = "/courses";
         }
-      }, [created]);
+    }, [created]);
 
     //提交
     const onSubmit = (e) => {
@@ -63,68 +62,66 @@ const Managecourse = () => {
             </div>
             <div className='submitwrapper'>
 
-                <div className='createcon'>
+                <div className='createcon animated  bounceIn'>
+                    <div className='title'>创建课程</div>
+                    <div className='blank'></div>
+                    <form {...{ onSubmit }} method='POST'>
+                        <div className="form-group">
+                            <div className='subname'>
+                                <label htmlFor="name" className='labelname'>课程名称</label>
+                                <input
+                                    type="text"
+                                    name="coursename"
+                                    id="coursename"
+                                    placeholder="课程名"
+                                    className="mb-3"
+                                    value={courseName}
+                                    onChange={(e) => setCourseName(e.target.value)}
+                                />
+                            </div>
 
+                            <div className='subcredit'>
 
-                <div className='title'>创建课程</div>
-                <div className='blank'></div>
-                <form {...{ onSubmit }} method='POST'>
-                    <div className="form-group">
-                        <div className='subname'>
-                            <label htmlFor="name" className='labelname'>课程名称</label>
-                            <input
-                                type="text"
-                                name="coursename"
-                                id="coursename"
-                                placeholder="课程名"
-                                className="mb-3"
-                                value={courseName}
-                                onChange={(e) => setCourseName(e.target.value)}
-                            />
+                                <label htmlFor="credit" className='labelname'>学分</label>
+                                <input
+                                    type="text"
+                                    name="credit"
+                                    id="credit"
+                                    placeholder="学分"
+                                    className="mb-3"
+                                    value={courseCredit}
+                                    onChange={(e) => setcourseCredit(e.target.value)}
+                                />
+                            </div>
+
                         </div>
+                        {sucID === "COURSE_SUCCESS" ? (
+                            <div
+                                className="suc-msgs"
 
-                        <div className='subcredit'>
-
-                            <label htmlFor="credit" className='labelname'>学分</label>
-                            <input
-                                type="text"
-                                name="credit"
-                                id="credit"
-                                placeholder="学分"
-                                className="mb-3"
-                                value={courseCredit}
-                                onChange={(e) => setcourseCredit(e.target.value)}
-                            />
-                        </div>
-
-                    </div>
-                    {sucID === "COURSE_SUCCESS" ? (
-                    <div
-                        className="suc-msgs"
-                    
-                    >
-                        {sucMsg}
-                    </div>
-                ) : null}
-                   
+                            >
+                                {sucMsg}
+                            </div>
+                        ) : null}
 
 
-                    {errID === "COURSE__ERROR" ? (
-                    <div
-                        className="err-msgs"
-                    
-                    >
-                        {errMsg}
-                    </div>
-                ) : null}
-                    <button color="dark"  >
-                        创建课程
-                    </button>
-                </form>
-               
+
+                        {errID === "COURSE__ERROR" ? (
+                            <div
+                                className="err-msgs"
+
+                            >
+                                {errMsg}
+                            </div>
+                        ) : null}
+                        <button color="dark"  >
+                            创建课程
+                        </button>
+                    </form>
+
                 </div>
 
-               
+
             </div>
 
         </div>
