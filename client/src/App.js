@@ -25,7 +25,7 @@ import { getCourses } from "./store/actions/courseActions";
 import Managecourse from "./components/courses/ManageCourse";
 import Courses from './components/courses/Course'
 import ViewCourse from './components/courses/ViewCourse'
-import UpdateCourse from "./components/courses/UpdateCourse"; 
+import UpdateCourse from "./components/courses/UpdateCourse";
 
 
 
@@ -42,7 +42,7 @@ import UpdateCourse from "./components/courses/UpdateCourse";
 
 
 
-/*初始化数据 一定要按顺序 students-class-courses*/ 
+/*初始化数据 一定要按顺序 students-class-courses*/
 store.dispatch(getStudents())
 store.dispatch(getCourses())
 
@@ -78,10 +78,34 @@ const HomeComponet = () => {
           </div>
         </div>
       </div>
-      <div className='wrapper_right '>
+      <div className='wrapper_right'>
         {courses.length > 0 ? (
 
-        <h1>aa</h1>
+          <div className='rightcontainer'>
+            <div className='createfunctions'>
+              {/* <Link><div className='createstudent create'>创建学生</div></Link>
+              <Link><div className='createcourse create'>创建课程</div></Link>
+              <Link><div className='createclass create'>创建班级</div></Link> */}
+              <div className='createstudent create animated flipInX'><Link>创建学生</Link></div>
+              <div className='createcourse create animated flipInX'><Link to='/create-course'>创建课程</Link></div>
+              <div className='createclass create animated flipInX'><Link>创建班级</Link></div>
+
+              
+            </div>
+            <div className='managefunctions'>
+              {/* <Link><div className='managestudnet manage'>管理学生</div></Link>
+              <Link><div className='managecourse manage'>管理课程</div></Link>
+              <Link><div className='manageclass manage'>管理班级</div></Link> */}
+
+              <div className='managestudnet manage animated flipInX'><Link>管理学生</Link></div>
+              <div className='managecourse manage animated flipInX'><Link>管理课程</Link></div>
+              <div className='manageclass manage animated flipInX'><Link>管理班级</Link></div>
+            </div>
+
+
+
+
+          </div>
         )
           : (<div className='content'>
             <div className='tip animated bounce '>你还未建立任何课程</div>
