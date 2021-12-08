@@ -79,7 +79,7 @@ router.delete("/", (req, res) => {
 
 //更新学生信息
 router.put('/', (req, res) => {
-	const { sno,newname,newsex,newage,newclno } = req.body
+	const { sno,newname,newsex,newage,newclno,newscno } = req.body
 	console.log(sno)
 	console.log(newname)
 	console.log(newsex)
@@ -89,13 +89,14 @@ router.put('/', (req, res) => {
 //	console.log(newstudents)
 //	if (newstudents.length == 0) return res.status(400).json({ msg: "请添加学生" })
 	
-	var updatesql = "UPDATE students SET sname = ?, ssex = ?, sage= ? , sclno = ? WHERE sno = ?";
+	var updatesql = "UPDATE students SET sname = ?, ssex = ?, sage= ? , sclno = ? ,scourses= ? WHERE sno = ?";
 	
 	pool.query(updatesql, 
 		[newname,
 		newsex,
 		newage,
 		newclno,
+		newscno.toString(),
 		sno], (err, result) => {
 			if (err) {
 				throw err;
