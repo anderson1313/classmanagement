@@ -18,6 +18,8 @@ const classReducer = (state = initialState, action) => {
                 classes: [...state.classes, ...action.payload]
 
             };
+
+            
         case UPDATE_CLASS:
             return {
                 ...state,

@@ -1,5 +1,4 @@
 
-
 @font-face {
     font-family:"font1" ;
     src: url(./font1.ttf);
@@ -389,7 +388,7 @@ a{
     background: rgba(248, 239, 186,.5);
 }
 
-.up{
+.courseinfocon .up{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -397,7 +396,7 @@ a{
     position: relative;
     font-size: 45px; 
 }
-.up .updatecourse{
+.courseinfocon .up .updatecourse{
     margin: 0 5px;
     padding: 5px;
     border: none;
@@ -408,10 +407,10 @@ a{
     /* border: none;
     background: none; */
 }
-.up .functions{
+.courseinfocon .up .functions{
     margin-left: 200px;
 }
-.up .deletecourse{
+.courseinfocon .up .deletecourse{
     margin: 0 5px;
     padding: 5px;
     border: none;
@@ -421,7 +420,7 @@ a{
      border-radius: 4px;
 
 }
-.up:after{
+.courseinfocon .up:after{
     position: absolute;
      bottom: 30px;
      left: 50px;
@@ -495,7 +494,8 @@ a{
     justify-content: center;
     align-items: center;
 }
-.submitcon form{
+.courseinfowrapper .submitcon form{
+  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -505,12 +505,12 @@ a{
     padding: 20px;
 
 }
-.submitcon form .form-group .subname,
-.submitcon form .form-group .subcredit{
+.courseinfowrapper .submitcon form .form-group .subname,
+.courseinfowrapper .submitcon form .form-group .subcredit{
     margin: 30px 0;
 
 }
-.submitcon form .form-group .labelname{
+.courseinfowrapper .submitcon form .form-group .labelname{
     font-family: 'font2';
     font-size: 15px;
     width: 70px;
@@ -521,7 +521,7 @@ a{
     font-weight: bold;
 }
 
-.submitcon form .form-group input{
+.courseinfowrapper .submitcon form .form-group input{
     margin: 0 20px;
     background:none;  
 	outline:none;  
@@ -531,7 +531,7 @@ a{
     border-radius: 10px;
     
 }
-.submitcon form button{
+.courseinfowrapper .submitcon form button{
     display: inline-block;
     background:none;  
 	outline:none;  
@@ -546,9 +546,114 @@ a{
     margin: 10px 0;
 
 }
-.submitcon form .err-msgs,
-.submitcon form .suc-msgs{
+.courseinfowrapper .submitcon form .err-msgs,
+.courseinfowrapper .submitcon form .suc-msgs{
    
     color: black;
     font-weight: bold;
+}
+
+/*updatestudent*/
+.studentinfowrapper{
+    height: 100vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background: #F7F6F2;
+    animation: none;
+    
+}
+.studentinfowrapper .up{
+    font-family: "font2";
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 150px;
+    position: relative;
+    font-size: 45px; 
+}
+.studentinfowrapper .up:after{
+    position: absolute;
+     bottom: 30px;
+     left: 10px;
+     right: 1px;
+     height: 1px;
+     width: 500px;
+     content: '';
+     -webkit-transform: scaleY(.5);
+     transform: scaleY(.5);
+     background-color: rgba(202, 211, 200,1.0);   
+}
+
+.studentinfowrapper .submitcon,
+.studentinfowrapper .submitcon form,
+.studentinfowrapper .submitcon form .form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.studentinfowrapper .submitcon form{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(149, 165, 166,.5);
+    border-radius: 10px;
+    padding: 20px;
+}
+.studentinfowrapper .submitcon form .form-group > div {
+    height: 34px;
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin: 10px 0;
+} 
+.studentinfowrapper .submitcon form .form-group > div label {
+    line-height: 34px;
+    
+    font-size: 15px;
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+    color: #1E3163;
+    font-weight: bold;
+} 
+.studentinfowrapper .submitcon form .form-group .subcourse {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    
+    
+}
+.studentinfowrapper .submitcon form .form-group tags {
+    margin: 10PX auto;
+    
+    width: 95%;
+    
+}
+.studentinfowrapper .submitcon form .form-group .subcourse label{
+    display: block;
+    width: 40%;
+
+}
+.studentinfowrapper .submitcon form .form-group input,
+.studentinfowrapper .submitcon form .form-group select{
+    width: 30%;
+    margin: 0 20px;
+    background:none;  
+	outline:none;  
+	border:none;
+    background: rgba(255, 255, 255, .5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    
+}
+.studentinfowrapper .submitcon form .form-group select{
+    width: 42%;
+
 }

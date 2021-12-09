@@ -8,6 +8,7 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import './styles.css'
 import './animated.css'
 import './icon.css'
+import  '../node_modules/@yaireo/tagify/src/tagify.css'
 
 
 /*avatar */
@@ -20,6 +21,7 @@ import store from './store/store.js';
 import { getClasses } from "./store/actions/classActions";
 import { getStudents } from "./store/actions/studentActions";
 import { getCourses } from "./store/actions/courseActions";
+
 
 /*courses页面 */
 import Managecourse from "./components/courses/ManageCourse";
@@ -38,16 +40,14 @@ import UpdateCourse from "./components/courses/UpdateCourse";
 
 
 /*student页面 */
+import UpdateStudent from './components/student/UpdateStudent'
 
 
 
-
-/*初始化数据 一定要按顺序 students-class-courses*/
-store.dispatch(getStudents())
-store.dispatch(getCourses())
-
-
-
+/*初始化数据将数据存到state一定要按顺序 students-class-courses*/
+store.dispatch(getStudents());
+store.dispatch(getClasses());
+store.dispatch(getCourses());
 
 /*avatar */
 const config = genConfig({
@@ -127,6 +127,8 @@ function App() {
           <Route path="/create-course" exact component={Managecourse} />
           <Route path="/about-course/:cno" exact component={ViewCourse} />
           <Route path="/courses" exact component={Courses} />
+
+          <Route path="/student/update/:sno" exact component={UpdateStudent} />
           <Route path="/course/update/:cno" exact component={UpdateCourse} />
           <Route component={HomeComponet} />
         </Switch>

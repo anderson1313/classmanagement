@@ -79,12 +79,8 @@ router.delete("/", (req, res) => {
 
 //更新学生信息
 router.put('/', (req, res) => {
-	const { sno,newname,newsex,newage,newclno,newscno } = req.body
-	console.log(sno)
-	console.log(newname)
-	console.log(newsex)
-	console.log(newage)
-	console.log(newclno)
+	const { sno,newname,newsex,newage,newclno,newscourse } = req.body
+	
 
 //	console.log(newstudents)
 //	if (newstudents.length == 0) return res.status(400).json({ msg: "请添加学生" })
@@ -96,7 +92,7 @@ router.put('/', (req, res) => {
 		newsex,
 		newage,
 		newclno,
-		newscno.toString(),
+		newscourse.toString(),
 		sno], (err, result) => {
 			if (err) {
 				throw err;

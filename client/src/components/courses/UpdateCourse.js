@@ -106,7 +106,7 @@ const UpdateCourse = () => {
             </div>
 
             <div className='submitcon animated flipInX'>
-              <form {...{ onSubmit }} method='POST'>
+              <form  method='POST'>
                 <div className="form-group">
                   <div className='subname'>
                     <label htmlFor="name" className='labelname'>课程名称</label>
@@ -150,7 +150,13 @@ const UpdateCourse = () => {
                 </button>
               </form>
             </div>
-          </>) : null}
+          </>) : <>
+
+          <div className='nodate'>没有此课程信息或者数据库未连接</div>
+          
+          
+          
+          </>}
 
         </div>
       </div>
