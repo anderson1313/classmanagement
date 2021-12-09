@@ -27,7 +27,7 @@ function ViewCourse() {
     useEffect(() => {
         if (courseDetail) {
             const studentList = students.map(({ scourses, sname }) => {
-                if (scourses.includes(courseDetail.cno)) {
+                if (scourses.includes(courseDetail.cname)) {
                     return sname;
                 }
             }).filter((student) => student != undefined)

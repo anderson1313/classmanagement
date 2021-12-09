@@ -4,7 +4,7 @@ const pool=require("../config/pool.js")
 
 //module.exports=router
 
-//测试：localhost:8080/api/student
+//测试：localhost:8080/api/classes
 //新增班级
 router.post('/create', (req, res) => {
 	//解构赋值

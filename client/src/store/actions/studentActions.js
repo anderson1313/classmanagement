@@ -76,12 +76,9 @@ export const deleteStuent = (id) => async (dispatch) => {
                 })
         })
 
-
 }
 
-export const updateStudent = 
-    ({ sno,newname,newsex,newage,newclno,newscourse }) => 
-        async (dispatch) => {
+export const updateStudent = ({ sno,newname,newsex,newage,newclno,newscourse }) => async (dispatch) => {
             const config = {
                 headers: {
                     "Content-Type": "application/json",
@@ -103,3 +100,10 @@ export const updateStudent =
                 });
 
 }
+
+
+
+
+
+
+
