@@ -13,8 +13,7 @@ router.post('/create', (req, res) => {
 	if(!credit){
 		return res.status(400).json({ msg: "请输入学分" })
 	}
-	if (isNaN(fcredit)){
-		
+	if (credit!=parseFloat(fcredit)){
 		return res.status(400).json({ msg: "请输入正确的学分类型" })
 	}
 	//sql查询
