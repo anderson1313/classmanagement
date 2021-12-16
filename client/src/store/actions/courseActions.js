@@ -38,11 +38,9 @@ export const createCourse =
                 .post("/api/course/create", body, config)
                 .then((res) => {
                     const { data } = res.data;
-                  
                     dispatch({ type: ADD_COURSE, payload: [data] });
                     dispatch({ type: "COURSE_CREATED" });
                     dispatch(clearErros())
-                   
                    dispatch({type:'COURSE_SUCCESS',payload:{msg:res.data.msg,id:'COURSE_SUCCESS'}})
         
                 }).catch((err) => {

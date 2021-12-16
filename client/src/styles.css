@@ -485,7 +485,7 @@ a{
 
 /*updatecourses*/
 
-.submitcon{
+.courseinfowrapper .submitcon{
     margin-top: 100px;
 }
 .courseinfowrapper .submitcon{
@@ -657,3 +657,30 @@ a{
     width: 42%;
 
 }
+
+.studentinfowrapper .submitcon form .form-group button{
+     display: inline-block;
+    background:none;  
+	outline:none;  
+	border:none;
+    border-radius: 5px;
+    color: white;
+    background: rgba(56,163,165,.4);
+    background: #3B3B98;
+    padding: 10px 100px;
+    font-family: "font2";
+    margin-top: 20px;
+    margin: 10px 0;
+
+}
+.studentinfowrapper .submitcon form .form-group .err-msgs,
+.studentinfowrapper .submitcon form .form-group .suc-msgs{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #297F87;
+    font-weight: bold;
+
+}
+
+/*xxxx*/

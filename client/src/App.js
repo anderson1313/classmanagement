@@ -2,6 +2,9 @@ import React from "react";
 import { Provider, useSelector } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "animate.css";
+import { clearErros } from "./store/actions/errorActions";
+
+
 
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 /*css */
@@ -34,13 +37,19 @@ import UpdateCourse from "./components/courses/UpdateCourse";
 
 
 /*class页面 */
-
+import Classes from "./components/classes/Class";
+import ManageClass from "./components/classes/ManageClass";
+import UpdateClass from "./components/classes/UpdateClass";
+import ViewClass from "./components/classes/ViewClass";
 
 
 
 
 /*student页面 */
 import UpdateStudent from './components/student/UpdateStudent'
+import Managestudent from './components/student/ManageStudent'
+import ViewStudent from './components/student/ViewStudent'
+import Students from './components/student/Student'
 
 
 
@@ -48,6 +57,9 @@ import UpdateStudent from './components/student/UpdateStudent'
 store.dispatch(getStudents());
 store.dispatch(getClasses());
 store.dispatch(getCourses());
+
+
+
 
 /*avatar */
 const config = genConfig({
@@ -58,13 +70,15 @@ const config = genConfig({
 
 
 const HomeComponet = () => {
+ 
+  
   const { courses } = useSelector((state) => state.cou)
-  console.log(courses)
+  
   return (
     <div className='container'>
       <div className='wrapper_left'>
         <div className='content'>
-          <div className='webname'>课程管理系统</div>
+          <div className='webname'><Link to='/'>课程管理系统</Link></div>
           <div className='avatarbox animated flipInX '>
             <Avatar style={{ width: '100px', height: '100px' }} {...config} />
           </div>
@@ -82,24 +96,17 @@ const HomeComponet = () => {
         {courses.length > 0 ? (
 
           <div className='rightcontainer'>
-            <div className='createfunctions'>
-              {/* <Link><div className='createstudent create'>创建学生</div></Link>
-              <Link><div className='createcourse create'>创建课程</div></Link>
-              <Link><div className='createclass create'>创建班级</div></Link> */}
-              <div className='createstudent create animated flipInX'><Link>创建学生</Link></div>
+            <div className='createfunctions'>         
+              <div className='createstudent create animated flipInX'><Link to='/create-student'>创建学生</Link></div>
               <div className='createcourse create animated flipInX'><Link to='/create-course'>创建课程</Link></div>
-              <div className='createclass create animated flipInX'><Link>创建班级</Link></div>
+              <div className='createclass create animated flipInX'><Link to='/create-class'>创建班级</Link></div>
 
               
             </div>
             <div className='managefunctions'>
-              {/* <Link><div className='managestudnet manage'>管理学生</div></Link>
-              <Link><div className='managecourse manage'>管理课程</div></Link>
-              <Link><div className='manageclass manage'>管理班级</div></Link> */}
-
-              <div className='managestudnet manage animated flipInX'><Link>管理学生</Link></div>
-              <div className='managecourse manage animated flipInX'><Link>管理课程</Link></div>
-              <div className='manageclass manage animated flipInX'><Link>管理班级</Link></div>
+              <div className='managestudnet manage animated flipInX'><Link to='/students'>管理学生</Link></div>
+              <div className='managecourse manage animated flipInX'><Link to='/courses'>管理课程</Link></div>
+              <div className='manageclass manage animated flipInX'><Link to='/classes'>管理班级</Link></div>
             </div>
 
 
@@ -125,11 +132,21 @@ function App() {
       <Router>
         <Switch>
           <Route path="/create-course" exact component={Managecourse} />
-          <Route path="/about-course/:cno" exact component={ViewCourse} />
-          <Route path="/courses" exact component={Courses} />
+          <Route path="/create-student" exact component={Managestudent} />
+          <Route path='/create-class' exact component={ManageClass}></Route>
 
+          <Route path="/about-course/:cno" exact component={ViewCourse} />
+          <Route path="/about-course/:cno" exact component={ViewClass} />
+          <Route path="/about-course/:cno" exact component={ViewClass} />
+
+          <Route path="/courses" exact component={Courses} />
+          <Route path="/students" exact component={Students} />
+          <Route path="/classes" exact component={Classes} />
+          
+          
           <Route path="/student/update/:sno" exact component={UpdateStudent} />
           <Route path="/course/update/:cno" exact component={UpdateCourse} />
+          <Route path='/course/update/:clno' exact component={UpdateClass}></Route>
           <Route component={HomeComponet} />
         </Switch>
       </Router>

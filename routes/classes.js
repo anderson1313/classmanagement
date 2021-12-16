@@ -8,20 +8,19 @@ const pool=require("../config/pool.js")
 //新增班级
 router.post('/create', (req, res) => {
 	//解构赋值
-	const {clno,clname } = req.body;
-	console.log(clno)
-	if (!clno) {
-		return res.status(400).json({ msg: "请输入班级号" })
+	const {clname } = req.body;
+
+	if (!clname) {
+		return res.status(400).json({ msg: "请输入班级名称" })
 	}
 	//sql查询
-	let sqlCheck = 'SELECT * from classes where clno=?'
+	let sqlCheck = 'SELECT * from classes where clname=?'
 	let sqlInsert = `INSERT INTO classes SET ?`
 	pool.query(sqlCheck, clno, (err, classs) => {
 		if (classs.length > 0) {
-			return res.status(400).json({ msg: "班级号已被使用" })
+			return res.status(400).json({ msg: "班级名称已被使用" })
 		}
 		const data = {
-			clno:clno, //clno是数据库属性，no是json属性
 			clname:clname
 			
 		}
@@ -30,7 +29,7 @@ router.post('/create', (req, res) => {
 				throw err;
 				return res.status(400).json({ msg: "无法插入" });
 			}
-			return res.status(200).json({ data })
+			return res.status(200).json({ data ,msg:'班级创建成功'})
 		})
 	})
 
@@ -82,9 +81,9 @@ router.delete("/", (req, res) => {
 
 //更新班级信息
 router.put('/', (req, res) => {
-	const { clno,newname } = req.body
+	const { clno,newclname } = req.body
 	console.log(clno)
-	console.log(newname)
+	console.log(newclname)
 
 //	console.log(newclasses)
 //	if (newclasses.length == 0) return res.status(400).json({ msg: "请添加学生" })
@@ -92,7 +91,7 @@ router.put('/', (req, res) => {
 	var updatesql = "UPDATE classes SET clname=? WHERE clno = ?";
 	
 	pool.query(updatesql, 
-		[newname,
+		[newclname,
 		clno], (err, result) => {
 			if (err) {
 				throw err;

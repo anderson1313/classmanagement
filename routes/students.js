@@ -8,10 +8,43 @@ const pool=require("../config/pool.js")
 //新增学生信息
 router.post('/create', (req, res) => {
 	//解构赋值
-	const { sno,sname,ssex,sage,sclno,scno } = req.body;
+	const { sno,sname,ssex,sage,sclno,scno} = req.body;
 	console.log(sno)
 	if (!sno) {
+
 		return res.status(400).json({ msg: "请输入学号" })
+	}
+	if(sno){
+		if(sno.length!=8){
+			return res.status(400).json({ msg: "请输入8位学号" })
+		}
+	}
+	if (!sname) {
+		return res.status(400).json({ msg: "请输入姓名" })
+	}
+	if (!ssex) {
+		return res.status(400).json({ msg: "请输入性别" })
+	}
+	if (sage){
+		if (sage==parseInt(sage)){
+			if (sage<0){
+				return res.status(400).json({ msg: "年龄必须大于零" })
+			}
+			
+		}
+	}
+
+
+	if (!sage) {
+		return res.status(400).json({ msg: "请输入年龄" })
+	}
+
+	if (!sclno) {
+		return res.status(400).json({ msg: "请选择班级" })
+	}
+
+	if (scno.length==0) {
+		return res.status(400).json({ msg: "请选择课程" })
 	}
 	//sql查询
 	let sqlCheck = 'SELECT * from students where sno=?'
@@ -27,19 +60,14 @@ router.post('/create', (req, res) => {
 			sage:sage,
 			sclno:sclno,
 			scourses:scno.toString()
-			
-			
 		}
 		pool.query(sqlInsert, data, (err, result) => {
 			if (err) {
 				throw err;
 				return res.status(400).json({ msg: "无法插入" });
 			}
-			return res.status(200).json({ data })
-		})
-
-	
-		
+			return res.status(200).json({ data ,msg:'创建学生成功'})
+		})	
 	})
 
 })

@@ -4,6 +4,8 @@ const initialState = {
     deleted: false,
     updated: false,
     created: false,
+    msg:{},
+    id:null
 }
 const studentReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -28,6 +30,13 @@ const studentReducer = (state = initialState, action) => {
                 ...state,
                 deleted: true
             };
+            case 'STUDENT_SUCCESS':
+            return{
+                ...state,
+                msg: action.payload.msg,
+                id:action.payload.id
+            
+            }
         default:
             return state;
     }
