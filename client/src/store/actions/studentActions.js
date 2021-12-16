@@ -12,13 +12,12 @@ export const getStudents = () => (dispatch) =>{
     axios
     .get('/api/student')
     .then((res)=>{
-        dispatch({type:CLEAR_ERRORS})
+        dispatch(clearErros());
         dispatch({type:ADD_STUDENT,payload:res.data})
     })
     .catch((err)=>{
         dispatch(returnErrors(err.response.data.msg, err.response.status))
     })
-
 }
 
 export const createStudents =
@@ -34,12 +33,10 @@ export const createStudents =
                 .post("/api/student/create",body,config)
                 .then((res) => {
                     const {data} = res.data;
-
                     dispatch({type:ADD_STUDENT, payload:[data]});
                     dispatch({type:"STUDENT_CREATED"});
                     dispatch(clearErros());
                     dispatch({type:'STUDENT_SUCCESS',payload:{msg:res.data.msg,id:'STUDENT_SUCCESS'}})
-
                 })
                 .catch((err) => {
                     console.log(err)

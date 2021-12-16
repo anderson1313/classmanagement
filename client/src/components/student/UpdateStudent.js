@@ -19,9 +19,7 @@ const UpdateStudent = () => {
     const { courses } = useSelector((state) => state.cou);
     const { students, updated } = useSelector((state) => state.stu);
     const courseList = courses.map((c) => c.cname);
-
     let { sno: s_sno } = useParams(); //sno是url传来的参数
-
     const studentDetail = students.filter(({ sno }) => sno == s_sno)[0];
     const { msg: errMsg, id: errID } = useSelector((state) => state.error);
     const [studentName, setStudentName] = useState("");
@@ -87,7 +85,6 @@ const UpdateStudent = () => {
     console.log(studentClassCN)
 
 
-
     const onChange = (e) => {
         console.log('ori', studentClass)
         console.log(e.target.value)
@@ -107,8 +104,6 @@ const UpdateStudent = () => {
                 courseStudents.push(tags[i].getAttribute("value"));
             }
         }
-
-
         dispatch(
             updateStudent({
                 sno: studentNo,

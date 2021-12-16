@@ -16,10 +16,7 @@ const classReducer = (state = initialState, action) => {
             return {
                 ...state,
                 classes: [...state.classes, ...action.payload]
-
             };
-
-            
         case UPDATE_CLASS:
             return {
                 ...state,
@@ -31,11 +28,17 @@ const classReducer = (state = initialState, action) => {
                 created: true
             };
 
-        case 'CLASS_CREATED':
+        case 'CLASS_DELETED':
             return {
                 ...state,
                 deleted: true
             };
+        case 'CLASS_SUCCESS':
+            return{
+                ...state,
+                msg: action.payload.msg,
+                id:action.payload.id
+            }    
         default:
             return state
     }

@@ -2,23 +2,31 @@ import React, { useEffect, useState } from "react";
 import Tagify from "@yaireo/tagify";
 import { useSelector, useDispatch } from "react-redux";
 import { createCourse } from '../../store/actions/courseActions'
+import { clearErros } from "../../store/actions/errorActions";
 import Avatar, { genConfig } from 'react-nice-avatar'
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const config = genConfig({
     'hairStyle': 'normal',
     'sex': 'man',
     'eyeStyle': 'oval'
 })
+
+
+
 const Managecourse = () => {
     const dispatch = useDispatch();
+
+    //返回就清楚错误
+    window.addEventListener("popstate", function(e) { 
+        dispatch(clearErros());//根据自己的需求实现自己的功能 
+        }, false);
+    
+    
+    
     const [courseName, setCourseName] = useState("");
     const [courseCredit, setcourseCredit] = useState("");
     const { msg: errMsg, id: errID } = useSelector((state) => state.error)
-
     const { msg: sucMsg, id: sucID, created } = useSelector((state) => state.cou)
-
-    // dispatch(createCourse({ name: 'TEST2', credit: 3 }));
-
-
     //跳转
     useEffect(() => {
         if (created) {
@@ -29,15 +37,7 @@ const Managecourse = () => {
     //提交
     const onSubmit = (e) => {
         console.log(e)
-        e.preventDefault();
-        // let courseStudents=[];
-        // const tags=document.querySelectorAll(".tagify__tag");
-        // console.log(tags)
-        // for (var i=0;i<=tags.length;i++){
-        //     if(tags[i]){
-        //         courseStudents.push(tags[i].getAttribute("value"));
-        //     }
-        // }    
+        e.preventDefault();   
         dispatch(createCourse({ name: courseName, credit: courseCredit }));
     }
 
@@ -46,7 +46,7 @@ const Managecourse = () => {
         <div className='container'>
             <div className='wrapper_left '>
                 <div className='content'>
-                    <div className='webname'>课程管理系统</div>
+                    <div className='webname' ><Link to='/'>课程管理系统</Link></div>
                     <div className='avatarbox  '>
                         <Avatar style={{ width: '100px', height: '100px' }} {...config} />
                     </div>
@@ -61,8 +61,7 @@ const Managecourse = () => {
                 </div>
             </div>
             <div className='submitwrapper'>
-
-                <div className='createcon animated  bounceIn'>
+                <div className='createcon animated  headShake'>
                     <div className='title'>创建课程</div>
                     <div className='blank'></div>
                     <form {...{ onSubmit }} method='POST'>
