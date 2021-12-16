@@ -116,14 +116,10 @@ const UpdateStudent = () => {
             </div>
 
 
-            <div className="studentinfowrapper">
-
-                <div className='up'>
-
-                    <div className='title animated fadeInLeft'>创建学生</div>
-                </div>
+            <div className="submitwrapper studentinfowrapper">
 
                 <div className="submitcon animated headShake ">
+                <div className='title animated fadeInLeft'>创建学生</div>
                     <form {...{ onSubmit }} method="post">
                         <div className="form-group">
                             <div className='subno'>
