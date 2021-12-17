@@ -18,9 +18,10 @@ const config = genConfig({
 const UpdateStudent = () => {
 
     const dispatch = useDispatch();
-    window.addEventListener("popstate", function (e) {
+     //返回就清除错误
+     window.addEventListener("popstate", function(e) { 
         dispatch(clearErros());//根据自己的需求实现自己的功能 
-    }, false);
+        }, false);
     const { courses } = useSelector((state) => state.cou);
     const { students, updated } = useSelector((state) => state.stu);
     const courseList = courses.map((c) => c.cname);

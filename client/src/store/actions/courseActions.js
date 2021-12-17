@@ -102,7 +102,7 @@ export const deleteCourse = (id) => async (dispatch) => {
 }
 
 /* 更新课程 */
-export const updateCourse = ({ cno, newname, newstudents, newcredit }) => async (dispatch) => {
+export const updateCourse = ({ cno, newname, newcredit }) => async (dispatch) => {
     // Headers
     const config = {
         headers: {
@@ -110,9 +110,9 @@ export const updateCourse = ({ cno, newname, newstudents, newcredit }) => async 
         },
     };
     // 请求
-    const body = JSON.stringify({ newname, newstudents, newcredit, cno });
+    const body = JSON.stringify({ newname, newcredit, cno });
     await axios
-        .put('/api/course', body, config)
+        .put('/api/course/', body, config)
         .then(() => dispatch({ type: UPDATE_COURSE }))
         .catch((err) => {
             dispatch(

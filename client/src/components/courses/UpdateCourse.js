@@ -67,7 +67,6 @@ const UpdateCourse = () => {
     dispatch(
       updateCourse({
         cno:courseDetail.cno,
-        newstudents:'',
         newname: courseName,
         newcredit:courseCredit
         
@@ -106,7 +105,7 @@ const UpdateCourse = () => {
             </div>
 
             <div className='submitcon animated flipInX'>
-              <form  method='POST'>
+              <form  {...{onSubmit}}>
                 <div className="form-group">
                   <div className='subname'>
                     <label htmlFor="name" className='labelname'>课程名称</label>
@@ -153,8 +152,6 @@ const UpdateCourse = () => {
           </>) : <>
 
           <div className='nodate'>没有此课程信息或者数据库未连接</div>
-          
-          
           
           </>}
 

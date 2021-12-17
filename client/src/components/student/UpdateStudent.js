@@ -3,6 +3,7 @@ import Tagify from "@yaireo/tagify";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { updateStudent } from "../../store/actions/studentActions";
+import { clearErros } from "../../store/actions/errorActions";
 
 
 import Avatar, { genConfig } from 'react-nice-avatar'
@@ -16,6 +17,10 @@ const config = genConfig({
 
 const UpdateStudent = () => {
     const dispatch = useDispatch();
+     //返回就清除错误
+     window.addEventListener("popstate", function(e) { 
+        dispatch(clearErros());//根据自己的需求实现自己的功能 
+        }, false);
     const { courses } = useSelector((state) => state.cou);
     const { students, updated } = useSelector((state) => state.stu);
     const courseList = courses.map((c) => c.cname);
