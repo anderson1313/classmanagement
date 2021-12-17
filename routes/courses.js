@@ -74,12 +74,11 @@ router.delete("/", (req, res) => {
 
 //更新课程
 router.put('/', (req, res) => {
-	const {  newname, newcredit, newstudents ,cno} = req.body
+	const {  newname, newcredit,cno} = req.body
 	// if (newstudents.length == 0) return res.status(400).json({ msg: "请添加学生" })
-	var updatesql = "UPDATE courses SET cname = ?, cstudents = ?, ccredit = ? WHERE cno = ?";
+	var updatesql = "UPDATE courses SET cname = ?, ccredit = ? WHERE cno = ?";
 	pool.query(updatesql, 
 		[newname,
-		newstudents,
 		newcredit,
 		cno], (err, result) => {
 			if (err) {
