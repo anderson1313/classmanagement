@@ -27,10 +27,18 @@ const Courses = () => {
     const [page_index, setpage_index] = useState(0);
 
     const forwardPage=()=>{
+        console.log(page_index)
+        if (page_index==0){
+            
+            return
+        }
         setpage_index(page_index-1)
        
     }
     const backwardPage=()=>{
+        if (page_index + 1 >= pageList.length){
+            return
+        }
         setpage_index(page_index+1)
     }
 
