@@ -70,7 +70,6 @@ const Students = () => {
                 
 
 
-
             </div>
 
             

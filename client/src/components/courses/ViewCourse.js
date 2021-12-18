@@ -25,7 +25,7 @@ function ViewCourse() {
    
 
     useEffect(() => {
-        if (courseDetail) {
+        if (courseDetail && students ) {
             const studentList = students.map(({ scourses, sname }) => {
                 if (scourses.includes(courseDetail.cname)) {
                     return sname;

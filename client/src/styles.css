@@ -1,4 +1,3 @@
-
 @font-face {
     font-family:"font1" ;
     src: url(./font1.ttf);
@@ -24,211 +23,199 @@ body{
     }
   }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
-.wrapper_left{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
-    align-items: center;
-    width: 30%;
-    background: bisque;
-    height: 100vh;
 
-}
-.wrapper_left .content{
-    
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-
-}
-
-.webname{
-    margin-bottom: 80PX;
-    font-size: 25PX;
-    color: #66806A;
-    font-family:"font1" ;
-}
-.stufflist{
-    margin: 60PX 0;
-}
-.stufflist .title{
-    font-size: 20px;
-    font-family: "font1";
-}
-.stufflist li{
-    font-family: "font1";
-    margin: 10px 0;
-    color: #533535;
-}
-.wrapper_right{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    
-    height: 100vh;
-    
-  
-    background-color: #f2f3f7;
-
-}
+/*app.js*/
 a{
     text-decoration: none;
 
 }
-.wrapper_right .content{
-    flex-direction: column;
-    padding: 40px 0;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.tip{
-    font-size: 30px;
-    margin-bottom: 100px;
-    font-family: "font2";
+
+
+@media (min-width:500px) {
 
 }
-.tocreate{
-    padding: 0 50PX;
-    margin: 0;
-    text-align: center;
-    
-    height: 50px;
-    font-size: 25px;
-    color: #000957;
-    background: rgba(255, 255, 255, .2);
-    line-height: 50px;
-    border-radius: 10px;
-    font-family: "font2";
+
+@media (min-width:640px) {
+	
+}
+@media (min-width:768px) {
+	
+}
+@media (min-width:992px) {
+	
 }
 
-.rightcontainer {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    
-  
-}
-.createfunctions,
-.managefunctions{
-    margin: 0 80px;
-    width: 20%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px;
-}
-.createfunctions{
- 
-    background-color: #f2f3f7;
-    box-shadow: -2px -2px 4px 0px #ffffff, 50px 50px 50px 0px rgba(0, 0, 0, .25);
+@media (min-width:1200px) {
 
-}
-.managefunctions{
-    
-    background-color: #f2f3f7;
-    box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.05),
-    0 0 10px 10px rgba(255, 255, 255, 0.005),
-    2px 2px 8px rgba(60, 60, 60, 0.1);
 
-}
-.create{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 40px;
-    width: 50%;
-    height: 20%;
-    font-size: 15px;
-    background: #f2f3f7;
-    border-radius: 10%;  
-    box-shadow:  -6px -6px 8px rgba(255, 255, 255, 0.9),
-    5px 5px 8px rgba(0, 0, 0, 0.07);
+    /*app.js*/
+    #root{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+
     }
-.create a,
-.manage a{
-    color: #077dfe;
+    html,body{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+    .wrapper_left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center;
+        width: 30%;
+        background: bisque;
+        height: 100%;
+        overflow: hidden;
+    
+    }
+    .wrapper_left .content{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+    .webname{
+        margin-bottom: 80PX;
+        font-size: 25PX;
+        color: #66806A;
+        font-family:"font1" ;
+        height: 20%;
+        vertical-align: middle;
+        line-height: 80px;
+
+    }
+    .stufflist{
+        margin: 60PX 0;
+        height: 40%;
+        overflow: hidden;
+    }
+    .stufflist .title{
+        font-size: 20px;
+        font-family: "font1";
+        height: 10%;
+    }
+    .stufflist li{
+        font-family: "font1";
+        margin: 10px 0;
+        color: #533535;
+        height: 5%;
+    }
+    .wrapper_right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 100%;
+        overflow: hidden;
+        background-image: linear-gradient(120deg,#005aa7,#fffde4);  background-size: 500%;
+        animation:  bganimation 15s infinite;
+    
+    }
+    .wrapper_right .rightcontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 80%;
+
+    }
+    .createfunctions,
+    .managefunctions{
+        height: 80%;
+        width: 40%;
+        margin: 0 20px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .create{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        height: 15%;
+        width: 30%;
+        font-size: 15px;
+        background: rgba(255, 255, 255, .4);
+        border-radius: 10px;  
+        
+        }
+        .manage{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            height: 15%;
+        width: 30%;
+            height: 15%;
+            font-size: 15px;
+            background: rgba(255, 255, 255, .4);
+            border-radius: 10px;  
+          
+        }
+        .create a,
+        .manage a{
+            
+    color: rgba(39, 60, 117,1.0);
     font-weight: bold;
     text-align: center;
+   
     display: block;
-    width: 100%;
-    height: 100%;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 13px;
 }
-.manage a{
-    color: #ff7a00;
 
-}
-
-.manage{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 40px;
-    width: 50%;
-    height: 20%;
-    font-size: 15px;
-    background: #f2f3f7;
-    border-radius: 10%;  
-    box-shadow:  -6px -6px 8px rgba(255, 255, 255, 0.9),
-    5px 5px 8px rgba(0, 0, 0, 0.07);
-}
-
-
-
-/* createcourse*/
+/*managecourse*/
 .submitwrapper{
     background-image: linear-gradient(125deg,#FEA47F,#82589F);  background-size: 400%;
-    /* background-image: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad); */
     animation:  bganimation 15s infinite;
     width: 70%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;    
+    justify-content: center;
+    overflow: hidden;
 }
 .submitwrapper .createcon{
     display: flex;
     flex-direction: column;
-   
     align-items: center;
-    margin: 150px 0;
-
+    overflow: hidden;
 }
 .submitwrapper .createcon .title{
     font-size: 50px;
     font-family: "font2";
     margin-bottom: 50px;
-
 }
 
-.submitwrapper form{
+.createcon form{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,12 +227,13 @@ a{
 }
 
 
-.submitwrapper form .form-group .subname,
-.submitwrapper form .form-group .subcredit{
+.createcon form .form-group .subname,
+.createcon form .form-group .subcredit{
+    height: auto;
     margin: 30px 0;
 
 }
-.submitwrapper form .form-group .labelname{
+.createcon form .form-group .labelname{
     font-family: 'font2';
     font-size: 15px;
     width: 70px;
@@ -256,17 +244,17 @@ a{
     font-weight: bold;
 }
 
-.submitwrapper form .form-group input{
+.createcon form .form-group input{
     margin: 0 20px;
     background:none;  
 	outline:none;  
 	border:none;
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .2);
     padding: 10px 20px;
     border-radius: 10px;
     
 }
-.submitwrapper form button{
+.createcon form button{
     display: inline-block;
     background:none;  
 	outline:none;  
@@ -281,8 +269,8 @@ a{
     margin: 10px 0;
 
 }
-.submitwrapper form .err-msgs,
-.submitwrapper form .suc-msgs{
+.createcon form .err-msgs,
+.createcon form .suc-msgs{
    
     color: black;
     font-weight: bold;
@@ -290,329 +278,64 @@ a{
 
 
 
-/* courses*/
-
-@-webkit-keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  
-.courses_wrapper{
-    height: 100vh;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    background: #F7F6F2;
-    animation: none;
-   
-    
-    
-    align-items: center;
-  
+/*managestudent*/
+.cssubmitwrapper{
+    background-image: linear-gradient(120deg,#373b44,#4286f4);  background-size: 500%;
+    background-image: linear-gradient(120deg,#2ebf91,#dd3e54);  background-size: 500%;
+    animation:  bganimation 15s infinite;
 }
 
-
-.courses_wrapper .coursestitle{
+.cscon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cscon .title{
+    width: 200px;
     font-size: 50px;
     font-family: "font2";
     margin-bottom: 50px;
-   
-
-}
-.courses_wrapper .allcoursescon{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.courses_wrapper .eachcourse{
-
     text-align: center;
-    color: #297F87;
-    margin: 30px 0;
-    padding: 10px 15px;
-    border-radius: 10px;
-    background-image: linear-gradient(125deg,#D3E4CD,#E2C2B9);  background-size: 400%;
-    animation-name:fadeInLeft, bganimation;
-    animation-duration:1s, 3s;
-    animation-timing-function:linear, linear;
-    animation-delay:0, 2s;
-    animation-iteration-count:1, infinite;
-    animation-fill-mode:forwards, forwards;
-    animation-direction:normal, alternate;
-    font-size: 15px;
-}
-.nocoursecon{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-image: linear-gradient(125deg,#D3E4CD,#E2C2B9);  background-size: 400%;
-    /* background-image: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad); */
-    animation:  bganimation 6s infinite;
-    height: 100vh;
 
 }
-/* viewcourses */
-.course_left{
-   background: rgba(96, 163, 188,1.0) ;
-}
-.courseinfowrapper{
-    width: 70%;
-    height: 100vh;
-    background: rgba(248, 239, 186,.5);
-}
-
-.courseinfocon .up{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 150px;
-    position: relative;
-    font-size: 45px; 
-}
-.courseinfocon .up .updatecourse{
-    margin: 0 5px;
-    padding: 5px;
-    border: none;
-    font-size: 10px;
-    color: rgba(12, 36, 97,1.0);
-     background-color: rgba(56, 173, 169,.5);
-     border-radius: 4px;
-    /* border: none;
-    background: none; */
-}
-.courseinfocon .up .functions{
-    margin-left: 200px;
-}
-.courseinfocon .up .deletecourse{
-    margin: 0 5px;
-    padding: 5px;
-    border: none;
-    font-size: 10px;
-    color: rgba(12, 36, 97,1.0);
-     background-color: rgba(229, 80, 57,.3);
-     border-radius: 4px;
-
-}
-.courseinfocon .up:after{
-    position: absolute;
-     bottom: 30px;
-     left: 50px;
-     right: 1px;
-     height: 1px;
-     width: 500px;
-     content: '';
-     -webkit-transform: scaleY(.5);
-     transform: scaleY(.5);
-     background-color: rgba(202, 211, 200,1.0);       
-
-}
-.basicinfo {
-    overflow: hidden;
-  
-}
-.courseinfocon .title{
-    margin-left: 50px;
-    font-family: "font2";
-    
-}
-
-
-.basicinfo .title{
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 20px;
-    
-}
-.basicinfo .iconfont{
-    font-size: 18px;
-    margin-right: 10px;
-    
-}
-.studentscon,.errcon
-{
-    margin-top: 20px;
-    margin-left: 50px;
-    width: 75%;
-    padding: 10px 30px;
-    background: tan;
-    border-radius: 2px;
-    display: flex;
-    flex-direction: row;
-}
-.eachs{
-    padding: 4px;
-    margin: 0 5px;
-    border-radius: 2px;
-    background: rgba(223, 228, 234,.6);
-
-}
-.infonotused{
-    text-align: center;
-    margin: 90px;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-
-/*updatecourses*/
-
-.courseinfowrapper .submitcon{
-    margin-top: 100px;
-}
-.courseinfowrapper .submitcon{
+.form-group {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.courseinfowrapper .submitcon form{
-  
+.form-group > div{
+    margin: 0px 0;
+}
+.form-group-up{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(149, 165, 166,.5);
-    border-radius: 10px;
-    padding: 20px;
 
 }
-.courseinfowrapper .submitcon form .form-group .subname,
-.courseinfowrapper .submitcon form .form-group .subcredit{
-    margin: 30px 0;
-
-}
-.courseinfowrapper .submitcon form .form-group .labelname{
-    font-family: 'font2';
-    font-size: 15px;
-    width: 70px;
-    display: inline-block;
-    text-align: center;
-    margin: 0 20px;
-    color: #1E3163;
-    font-weight: bold;
-}
-
-.courseinfowrapper .submitcon form .form-group input{
-    margin: 0 20px;
-    background:none;  
-	outline:none;  
-	border:none;
-    background: rgba(255, 255, 255, .5);
-    padding: 10px 20px;
-    border-radius: 10px;
-    
-}
-.courseinfowrapper .submitcon form button{
-    display: inline-block;
-    background:none;  
-	outline:none;  
-	border:none;
-    border-radius: 5px;
-    color: white;
-    background: rgba(56,163,165,.4);
-    background: #3B3B98;
-    padding: 10px 100px;
-    font-family: "font2";
-    margin-top: 20px;
-    margin: 10px 0;
-
-}
-.courseinfowrapper .submitcon form .err-msgs,
-.courseinfowrapper .submitcon form .suc-msgs{
-   
-    color: black;
-    font-weight: bold;
-}
-
-/*updatestudent*/
-.studentinfowrapper{
-    height: 100vh;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    background: #F7F6F2;
-    animation: none;
-    
-}
-.studentinfowrapper .up{
-    font-family: "font2";
-    margin-left: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 150px;
-    position: relative;
-    font-size: 45px; 
-}
-.studentinfowrapper .up:after{
-    position: absolute;
-     bottom: 30px;
-     left: 10px;
-     right: 1px;
-     height: 1px;
-     width: 500px;
-     content: '';
-     -webkit-transform: scaleY(.5);
-     transform: scaleY(.5);
-     background-color: rgba(202, 211, 200,1.0);   
-}
-
-.studentinfowrapper .submitcon,
-.studentinfowrapper .submitcon form,
-.studentinfowrapper .submitcon form .form-group{
+.form-group-up > div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 0px;
 }
-
-.studentinfowrapper .submitcon form{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(149, 165, 166,.5);
+.up-left{
+    background: rgba(255, 255, 255, .2);
     border-radius: 10px;
     padding: 20px;
 }
-.studentinfowrapper .submitcon form .form-group > div {
+
+.up-left > div {
     height: 34px;
     display: flex;
     flex-direction: row;
     width: 95%;
     margin: 10px 0;
 } 
-.studentinfowrapper .submitcon form .form-group > div label {
+.up-left > div label {
     line-height: 34px;
     
     font-size: 15px;
@@ -623,90 +346,194 @@ a{
     color: #1E3163;
     font-weight: bold;
 } 
-.studentinfowrapper .submitcon form .form-group .subcourse {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    
-    
-}
-.studentinfowrapper .submitcon form .form-group tags {
-    margin: 10PX auto;
-    
-    width: 95%;
-    
-}
-.studentinfowrapper .submitcon form .form-group .subcourse label{
-    display: block;
-    width: 40%;
-
-}
-.studentinfowrapper .submitcon form .form-group input,
-.studentinfowrapper .submitcon form .form-group select{
+.up-left input,
+.up-right input,
+.up-left select{
     width: 30%;
     margin: 0 20px;
     background:none;  
 	outline:none;  
 	border:none;
-    background: rgba(255, 255, 255, .5);
+    background: rgba(255, 255, 255, .2);
     padding: 10px 20px;
     border-radius: 10px;
     
 }
-.studentinfowrapper .submitcon form .form-group select{
-    width: 42%;
-
+.up-left select{
+    width: 43%;
 }
 
-.studentinfowrapper .submitcon form .form-group button{
-     display: inline-block;
-    background:none;  
-	outline:none;  
-	border:none;
-    border-radius: 5px;
-    color: white;
-    background: rgba(56,163,165,.4);
-    background: #3B3B98;
-    padding: 10px 100px;
-    font-family: "font2";
-    margin-top: 20px;
-    margin: 10px 0;
+.up-right{
+    /* background: rgba(255, 255, 255, .2); */
+    border-radius: 10px;
+    padding: 20px;
 
 }
-.studentinfowrapper .submitcon form .form-group .err-msgs,
-.studentinfowrapper .submitcon form .form-group .suc-msgs{
-    display: block;
-    margin: 0 auto;
+.up-right > div label{
     text-align: center;
-    color: #297F87;
+    font-size: 10px;
+    display: inline-block;
+    margin: 10px 0;
+    color: #1E3163;
     font-weight: bold;
+}
+.up-right .subcourse{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.up-right tags{
+    width: 70%;
+}
+
+.up-right .nocoursetip{
+    background: rgba(255, 255, 255, .2);
+  
+    border-radius: 10px;
+    padding: 10px;
+    
+    text-align: center;
+    
+    
+
+}
+.up-right .tiptext{
+    color: rgba(45, 52, 54,1.0);
+}
+.up-right a{
+    color: wheat;
+}
+.form-group-down button{
+    display: inline-block;
+   background:none;  
+   outline:none;  
+   border:none;
+   border-radius: 5px;
+   color: white;
+   background: rgba(56,163,165,.4);
+   background: #3B3B98;
+   padding: 10px 100px;
+   font-family: "font2";
+   margin-top: 20px;
+   margin: 10px 0;
+
+}
+.form-group-down .err-msgs,
+.form-group-down .suc-msgs{
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+   color: #3B3B98;
+   font-weight: bold;
 
 }
 
-/*ManageStudent*/
 
-.submitwrapper .submitcon .title{
+/*管理课程*/
+
+.courses_wrapper{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 100%;
+        overflow: hidden;
+        background-image: linear-gradient(120deg,#2980b9,#2c3e50);  background-size: 400%;
+        animation:  bganimation 15s infinite;
+
+}
+.allcoursecon {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+}
+ .allcoursescon .title{
+     text-align: center;
+     color: white;
     font-size: 50px;
     font-family: "font2";
     margin-bottom: 50px;
 
 }
-.submitwrapper .submitcon {
-    margin-top: 100px;
+.allcoursescon  .allcourses{
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
 }
-.submitwrapper .submitcon form{
-    background: rgba(255, 255, 255, .2);
+.allcourses .seqlist,
+.allcourses .courseslist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
 }
-
-.submitwrapper{
-    background-image: linear-gradient(125deg,#FEA47F,#82589F);  background-size: 400%;
-    animation:  bganimation 15s infinite;
-    width: 70%;
+.allcourses .courseslist{
+    align-items: initial;
+    height: 240px;
    
+    overflow: hidden;
+
+}
+.allcourses .seqlist .stitle,
+.allcourses .courseslist .ctitle{
+    color: wheat;
+    font-size: 15px;
+    font-family: "font1";
 }
 
-/*Student*/
+.allcourses .seqlist .seqnum{
+    color: rgba(199, 236, 238,1.0);
+    font-size: 15px;
+    margin: 5px 0;
+    background-color: rgba(255, 255, 255, .2);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    font-family: "font2";
+
+}
+.allcourses .courseslist .coursename a{
+    
+    color: rgba(199, 236, 238,1.0);
+    font-size: 20px;text-align: left;
+    font-family: "font2";
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    
+    
+ 
+}
+.allcourses .courseslist .coursename{
+   
+    margin: 5px 0;
+    height: 30px;
+    text-align: left;
 
 
-
+}
+.allcoursescon .pagebox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.allcoursescon .pagebox > div{
+    font-size: 20px;
+    margin: 20px 20px;
+}
+.allcoursescon .pagebox .iconfont{
+    font-size: 30px;
+  
+}
+}

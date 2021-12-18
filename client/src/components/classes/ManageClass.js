@@ -49,7 +49,7 @@ const ManageClass = () => {
 
             <div className='submitwrapper'>
                 <div className='createcon animated  headShake'>
-                    <div className='title'>创建班级</div>
+                    <div className='title animated fadeInLeft'>创建班级</div>
                     <div className='blank'></div>
                     <form {...{ onSubmit }} method='POST'>
                         <div className="form-group">
