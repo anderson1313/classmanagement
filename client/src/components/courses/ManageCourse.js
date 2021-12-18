@@ -16,7 +16,7 @@ const config = genConfig({
 const Managecourse = () => {
     const dispatch = useDispatch();
 
-    //返回就清楚错误
+    //返回就清除错误
     window.addEventListener("popstate", function(e) { 
         dispatch(clearErros());//根据自己的需求实现自己的功能 
         }, false);
@@ -62,7 +62,7 @@ const Managecourse = () => {
             </div>
             <div className='submitwrapper'>
                 <div className='createcon animated  headShake'>
-                    <div className='title'>创建课程</div>
+                    <div className='title animated fadeInLeft'>创建课程</div>
                     <div className='blank'></div>
                     <form {...{ onSubmit }} method='POST'>
                         <div className="form-group">

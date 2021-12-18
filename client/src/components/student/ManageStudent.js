@@ -7,6 +7,7 @@ import { clearErros } from "../../store/actions/errorActions";
 import { CLEAR_ERRORS } from "../../store/actions/types";
 
 import Avatar, { genConfig } from 'react-nice-avatar'
+import { Link } from "react-router-dom";
 const config = genConfig({
     'hairStyle': 'normal',
     'sex': 'man',
@@ -18,10 +19,10 @@ const config = genConfig({
 const UpdateStudent = () => {
 
     const dispatch = useDispatch();
-     //返回就清除错误
-     window.addEventListener("popstate", function(e) { 
+    //返回就清除错误
+    window.addEventListener("popstate", function (e) {
         dispatch(clearErros());//根据自己的需求实现自己的功能 
-        }, false);
+    }, false);
     const { courses } = useSelector((state) => state.cou);
     const { students, updated } = useSelector((state) => state.stu);
     const courseList = courses.map((c) => c.cname);
@@ -31,7 +32,7 @@ const UpdateStudent = () => {
     const [studentName, setStudentName] = useState("");
 
     const [studentAge, setStudentAge] = useState("");
-    const [studentClass, setStudentClass] = useState("");
+    const [studentClass, setStudentClass] = useState("1");
     const [studentSex, setStudentSex] = useState("");
     const [studentNo, setStudentNo] = useState("");
     const [studentClassCN, setStudentClassCN] = useState("");
@@ -52,7 +53,7 @@ const UpdateStudent = () => {
             dropdown: {
                 classname: "color-blue",
                 enabled: 0,
-                maxItems: 5,
+                maxItems: 10,
                 position: "text",
                 closeOnSelect: false,
                 highlightFirst: true,
@@ -68,11 +69,10 @@ const UpdateStudent = () => {
         }
     }, [updated]);
     const onChange = (e) => {
-        console.log('ori', studentClass)
-        console.log(e.target.value)
+       
         setStudentClassCN(e.target.value);
         setStudentClass(e.target.value)
-        console.log('changed', studentClass)
+        
     };
 
     const onSubmit = (e) => {
@@ -117,108 +117,125 @@ const UpdateStudent = () => {
             </div>
 
 
-            <div className="submitwrapper studentinfowrapper">
-
-                <div className="submitcon animated headShake ">
-                <div className='title animated fadeInLeft'>创建学生</div>
+            <div className="submitwrapper cssubmitwrapper">
+                <div className="cscon animated headShake ">
+                    <div className='title animated fadeInLeft'>创建学生</div>
                     <form {...{ onSubmit }} method="post">
                         <div className="form-group">
-                            <div className='subno'>
-                                <label htmlFor="name">学生学号</label>
-                                <input
-                                    type="text"
-                                    name="studentno"
-                                    id="studentno"
-                                    placeholder="学生学号"
-                                    className="mb-3"
-                                    value={studentNo}
-                                    onChange={(e) => setStudentNo(e.target.value)}
-                                />
-                            </div>
+                            <div className='form-group-up'>
+                                <div className='up-left'>
+                                    <div className='subno'>
+                                        <label htmlFor="name">学生学号</label>
+                                        <input
+                                            type="text"
+                                            name="studentno"
+                                            id="studentno"
+                                            placeholder="学生学号"
+                                            className="mb-3"
+                                            value={studentNo}
+                                            onChange={(e) => setStudentNo(e.target.value)}
+                                        />
+                                    </div>
 
-                            <div className='subname'>
-                                <label htmlFor="name">学生姓名</label>
-                                <input
-                                    type="text"
-                                    name="studentname"
-                                    id="studentname"
-                                    placeholder="学生姓名"
-                                    className="mb-3"
-                                    value={studentName}
-                                    onChange={(e) => setStudentName(e.target.value)}
-                                />
-                            </div>
+                                    <div className='subname'>
+                                        <label htmlFor="name">学生姓名</label>
+                                        <input
+                                            type="text"
+                                            name="studentname"
+                                            id="studentname"
+                                            placeholder="学生姓名"
+                                            className="mb-3"
+                                            value={studentName}
+                                            onChange={(e) => setStudentName(e.target.value)}
+                                        />
+                                    </div>
 
-                            <div className='subsex'>
-                                <label htmlFor="sex">学生性别</label>
-                                <input
-                                    type="text"
-                                    name="studentsex"
-                                    id="studentsex"
-                                    placeholder="学生性别"
-                                    className="mb-3"
-                                    value={studentSex}
-                                    onChange={(e) => setStudentSex(e.target.value)}
-                                />
-                            </div>
+                                    <div className='subsex'>
+                                        <label htmlFor="sex">学生性别</label>
+                                        <input
+                                            type="text"
+                                            name="studentsex"
+                                            id="studentsex"
+                                            placeholder="学生性别"
+                                            className="mb-3"
+                                            value={studentSex}
+                                            onChange={(e) => setStudentSex(e.target.value)}
+                                        />
+                                    </div>
 
-                            <div className='subage'>
-                                <label htmlFor="age">学生年龄</label>
-                                <input
-                                    type="number"
-                                    name="studentage"
-                                    id="studentage"
-                                    placeholder="学生年龄"
-                                    className="mb-3"
-                                    onChange={(e) => setStudentAge(e.target.value)}
-                                    value={studentAge}
-                                />
+                                    <div className='subage'>
+                                        <label htmlFor="age">学生年龄</label>
+                                        <input
+                                            type="number"
+                                            name="studentage"
+                                            id="studentage"
+                                            placeholder="学生年龄"
+                                            className="mb-3"
+                                            onChange={(e) => setStudentAge(e.target.value)}
+                                            value={studentAge}
+                                        />
 
-                            </div>
+                                    </div>
 
-                            <div className="subclass">
-                                <label htmlFor="name">学生班级</label>
-                                <select   {...{ onChange }}>
-                                    {classOptions.map((o, index) => (
-                                        <option key={o} value={classListValues[index]}>
-                                            {o}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
+                                    <div className="subclass">
+                                        <label htmlFor="name">学生班级</label>
+                                        <select   {...{ onChange }}>
+                                            {classOptions.map((o, index) => (
+                                                <option key={o} value={classListValues[index]}>
+                                                    {o}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
 
-                            <div className='subcourse'>
-                                <label htmlFor="name">为学生添加课程</label>
-                                <input
-                                    type="text"
-                                    name="tags"
-                                    id="assigncourses"
-                                    placeholder="添加课程"
-                                    className="mb-3"
-
-                                />
-                            </div>
-
-                            {sucID === "STUDENT_SUCCESS" ? (
-                                <div style={{ marginTop: "10px" }}
-                                    className="suc-msgs"
-
-                                >
-                                    {sucMsg}
                                 </div>
-                            ) : null}
+                                <div className='up-right'>
+                                    <div className='subcourse'>
+                                        <label htmlFor="name">为学生添加课程</label>
+                                        <input
+                                            type="text"
+                                            name="tags"
+                                            id="assigncourses"
+                                            placeholder="添加课程"
+                                            className="mb-3"
 
-                            {errID == "STUDENT_ERROR" ? (
-                                <div
-                                    className="err-msgs"
-                                    style={{ marginTop: "10px" }}
-                                >
-                                    {errMsg}
+                                        />
+                                    </div>
+
+                                    <div className='nocoursetip'>
+                                                <div className='tiptext'>没有你想要的课程？</div>
+                                                <div className='tiptext'><Link to='/create-course'>点击创建课程</Link></div>
+
+                                    </div>
                                 </div>
-                            ) : null}
-                            <button color="dark" style={{ marginTop: "1rem" }} block>
-                                创建学生
-                            </button>
+                            </div>
+                            <div className='form-group-down'>
+                                {sucID === "STUDENT_SUCCESS" ? (
+                                    <div style={{ marginTop: "10px" }}
+                                        className="suc-msgs"
+
+                                    >
+                                        {sucMsg}
+                                    </div>
+                                ) : null}
+
+                                {errID == "STUDENT_ERROR" ? (
+                                    <div
+                                        className="err-msgs"
+                                        style={{ marginTop: "10px" }}
+                                    >
+                                        {errMsg}
+                                    </div>
+                                ) : null}
+                                <button color="dark" style={{ marginTop: "1rem" }} block>
+                                    创建学生
+                                </button>
+                            </div>
+
+
+
+
+
                         </div>
                     </form>
                 </div>
