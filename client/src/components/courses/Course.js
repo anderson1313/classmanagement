@@ -19,9 +19,7 @@ const Courses = () => {
     const dispatch = useDispatch()
     // dispatch(createCourse({ name: 'TEST2', credit: 3 }));
     const { courses } = useSelector((state) => state.cou);
-    // var pageList=[]
-    // var all_pageList=[]
-    // var page_index=0
+ 
     const [pageList, setpageList] = useState([]);
     const [all_pageList, setall_pageList] = useState([]);
     const [page_index, setpage_index] = useState(0);

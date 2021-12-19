@@ -52,14 +52,7 @@ router.get('/', (req, result) => {
 router.delete("/", (req, res) => {
 	//解构赋值
 	const { cno } = req.body;
-	// let delQuery1 = "DELETE FROM sc WHERE cno = ?";
-	// pool.query(delQuery1, [cno], (err, result) => {
-	// 	if (err) {
-	// 		res.send(err).status(400);
-	// 	} else {
-	// 		res.json({ success: true }).status(200);
-	// 	}
-	// });
+	
 
 	let delQuery2 = "DELETE FROM courses WHERE cno = ?";
 	pool.query(delQuery2, [cno], (err, result) => {

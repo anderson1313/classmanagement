@@ -135,7 +135,7 @@ function App() {
 
           <Route path="/about-course/:cno" exact component={ViewCourse} />
           <Route path="/about-course/:cno" exact component={ViewClass} />
-          <Route path="/about-course/:cno" exact component={ViewClass} />
+          <Route path="/about-class/:clno" exact component={ViewClass} />
 
           <Route path="/courses" exact component={Courses} />
           <Route path="/students" exact component={Students} />
@@ -144,7 +144,7 @@ function App() {
           
           <Route path="/student/update/:sno" exact component={UpdateStudent} />
           <Route path="/course/update/:cno" exact component={UpdateCourse} />
-          <Route path='/course/update/:clno' exact component={UpdateClass}></Route>
+          <Route path='/class/update/:clno' exact component={UpdateClass}></Route>
           <Route component={HomeComponet} />
         </Switch>
       </Router>

@@ -26,29 +26,7 @@ const UpdateCourse = () => {
   //获取到课程信息之后
 
   useEffect(() => {
-    var input1 = document.querySelector("input[name=tags]");
-    if (courseDetail) {
-      const studentList = students.map(({ scourses, sname }) => {
-        if (scourses.includes(courseDetail.cno)) {
-          return sname
-        }
-        return null;
-      }).filter((s) => s != undefined);
-      if (studentList.length > 0) {
-        new Tagify(input1, {
-          whitelist: [...studentList],
-          dropdown: {
-            classname: "color-blue",
-            enabled: 0,
-            maxItems: 5,
-            position: "text",
-            closeOnSelect: false,
-            highlightFirst: true,
-          },
-        });
-
-      }
-    }
+   
     if (courseDetail) {
       setCourseName(courseDetail.cname);
     }
