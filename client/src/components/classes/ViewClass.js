@@ -22,9 +22,9 @@ function ViewClass() {
     const onDelete = (id) => dispatch(deleteClass(id));
 
     useEffect(() => {
-        if (classDetail) {
+        if (classDetail && students) {
             const studentList = students.map(({ sclno, sname }) => {
-                if (sclno.includes(classDetail.sname)) {
+                if (sclno==(classDetail.clno)) {
                     return sname;
                 }
             }).filter((student) => student != undefined)
@@ -41,7 +41,7 @@ function ViewClass() {
     
     return (
         <div className='container'>
-            <div className='wrapper_left class_left'>
+            <div className='wrapper_left course_left'>
                 <div className='content'>
                     <div className='webname'>课程管理系统</div>
                     <div className='avatarbox  '>
@@ -58,16 +58,16 @@ function ViewClass() {
                 </div>
             </div>
 
-            <div className='classinfowrapper'>
-                <div className='classinfocon'>
+            <div className='courseinfowrapper'>
+                <div className='courseinfocon'>
                     {classDetail ? (<>
                         <div className='up'>
                             <div className='title  animated fadeInLeft'>{classDetail.clname}</div>
                             <div className='functions animated fadeInLeft'>
-                                <Link to={`/class/update/${classDetail.clno}`} className='updateclass'>
+                                <Link to={`/class/update/${classDetail.clno}`} className='updatecourse'>
                                     更新班级
                                 </Link>
-                                <button className="deleteclass" onClick={() => onDelete(classDetail.clno)}>删除班级</button>
+                                <button className="deletecourse" onClick={() => onDelete(classDetail.clno)}>删除班级</button>
                             </div>
                         </div>
                         <div className='basicinfo'>

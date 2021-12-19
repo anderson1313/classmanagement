@@ -88,6 +88,7 @@ export const deleteClass = (id) => async (dispatch) => {
 
 }
 
+
 export const updateClass = ({clno,newclname}) => async (dispatch) => {
         const config = {
             headers: {

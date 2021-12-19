@@ -17,35 +17,14 @@ const UpdateClass = () => {
     const { classes, updated } = useSelector((state) => state.cla)
     const { students } = useSelector((state) => state.stu);
     const classDetail = classes.filter(({ clno }) => clno == cpara)[0]; 
-    console.log(classDetail)
 
     const { msg: errMsg, id: errID } = useSelector((state) => state.error);
     const [className, setClassName] = useState("");
 
 
     useEffect(() => {
-      var input1 = document.querySelector("input[name=tags]");
-      if (classDetail) {
-        const studentList = students.map(({sclno, sname}) => {
-          if (sclno.includes(classDetail.clno)) {
-            return sname
-          }
-          return null;
-        }).filter((s) => s != undefined);
-        if (studentList.length > 0) {
-          new Tagify(input1, {
-            whitelist: [...studentList],
-            dropdown: {
-              classname: "color-blue",
-              enabled: 0,
-              maxItems: 5,
-              position: "text",
-              closeOnSelect: false,
-              highlightFirst: true,
-            },
-          });
-  
-        }
+      if(classDetail){
+        setClassName(classDetail.clname)
       }
     }, [classDetail])
 
@@ -60,14 +39,14 @@ const UpdateClass = () => {
         dispatch(
           updateClass({
             clno:classDetail.clno,
-            newname: className,
+            newclname: className,
           })
         );
     }    
     
     return (
         <div className='container'>
-        <div className='wrapper_left class_left'>
+        <div className='wrapper_left course_left'>
           <div className='content'>
             <div className='webname'>课程管理系统</div>
             <div className='avatarbox  '>
@@ -84,8 +63,8 @@ const UpdateClass = () => {
           </div>
         </div>
   
-        <div className='classinfowrapper'>
-          <div className='classinfocon'>
+        <div className='courseinfowrapper'>
+          <div className='courseinfocon'>
             {classDetail ? (<>
               <div className='up'>
                 <div className='title animated fadeInLeft'>{classDetail.clname}</div>
@@ -93,7 +72,7 @@ const UpdateClass = () => {
               </div>
   
               <div className='submitcon animated flipInX'>
-                <form  method='POST'>
+                <form  {...{onSubmit}}>
                   <div className="form-group">
                     <div className='subname'>
                       <label htmlFor="name" className='labelname'>班级名称</label>
@@ -112,7 +91,6 @@ const UpdateClass = () => {
                   {errID === "UPDATE_CLASS_ERROR" ? (
                     <div className="err-msgs">{errMsg}</div>
                   ) : null}
-
                   <button color="dark"  >更新班级</button>
                 </form>
               </div>

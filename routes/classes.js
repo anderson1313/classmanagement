@@ -48,24 +48,6 @@ router.get('/', (req, result) => {
 router.delete("/", (req, res) => {
 	//解构赋值
 	const { clno } = req.body;
-	let delQuery3 = "DELETE FROM sc WHERE EXISTS (SELECT sno FROM students WHERE sclno = ?) ";
-	pool.query(delQuery3, [clno], (err, result) => {
-		if (err) {
-			res.send(err).status(400);
-		} else {
-			res.json({ success: true }).status(200);
-		}
-	});
-	
-	let delQuery1 = "DELETE FROM students WHERE sclno = ?";
-	pool.query(delQuery1, [clno], (err, result) => {
-		if (err) {
-			res.send(err).status(400);
-		} else {
-			res.json({ success: true }).status(200);
-		}
-	});
-	
 	
 
 	let delQuery2 = "DELETE FROM classes WHERE clno = ?";
@@ -84,6 +66,9 @@ router.put('/', (req, res) => {
 	const { clno,newclname } = req.body
 	console.log(clno)
 	console.log(newclname)
+	if (!newclname) {
+		return res.status(400).json({ msg: "请输入班级名称" })
+	}
 
 //	console.log(newclasses)
 //	if (newclasses.length == 0) return res.status(400).json({ msg: "请添加学生" })
