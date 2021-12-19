@@ -77,6 +77,12 @@ router.put('/', (req, res) => {
 	const {  newname, newcredit,cno} = req.body
 	// if (newstudents.length == 0) return res.status(400).json({ msg: "请添加学生" })
 	var updatesql = "UPDATE courses SET cname = ?, ccredit = ? WHERE cno = ?";
+	if (!newname) {
+		return res.status(400).json({ msg: "请输入课程名" })
+	}
+	if (!newcredit) {
+		return res.status(400).json({ msg: "请输入学分" })
+	}
 	pool.query(updatesql, 
 		[newname,
 		newcredit,
