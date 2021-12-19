@@ -104,7 +104,7 @@ const UpdateCourse = () => {
               <div className='title animated fadeInLeft'>课程信息更改</div>
             </div>
 
-            <div className='submitcon animated flipInX'>
+            <div className='submitcon animated headShake'>
               <form  {...{onSubmit}}>
                 <div className="form-group">
                   <div className='subname'>

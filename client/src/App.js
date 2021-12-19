@@ -110,8 +110,6 @@ const HomeComponet = () => {
             </div>
 
 
-
-
           </div>
         )
           : (<div className='content'>

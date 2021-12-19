@@ -17,15 +17,15 @@ function ViewCourse() {
     const courseDetail = courses.filter(({ cno }) => cno == cpara)[0];
     const { students } = useSelector((state) => state.stu);
     const [courseStudents, setCourseStudents] = useState("");
-    const dispatch=useDispatch()
+    const dispatch = useDispatch()
     const onDelete = (id) => dispatch(deleteCourse(id));
     // dispatch(deleteCourse(38))
-    
+
     // dispatch(createCourse({ name: 'TEST4', credit: 3 }));
-   
+
 
     useEffect(() => {
-        if (courseDetail && students ) {
+        if (courseDetail && students) {
             const studentList = students.map(({ scourses, sname }) => {
                 if (scourses.includes(courseDetail.cname)) {
                     return sname;
@@ -41,12 +41,12 @@ function ViewCourse() {
         }
     }, [deleted]);
 
-    
+
     return (
         <div className='container'>
             <div className='wrapper_left course_left'>
                 <div className='content'>
-                    <div className='webname'>课程管理系统</div>
+                    <div className='webname'><Link to='/'>课程管理系统</Link></div>
                     <div className='avatarbox  '>
                         <Avatar style={{ width: '100px', height: '100px' }} {...config} />
                     </div>
@@ -71,11 +71,11 @@ function ViewCourse() {
                                     更新课程
                                 </Link>
                                 <button
-                  className="deletecourse"
-                  onClick={() => onDelete(courseDetail.cno)}
-                >
-                  删除课程
-                </button>
+                                    className="deletecourse"
+                                    onClick={() => onDelete(courseDetail.cno)}
+                                >
+                                    删除课程
+                                </button>
                                 {/* <button className='deletecourse' onClick={()=>onDelete(courseDetail.cno)}>删除课程</button> */}
                             </div>
                         </div>
@@ -83,7 +83,6 @@ function ViewCourse() {
                             <div className='title'>
                                 <div className='iconfont icon-xuexiao_xuesheng'></div>
                                 <div>课程学生</div>
-
                             </div>
                             {courseStudents.length > 0 ? (
                                 <div className='studentscon  '>
@@ -96,17 +95,11 @@ function ViewCourse() {
                                     <div className='err'>你还未添加任何学生</div>
                                 </div>
                             )}
-
                         </div>
                         <div className='otherinfo'>
-
                         </div>
                     </>) : (<div className='infonotused'>课程信息不可用</div>)}
-
                 </div>
-
-
-
             </div>
         </div>
 

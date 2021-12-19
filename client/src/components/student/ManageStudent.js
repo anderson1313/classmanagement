@@ -36,6 +36,7 @@ const UpdateStudent = () => {
     const [studentSex, setStudentSex] = useState("");
     const [studentNo, setStudentNo] = useState("");
     const [studentClassCN, setStudentClassCN] = useState("");
+    const [top,settop]=useState('30px')
 
 
     /* Classes */
@@ -60,9 +61,16 @@ const UpdateStudent = () => {
             },
         });
     }
-
-
-
+    const handleScroll = (event) => {
+        const scrollTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+        const offsetTop = document.getElementsByClassName('content')
+        console.log(scrollTop);
+        console.log(offsetTop);
+        settop(scrollTop+30)
+        
+      };
+    window.addEventListener('scroll', handleScroll);
+    
     useEffect(() => {
         if (created) {
             window.location.href = "/students";
@@ -97,11 +105,11 @@ const UpdateStudent = () => {
     };
 
     return (
-        <div className="container">
+        <div className="mscontainer">
 
-            <div className='wrapper_left course_left'>
-                <div className='content'>
-                    <div className='webname'>课程管理系统</div>
+            <div className=' ms_left'>
+                <div className='content' style={{top:top}} >
+                <div className='webname'><Link to='/'>课程管理系统</Link></div>
                     <div className='avatarbox  '>
                         <Avatar style={{ width: '100px', height: '100px' }} {...config} />
                     </div>
