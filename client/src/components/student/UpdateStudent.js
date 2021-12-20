@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { updateStudent } from "../../store/actions/studentActions";
 import { clearErros } from "../../store/actions/errorActions";
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Avatar, { genConfig } from 'react-nice-avatar'
 const config = genConfig({
@@ -82,12 +83,12 @@ const UpdateStudent = () => {
 
     useEffect(() => {
         if (updated) {
-            window.location.href = "/courses";
+            window.location.href = "/students";
         }
     }, [updated]);
 
 
-    console.log(studentClassCN)
+    
 
 
     const onChange = (e) => {
@@ -126,7 +127,7 @@ const UpdateStudent = () => {
 
             <div className='wrapper_left course_left'>
                 <div className='content'>
-                    <div className='webname'>课程管理系统</div>
+                <div className='webname' ><Link to='/'>课程管理系统</Link></div>
                     <div className='avatarbox  '>
                         <Avatar style={{ width: '100px', height: '100px' }} {...config} />
                     </div>
@@ -150,7 +151,7 @@ const UpdateStudent = () => {
                             <div className='title animated fadeInLeft'>学生信息更改</div>
                         </div>
 
-                        <div className="submitcon animated flipInX">
+                        <div className="submitcon animated headShake">
                             <form {...{ onSubmit }} method="post">
                                 <div className="form-group">
 

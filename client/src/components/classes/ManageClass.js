@@ -3,6 +3,8 @@ import Tagify from "@yaireo/tagify";
 import { useSelector, useDispatch } from "react-redux";
 import {createClass} from '../../store/actions/classActions'
 import Avatar, { genConfig } from 'react-nice-avatar'
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 const config = genConfig({
     'hairStyle': 'normal',
     'sex': 'man',
@@ -32,7 +34,7 @@ const ManageClass = () => {
 
             <div className='wrapper_left '>
                 <div className='content'>
-                    <div className='webname'>课程管理系统</div>
+                <div className='webname' ><Link to='/'>课程管理系统</Link></div>
                     <div className='avatarbox  '>
                         <Avatar style={{ width: '100px', height: '100px' }} {...config} />
                     </div>
