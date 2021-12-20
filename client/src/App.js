@@ -135,7 +135,7 @@ function App() {
 
           <Route path="/about-course/:cno" exact component={ViewCourse} />
           <Route path="/about-course/:cno" exact component={ViewClass} />
-          <Route path="/about-class/:clno" exact component={ViewClass} />
+          <Route path="/about-student/:sno" exact component={ViewStudent} />
 
           <Route path="/courses" exact component={Courses} />
           <Route path="/students" exact component={Students} />

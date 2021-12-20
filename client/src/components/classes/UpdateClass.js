@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateClass } from '../../store/actions/classActions'
 import Tagify from "@yaireo/tagify";
 
+
 import Avatar, { genConfig } from 'react-nice-avatar'
 const config = genConfig({
   'hairStyle': 'normal',
@@ -48,7 +49,7 @@ const UpdateClass = () => {
         <div className='container'>
         <div className='wrapper_left course_left'>
           <div className='content'>
-            <div className='webname'>课程管理系统</div>
+          <div className='webname' ><Link to='/'>课程管理系统</Link></div>
             <div className='avatarbox  '>
               <Avatar style={{ width: '100px', height: '100px' }} {...config} />
             </div>

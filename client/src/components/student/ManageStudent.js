@@ -75,7 +75,7 @@ const UpdateStudent = () => {
         if (created) {
             window.location.href = "/students";
         }
-    }, [updated]);
+    }, [created]);
     const onChange = (e) => {
        
         setStudentClassCN(e.target.value);

@@ -1,53 +1,82 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteStudent } from '../../store/actions/studentActions'
+import { createCourse } from '../../store/actions/courseActions'
+import { deleteCourse } from '../../store/actions/courseActions'
+import { clearErros } from "../../store/actions/errorActions";
 import Avatar, { genConfig } from 'react-nice-avatar'
-
-
+import { deleteStuent } from "../../store/actions/studentActions";
 const config = genConfig({
     'hairStyle': 'normal',
     'sex': 'man',
     'eyeStyle': 'oval'
 })
 
-function ViewStudent() {
-    let { sno: spara } = useParams();
-    console.log(spara);
-    const { students, deleted } = useSelector((state) => state.stu);
-    const studentDetail = students.filter(({ sno }) => sno == spara)[0];
-    const { courses } = useSelector((state) => state.cou);
-    const [courseStudents, setCourseStudents] = useState("");
-    const dispatch=useDispatch()
-    
-    // dispatch(deleteCourse(38))
-    
-    // dispatch(createCourse({ name: 'TEST4', credit: 3 }));
-   
+function ViewCourse() {
+    const dispatch = useDispatch()
 
-    useEffect(() => {
-        if (studentDetail) {
-            const courseList = courses.map(({ scourses, cname }) => {
-                if (scourses.includes(studentDetail.sname)) {
-                    return cname;
-                }
-            }).filter((course) => course != undefined)
-            setCourseStudents(courseList);
-        }
-    }, [studentDetail]);
-    console.log(courseStudents)
+    //返回就清除错误
+    window.addEventListener("popstate", function (e) {
+        dispatch(clearErros());//根据自己的需求实现自己的功能 
+    }, false);
+
+
+    let { sno: spara } = useParams();
+
+    //fecth data-lzx
+    const { courses } = useSelector((state) => state.cou);
+    const { classes } = useSelector((state) => state.cla);
+    const { students,deleted } = useSelector((state) => state.stu);
+    const studentDetail = students.filter(({ sno }) => sno == spara)[0];
+    console.log(studentDetail)
+
+  
+    //define data -lzx
+    const [studentName, setStudentName] = useState("");
+    const [studentAge, setStudentAge] = useState("");
+    const [studentClass, setStudentClass] = useState("");
+    const [studentSex, setStudentSex] = useState("");
+    const [studentNo, setStudentNo] = useState("");
+    const [studentClassCN, setStudentClassCN] = useState("");
+    const [courseStudents, setCourseStudents] = useState("");
+    const [sclist,setsclist]=useState([]);
+    
     useEffect(() => {
         if (deleted) {
             window.location.href = "/students";
         }
     }, [deleted]);
 
-    
+
+
+    //methods
+    const onDelete = (id) => dispatch(deleteStuent(id));
+
+    useEffect(() => {
+        if (classes && studentDetail) {
+            const sclass = classes.filter(({ clno }) => clno == studentDetail.sclno)[0]
+            if (sclass != undefined && sclass.length != 0) {
+                setStudentClassCN(sclass.clname)
+            }
+        }
+        if (studentDetail) {
+            setStudentName(studentDetail.sname);
+            setStudentAge(studentDetail.sage);
+            setStudentSex(studentDetail.ssex)
+            setStudentNo(studentDetail.sno)
+            setStudentClass(studentDetail.sclno);
+            const sclist=studentDetail.scourses.split(',')
+            setsclist(sclist)
+        }
+    }, [studentDetail,classes]);
+
+
+
     return (
         <div className='container'>
             <div className='wrapper_left course_left'>
                 <div className='content'>
-                    <div className='webname'>课程管理系统</div>
+                    <div className='webname'><Link to='/'>课程管理系统</Link></div>
                     <div className='avatarbox  '>
                         <Avatar style={{ width: '100px', height: '100px' }} {...config} />
                     </div>
@@ -62,56 +91,75 @@ function ViewStudent() {
                 </div>
             </div>
 
-            <div className='studentinfowrapper'>
+            <div className='courseinfowrapper'>
                 <div className='courseinfocon'>
                     {studentDetail ? (<>
                         <div className='up'>
                             <div className='title  animated fadeInLeft'>{studentDetail.sname}</div>
                             <div className='functions animated fadeInLeft'>
                                 <Link to={`/student/update/${studentDetail.sno}`} className='updatecourse'>
-                                    更新学生信息
+                                    更新学生
                                 </Link>
                                 <button
-                  className="deletecourse"
-                  
-                >
-                  删除学生信息
-                </button>
+                                    className="deletecourse"
+                                    onClick={() => onDelete(studentDetail.sno)}
+                                >
+                                    删除学生
+                                </button>
                                 {/* <button className='deletecourse' onClick={()=>onDelete(courseDetail.cno)}>删除课程</button> */}
                             </div>
                         </div>
                         <div className='basicinfo'>
                             <div className='title'>
                                 <div className='iconfont icon-xuexiao_xuesheng'></div>
-                                <div>学生课程</div>
+                                <div>学生基本信息</div>
+                            </div>
+
+                            <div className='infocon'>
+                            <div className='sname'>
+                                <div className='snametitle'>学生姓名</div>
+                                <div className='snamecontent'>{studentDetail.sname}</div>
 
                             </div>
-                            {courseStudents.length > 0 ? (
+                            <div className='ssex'>
+                                <div className='ssextitle'>学生性别</div>
+                                <div className='ssexcontent'>{studentDetail.ssex}</div>
+
+                            </div>
+                            <div className='sage'>
+                                <div className='sagetitle'>学生年龄</div>
+                                <div className='sagecontent'>{studentDetail.sage}</div>
+                            </div>
+                            <div className='scl'>
+                                <div className='scltitle'>学生班级</div>
+                                <div className='sclcontent'>{studentClassCN}</div>
+                            </div>
+
+                            {sclist.length > 0 ? (
+                                <div className='scourses'>
+                                <div className='scoursestitle'>学生课程</div>
                                 <div className='studentscon  '>
-                                    {courseStudents.map((c) => (
+                                    
+                                    {sclist.map((c) => (
                                         <div className='eachs animated flipInX'>{c}</div>
                                     ))}
                                 </div>
+                                </div>
                             ) : (
                                 <div className='errcon'>
-                                    <div className='err'>该课程中还没有任何学生</div>
+                                    <div className='err'>该学生还未选择课程</div>
                                 </div>
                             )}
-
+                            </div>
+                            
                         </div>
                         <div className='otherinfo'>
-
                         </div>
                     </>) : (<div className='infonotused'>学生信息不可用</div>)}
-
                 </div>
-
-
-
             </div>
         </div>
-
     );
 
 }
-export default ViewStudent;
+export default ViewCourse;

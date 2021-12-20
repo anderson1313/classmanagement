@@ -72,7 +72,7 @@ a {
         padding: 0;
         margin: 0;
         height: 100%;
-        
+
     }
 
     .wrapper_left {
@@ -95,16 +95,16 @@ a {
         height: 100%;
     }
 
-        .wrapper_left .webname {
-            margin-bottom: 80PX;
-            font-size: 25PX;
-            color: #66806A;
-            font-family: "font1";
-            height: 20%;
-            vertical-align: middle;
-            line-height: 80px;
+    .wrapper_left .webname {
+        margin-bottom: 80PX;
+        font-size: 25PX;
+        color: #66806A;
+        font-family: "font1";
+        height: 20%;
+        vertical-align: middle;
+        line-height: 80px;
 
-        }
+    }
 
     .stufflist {
         margin: 60PX 0;
@@ -218,10 +218,12 @@ a {
         justify-content: center;
         overflow: hidden;
     }
-.cssubmitwrapper{
-    height: 1078px;
-   
-}
+
+    .cssubmitwrapper {
+        height: 1078px;
+
+    }
+
     .submitwrapper .createcon {
         display: flex;
         flex-direction: column;
@@ -303,16 +305,18 @@ a {
 
 
     /*managestudent*/
-    .mscontainer{
+    .mscontainer {
         display: flex;
         flex-direction: row;
     }
-    .ms_left{
+
+    .ms_left {
         height: 1078px;
         background-image: linear-gradient(160deg, #00467f, #a5cc82);
         width: 30%;
     }
-    .ms_left .content{
+
+    .ms_left .content {
         margin-top: 150px;
         position: relative;
         display: flex;
@@ -320,9 +324,10 @@ a {
         justify-content: center;
         align-items: center;
     }
+
     .ms_left .content .webname {
         display: flex;
-       
+
         justify-content: center;
         align-items: center;
         display: block;
@@ -330,22 +335,23 @@ a {
         height: 100px;
         width: 100%;
     }
-    .ms_left .content .webname a{
+
+    .ms_left .content .webname a {
         text-align: center;
         display: block;
         color: white;
         width: 100%;
         height: 100%;
         margin-bottom: 80PX;
-            font-size: 25PX;
-         
-            font-family: "font1";
-            
-            
+        font-size: 25PX;
+
+        font-family: "font1";
+
+
     }
-    
-   
-   
+
+
+
     .cssubmitwrapper {
         background-image: linear-gradient(120deg, #373b44, #4286f4);
         background-size: 500%;
@@ -369,7 +375,7 @@ a {
         font-family: "font2";
         margin-bottom: 50px;
         text-align: center;
-        
+
 
     }
 
@@ -639,18 +645,20 @@ a {
 
     }
 
-    .nocoursecon .content{
+    .nocoursecon .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .nocoursecon .content .tip{
+
+    .nocoursecon .content .tip {
         font-size: 30px;
         font-family: "font2";
         color: whitesmoke;
     }
-    .nocoursecon .content a{
+
+    .nocoursecon .content a {
         display: block;
         margin: 30px 0;
         font-size: 20px;
@@ -666,16 +674,18 @@ a {
 
 
     /*viewcourses*/
-    .course_left{
+    .course_left {
         background-image: linear-gradient(160deg, #00467f, #a5cc82);
         background-size: 400%;
         animation: bganimation 15s infinite;
 
     }
-    .course_left .content .webname a{
+
+    .course_left .content .webname a {
         color: white;
     }
-    .courseinfowrapper{
+
+    .courseinfowrapper {
         display: flex;
         flex-direction: column;
         width: 70%;
@@ -686,97 +696,108 @@ a {
         animation: bganimation 15s infinite;
 
     }
-.courseinfocon{
-    width: 90%;
-}
 
-    .courseinfocon .up{
+    .courseinfocon {
+        width: 90%;
+    }
+
+    .courseinfocon .up {
         display: flex;
         flex-direction: row;
         align-items: center;
         height: 150px;
         position: relative;
-        font-size: 45px; 
+        font-size: 45px;
     }
-    .courseinfocon .up .updatecourse{
+
+    .courseinfocon .up .updatecourse {
         margin: 0 5px;
         padding: 5px;
         border: none;
         font-size: 10px;
-        color: rgba(12, 36, 97,1.0);
-         background-color: rgba(56, 173, 169,.5);
-         border-radius: 4px;
-        
+        color: rgba(12, 36, 97, 1.0);
+        background-color: rgba(56, 173, 169, .5);
+        border-radius: 4px;
+
     }
-    .courseinfocon .up .functions{
+
+    .courseinfocon .up .functions {
         margin-left: 400px;
     }
-    .courseinfocon .up .deletecourse{
+
+    .courseinfocon .up .deletecourse {
         margin: 0 5px;
         padding: 5px;
         border: none;
         font-size: 10px;
-        color: rgba(12, 36, 97,1.0);
-         background-color: rgba(229, 80, 57,.3);
-         border-radius: 4px;
-    
+        color: rgba(12, 36, 97, 1.0);
+        background-color: rgba(229, 80, 57, .3);
+        border-radius: 4px;
+
     }
-    .courseinfocon .up:after{
+
+    .courseinfocon .up:after {
         position: absolute;
-         bottom: 30px;
-         left: 50px;
-         right: 1px;
-         height: 1px;
-         width: 700px;
-         content: '';
-         -webkit-transform: scaleY(.5);
-         transform: scaleY(.5);
-         background-color: rgba(202, 211, 200,1.0);       
-    
+        bottom: 30px;
+        left: 50px;
+        right: 1px;
+        height: 1px;
+        width: 700px;
+        content: '';
+        -webkit-transform: scaleY(.5);
+        transform: scaleY(.5);
+        background-color: rgba(202, 211, 200, 1.0);
+
     }
+
     .basicinfo {
         overflow: hidden;
-      
+
     }
-    .courseinfocon .title{
+
+    .courseinfocon .title {
         margin-left: 50px;
         font-family: "font2";
-        color: rgba(223, 249, 251,1.0);
-        
+        color: rgba(223, 249, 251, 1.0);
+
     }
-    .basicinfo .title{
-    
+
+    .basicinfo .title {
+
         display: flex;
         flex-direction: row;
         align-items: center;
         font-size: 20px;
-        
+
     }
-    .basicinfo .iconfont{
+
+    .basicinfo .iconfont {
         font-size: 18px;
         margin-right: 10px;
-        
+
     }
+
     .studentscon,
-    .errcon
-    {
+    .errcon {
         margin-top: 20px;
         margin-left: 50px;
         width: 75%;
         padding: 10px 30px;
-        background: rgba(199, 236, 238,.4);
+        background: rgba(199, 236, 238, .4);
         border-radius: 2px;
         display: flex;
         flex-direction: row;
     }
-    .eachs{
+
+    .eachs {
         padding: 4px;
         margin: 0 5px;
         border-radius: 2px;
-        background: rgba(223, 228, 234,.6);
-    
+        background: rgba(223, 228, 234, .6);
+
     }
-    .infonotused{
+
+    .infonotused {
         text-align: center;
         margin: 90px;
         font-size: 30px;
@@ -785,11 +806,11 @@ a {
 
 
     /*updatecourse*/
-   
- 
-   
-    .courseinfowrapper .submitcon{
-        margin:  0 auto;
+
+
+
+    .courseinfowrapper .submitcon {
+        margin: 0 auto;
         width: 50%;
         margin-top: 100px;
         display: flex;
@@ -797,23 +818,26 @@ a {
         justify-content: center;
         align-items: center;
     }
-    .courseinfowrapper .submitcon form{
-    
+
+    .courseinfowrapper .submitcon form {
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(149, 165, 166,.5);
+        background: rgba(149, 165, 166, .5);
         border-radius: 10px;
         padding: 20px;
-    
+
     }
+
     .courseinfowrapper .submitcon form .form-group .subname,
-    .courseinfowrapper .submitcon form .form-group .subcredit{
+    .courseinfowrapper .submitcon form .form-group .subcredit {
         margin: 30px 0;
-    
+
     }
-    .courseinfowrapper .submitcon form .form-group .labelname{
+
+    .courseinfowrapper .submitcon form .form-group .labelname {
         font-family: 'font2';
         font-size: 15px;
         width: 70px;
@@ -823,8 +847,186 @@ a {
         color: #1E3163;
         font-weight: bold;
     }
+
+    .courseinfowrapper .submitcon form .form-group input {
+        margin: 0 20px;
+        background: none;
+        outline: none;
+        border: none;
+        background: rgba(255, 255, 255, .5);
+        padding: 10px 20px;
+        border-radius: 10px;
+
+    }
+
+    .courseinfowrapper .submitcon form button {
+        display: inline-block;
+        background: none;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: rgba(56, 163, 165, .4);
+        background: #3B3B98;
+        padding: 10px 100px;
+        font-family: "font2";
+        margin-top: 20px;
+        margin: 10px 0;
+
+    }
+
+    .courseinfowrapper .submitcon form .err-msgs,
+    .courseinfowrapper .submitcon form .suc-msgs {
+
+        color: black;
+        font-weight: bold;
+    }
+
+    .nodate {
+        font-size: 30px;
+        font-family: "font2";
+        text-align: center;
+        margin-top: 200px;
+    }
+
+
+    /*viewstudent*/
+    .basicinfo .infocon {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: center; */
+        margin: 20PX 90PX;
+    }
+
+    .basicinfo .sname,
+    .basicinfo .ssex,
+    .basicinfo .sage,
+    .basicinfo .scl {
+
+        display: flex;
+        flex-direction: row;
+        font-family: "font2";
+        font-size: 20px;
+        width: 250PX;
+        color: #dff9fb;
+    }
+
+    .basicinfo .sname>div,
+    .basicinfo .ssex>div,
+    .basicinfo .sage>div,
+    .basicinfo .scl>div {
+        margin: 10PX 20px;
+
+    }
+    .basicinfo .scourses{
+        width: 80%;
+        margin: 10PX 0;
+    }
+    .basicinfo .scourses .scoursestitle{
+        font-family: "font2";
+        font-size: 20px;
+        color: #dff9fb;
+        margin-left: 20PX;
     
-    .courseinfowrapper .submitcon form .form-group input{
+    }
+    .basicinfo .scourses .studentscon{
+        margin-top: 20PX;
+        margin-left: 20PX;
+    }
+
+
+    /*updatestudent*/
+    .studentinfowrapper{
+        height: 100vh;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        background: rgba(72, 126, 176,.6);
+        animation: none;
+        
+    }
+    .studentinfowrapper .up{
+        font-family: "font2";
+        margin-left: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 150px;
+        position: relative;
+        font-size: 45px; 
+    }
+    .studentinfowrapper .up:after{
+        position: absolute;
+         bottom: 30px;
+         left: 10px;
+         right: 1px;
+         height: 1px;
+         width: 500px;
+         content: '';
+         -webkit-transform: scaleY(.5);
+         transform: scaleY(.5);
+         background-color: rgba(202, 211, 200,1.0);   
+    }
+    
+    .studentinfowrapper .submitcon,
+    .studentinfowrapper .submitcon form,
+    .studentinfowrapper .submitcon form .form-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .studentinfowrapper .submitcon form{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, .2);
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .studentinfowrapper .submitcon form .form-group > div {
+        height: 34px;
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        margin: 10px 0;
+    } 
+    .studentinfowrapper .submitcon form .form-group > div label {
+        line-height: 34px;
+        
+        font-size: 15px;
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        margin: 0 20px;
+        color: #1E3163;
+        font-weight: bold;
+    } 
+    .studentinfowrapper .submitcon form .form-group .subcourse {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        
+        
+    }
+    .studentinfowrapper .submitcon form .form-group tags {
+        margin: 10PX auto;
+        
+        width: 95%;
+        
+    }
+    .studentinfowrapper .submitcon form .form-group .subcourse label{
+        display: block;
+        width: 40%;
+    
+    }
+    .studentinfowrapper .submitcon form .form-group input,
+    .studentinfowrapper .submitcon form .form-group select{
+        width: 30%;
         margin: 0 20px;
         background:none;  
         outline:none;  
@@ -834,8 +1036,13 @@ a {
         border-radius: 10px;
         
     }
-    .courseinfowrapper .submitcon form button{
-        display: inline-block;
+    .studentinfowrapper .submitcon form .form-group select{
+        width: 42%;
+    
+    }
+    
+    .studentinfowrapper .submitcon form .form-group button{
+         display: inline-block;
         background:none;  
         outline:none;  
         border:none;
@@ -849,17 +1056,13 @@ a {
         margin: 10px 0;
     
     }
-    .courseinfowrapper .submitcon form .err-msgs,
-    .courseinfowrapper .submitcon form .suc-msgs{
-       
-        color: black;
-        font-weight: bold;
-    }
-    .nodate{
-        font-size: 30px;
-        font-family: "font2";
+    .studentinfowrapper .submitcon form .form-group .err-msgs,
+    .studentinfowrapper .submitcon form .form-group .suc-msgs{
+        display: block;
+        margin: 0 auto;
         text-align: center;
-        margin-top: 200px;
-    }
+        color: #297F87;
+        font-weight: bold;
     
+    }
 }

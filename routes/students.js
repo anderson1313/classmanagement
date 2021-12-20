@@ -85,14 +85,7 @@ router.get('/', (req, result) => {
 router.delete("/", (req, res) => {
 	//解构赋值
 	const { sno } = req.body;
-	let delQuery1 = "DELETE FROM sc WHERE sno = ?";
-	pool.query(delQuery1, [sno], (err, result) => {
-		if (err) {
-			res.send(err).status(400);
-		} else {
-			res.json({ success: true }).status(200);
-		}
-	});
+	
 
 	let delQuery2 = "DELETE FROM students WHERE sno = ?";
 	pool.query(delQuery2, [sno], (err, result) => {
