@@ -21,7 +21,7 @@ router.post('/create', (req, res) => {
 	let sqlInsert = `INSERT INTO courses SET ?`
 	pool.query(sqlCheck, name, (err, course) => {
 		if (course.length > 0) {
-			return res.status(400).json({ msg: "课程已存在" })
+			return res.status(400).json({ msg:`${name}课程已存在` })
 		}
 		const data = {
 			ccredit: fcredit,//ccredit是数据库属性，fcredit是json属性

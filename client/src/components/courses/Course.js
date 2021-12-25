@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { createCourse } from '../../store/actions/courseActions'
+import { clearErros } from "../../store/actions/errorActions";
 
 /*avatar */
 import Avatar, { genConfig } from 'react-nice-avatar'
@@ -23,7 +24,9 @@ const Courses = () => {
     const [pageList, setpageList] = useState([]);
     const [all_pageList, setall_pageList] = useState([]);
     const [page_index, setpage_index] = useState(0);
-
+    window.addEventListener("popstate", function (e) {
+        dispatch(clearErros());//根据自己的需求实现自己的功能 
+    }, false);
     const forwardPage=()=>{
         console.log(page_index)
         if (page_index==0){

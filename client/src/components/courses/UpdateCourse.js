@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { updateCourse } from '../../store/actions/courseActions'
 import Tagify from "@yaireo/tagify";
-
+import { clearErros } from "../../store/actions/errorActions";
 import Avatar, { genConfig } from 'react-nice-avatar'
 const config = genConfig({
   'hairStyle': 'normal',
@@ -21,7 +21,12 @@ const UpdateCourse = () => {
   const { msg: errMsg, id: errID } = useSelector((state) => state.error); //errMsg=state.error.msg
   const [courseName, setCourseName] = useState("");
   const [courseCredit, setcourseCredit] = useState("");
-
+  window.addEventListener("popstate", function (e) {
+    dispatch(clearErros());//根据自己的需求实现自己的功能 
+}, false);
+window.addEventListener("unload", function (e) {
+  dispatch(clearErros());//根据自己的需求实现自己的功能 
+}, false);
 
   //获取到课程信息之后
 
