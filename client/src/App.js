@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Provider, useSelector } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "animate.css";
@@ -11,7 +11,7 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import './styles.css'
 import './animated.css'
 import './icon.css'
-import  '../node_modules/@yaireo/tagify/src/tagify.css'
+import '../node_modules/@yaireo/tagify/src/tagify.css'
 
 
 /*avatar */
@@ -51,7 +51,9 @@ import Managestudent from './components/student/ManageStudent'
 import ViewStudent from './components/student/ViewStudent'
 import Students from './components/student/Student'
 
+/*images*/
 
+import imgURL from './static/pic1.jpg';
 
 /*初始化数据将数据存到state一定要按顺序 students-class-courses*/
 store.dispatch(getStudents());
@@ -69,57 +71,88 @@ const config = genConfig({
 })
 
 
+
 const HomeComponet = () => {
- 
-  
+  const [bgsize, setbgsize] = useState("120%")
+  const handleScroll = (event) => {
+    var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+    var res = 120 + scrollTop / 4 + "%"
+    if (120 + scrollTop < 400) {
+      setbgsize(res)
+
+    }
+
+
+  };
+  window.addEventListener('scroll', handleScroll);
+
+
   const { courses } = useSelector((state) => state.cou)
   
+  
+
   return (
     <div className='container'>
-      <div className='wrapper_left'>
-        <div className='content'>
-          <div className='webname'><Link to='/'>课程管理系统</Link></div>
-          <div className='avatarbox animated flipInX '>
-            <Avatar style={{ width: '100px', height: '100px' }} {...config} />
+
+
+      <div className='topconatiner' style={{ "background-size": bgsize }} >
+
+        <div className='downblock animated fadeInUp'>
+          <div className='pname'>课程管理系统</div>
+          <div className='pperson'>
+            <div className='per'>梁梓轩</div>
+            <div className='per'>黄景增</div>
+            <div className='per'>张信宇</div>
+            <div className='per'>胡瀚文</div>
+            <div className='per'>汪杰烽</div>
           </div>
-          <div className='stufflist'>
-            <div className='title'>技术人员</div>
-            <li>梁梓轩</li>
-            <li>黄景增</li>
-            <li>张信宇</li>
-            <li>胡瀚文</li>
-            <li>汪杰烽</li>
-          </div>
+          {courses.length < 0 ? (<div className='nocourse'><Link to='/create-course'>创建课程</Link></div>) : (<div className='havecourse' >已建立课程 开始管理</div>)}
+
+
+
         </div>
+
       </div>
-      <div className='wrapper_right'>
-        {courses.length > 0 ? (
 
-          <div className='rightcontainer'>
-            <div className='createfunctions'>         
-              <div className='createstudent create animated flipInX'><Link to='/create-student'>创建学生</Link></div>
-              <div className='createcourse create animated flipInX'><Link to='/create-course'>创建课程</Link></div>
-              <div className='createclass create animated flipInX'><Link to='/create-class'>创建班级</Link></div>
-
-              
-            </div>
-            <div className='managefunctions'>
-              <div className='managestudnet manage animated flipInX'><Link to='/students'>管理学生</Link></div>
-              <div className='managecourse manage animated flipInX'><Link to='/courses'>管理课程</Link></div>
-              <div className='manageclass manage animated flipInX'><Link to='/classes'>管理班级</Link></div>
-            </div>
-
+      <div className='middlecontainer'>
+        <div className='midwrapper'>
+          <div className='students'>
+            <div className='title'>学生</div>
+            <div className='intro'>建立学生档案，查看学生信息，支持excel导入</div>
+            <div className='func'><Link to='/create-student'>创建学生</Link></div>
+            <div className='func'><Link to='/students'>管理学生</Link></div>
+          </div>
+          <div className='classes'>
+            <div className='title'>班级</div>
+            <div className='intro'>建立学生档案，查看学生信息，支持excel导入</div>
+            <div className='func'><Link to='/create-class'>创建班级</Link></div>
+            <div className='func'><Link to='/classes'>管理班级</Link></div>
+          </div>
+          <div className='courses'>
+            <div className='title'>课程</div>
+            <div className='intro'>建立学生档案，查看学生信息，支持excel导入</div>
+            <div className='func'><Link to='/create-course'>创建课程</Link></div>
+            <div className='func'><Link to='/courses'>管理课程</Link></div>
 
           </div>
-        )
-          : (<div className='content'>
-            <div className='tip animated bounce '>你还未建立任何课程</div>
-            <Link to="/create-course">
-              <div className='tocreate animated pulse infinite'>建立课程</div>
-            </Link>
-          </div>)
-        }
+
+
+        </div>
+
+
       </div >
+
+      <div className='downcontainer'>
+        <div className='aboutus'>关于我们</div>
+        <div className='info'>
+          信息时代的到来意味着工作效率的日渐提交，同时也给课程管理人员带来了更大的压力，课程管理人员必须及时准确地更新每个班级的课程表，每位学生所属的班级以及每门课的开课班级、上课时间。
+          无论在初中高中还是大学，一位老师往往负责几个班的教学工作，如果依靠人工来管理每位老师负责的课程，不仅工作量大，而且十分麻烦，容易出错，开发此系统便是为了方便课程管理人员，减小出错概概率。
+
+        </div>
+
+
+
+      </div>
     </div >
   );
 }
@@ -134,14 +167,14 @@ function App() {
           <Route path='/create-class' exact component={ManageClass}></Route>
 
           <Route path="/about-course/:cno" exact component={ViewCourse} />
-          <Route path="/about-course/:cno" exact component={ViewClass} />
+          <Route path="/about-class/:clno" exact component={ViewClass} />
           <Route path="/about-student/:sno" exact component={ViewStudent} />
 
           <Route path="/courses" exact component={Courses} />
           <Route path="/students" exact component={Students} />
           <Route path="/classes" exact component={Classes} />
-          
-          
+
+
           <Route path="/student/update/:sno" exact component={UpdateStudent} />
           <Route path="/course/update/:cno" exact component={UpdateCourse} />
           <Route path='/class/update/:clno' exact component={UpdateClass}></Route>

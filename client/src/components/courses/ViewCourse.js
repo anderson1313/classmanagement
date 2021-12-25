@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { createCourse } from '../../store/actions/courseActions'
 import { deleteCourse } from '../../store/actions/courseActions'
 import Avatar, { genConfig } from 'react-nice-avatar'
+import { clearErros } from "../../store/actions/errorActions";
 const config = genConfig({
     'hairStyle': 'normal',
     'sex': 'man',
@@ -22,6 +23,9 @@ function ViewCourse() {
     // dispatch(deleteCourse(38))
 
     // dispatch(createCourse({ name: 'TEST4', credit: 3 }));
+    window.addEventListener("popstate", function (e) {
+        dispatch(clearErros());//根据自己的需求实现自己的功能 
+    }, false);
 
 
     useEffect(() => {

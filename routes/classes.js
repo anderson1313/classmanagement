@@ -16,7 +16,7 @@ router.post('/create', (req, res) => {
 	//sql查询
 	let sqlCheck = 'SELECT * from classes where clname=?'
 	let sqlInsert = `INSERT INTO classes SET ?`
-	pool.query(sqlCheck, clno, (err, classs) => {
+	pool.query(sqlCheck, clname, (err, classs) => {
 		if (classs.length > 0) {
 			return res.status(400).json({ msg: "班级名称已被使用" })
 		}

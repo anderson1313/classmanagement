@@ -15,6 +15,7 @@ const ManageClass = () => {
     const dispatch = useDispatch();
     const [className, setClassName] = useState("");
     const { msg: errMsg, id: errID } = useSelector((state) => state.error)
+    console.log(errMsg)
     const { msg: sucMsg, id: sucID, created } = useSelector((state) => state.cla)
 
     useEffect(() => {
@@ -30,28 +31,10 @@ const ManageClass = () => {
     }
 
     return(
-        <div className='container'>
-
-            <div className='wrapper_left '>
-                <div className='content'>
-                <div className='webname' ><Link to='/'>课程管理系统</Link></div>
-                    <div className='avatarbox  '>
-                        <Avatar style={{ width: '100px', height: '100px' }} {...config} />
-                    </div>
-                    <div className='stufflist'>
-                        <div className='title'>技术人员</div>
-                        <li>梁梓轩</li>
-                        <li>黄景增</li>
-                        <li>张信宇</li>
-                        <li>胡瀚文</li>
-                        <li>汪杰烽</li>
-                    </div>
-                </div>
-            </div>
-
+        <div className='container'>           
             <div className='submitwrapper'>
-                <div className='createcon animated  headShake'>
-                    <div className='title animated fadeInLeft'>创建班级</div>
+                <div className='createcon animated  fadeInLeft'>
+                    <div className='title animated '>创建班级</div>
                     <div className='blank'></div>
                     <form {...{ onSubmit }} method='POST'>
                         <div className="form-group">
@@ -72,7 +55,7 @@ const ManageClass = () => {
                         {sucID === "CLASS_SUCCESS" ? (
                             <div className="suc-msgs">{sucMsg}</div>) 
                             : null}
-                        {errID === "CLASS__ERROR" ? (
+                        {errID === "CLASS_ERROR" ? (
                             <div className="err-msgs">{errMsg}</div>) 
                             : null}
                         <button color="dark" >创建班级</button>

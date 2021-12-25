@@ -46,7 +46,6 @@ const courseReducer = (state = initialState, action) => {
                 ...state,
                 msg: action.payload.msg,
                 id:action.payload.id
-            
             }
         default:
             return state
