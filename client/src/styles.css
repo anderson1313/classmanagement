@@ -131,19 +131,20 @@ a {
 
     }
 
-   
-    .midwrapper{
+
+    .midwrapper {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         position: relative;
-        border: 1px solid rgba(220, 221, 225,.8);
+        border: 1px solid rgba(220, 221, 225, .8);
         width: 70%;
         height: 500px;
         margin: 50px auto;
     }
-    .midwrapper > div{
+
+    .midwrapper>div {
         background: white;
         width: 33.3%;
         display: flex;
@@ -151,41 +152,46 @@ a {
         justify-content: center;
         align-items: center;
         height: 500px;
-        
+
 
     }
-    .midwrapper > div .intro{
+
+    .midwrapper>div .intro {
         width: 40%;
         text-align: center;
-        color: rgba(127, 143, 166,.8);
+        color: rgba(127, 143, 166, .8);
 
     }
-    .midwrapper > div .title{
+
+    .midwrapper>div .title {
         font-size: 50px;
         font-family: 'font4';
-        color: rgba(64, 115, 158,1.0);
+        color: rgba(64, 115, 158, 1.0);
     }
 
-    .midwrapper > div .func{
+    .midwrapper>div .func {
         padding: 10px 20px;
-        background: rgba(39, 60, 117,1.0);
+        background: rgba(39, 60, 117, 1.0);
     }
-    .midwrapper > div .func a{
+
+    .midwrapper>div .func a {
         display: block;
         color: white;
         font-size: 15px;
         font-family: 'font3';
-        background: rgba(39, 60, 117,1.0);
-    }
-    .midwrapper > div >div{
-        margin: 40px 0;
-    }
-    .midwrapper .students,
-    .midwrapper .classes{
-        border-right: 1px solid rgba(220, 221, 225,.8);
+        background: rgba(39, 60, 117, 1.0);
     }
 
-    .downcontainer{
+    .midwrapper>div>div {
+        margin: 40px 0;
+    }
+
+    .midwrapper .students,
+    .midwrapper .classes {
+        border-right: 1px solid rgba(220, 221, 225, .8);
+    }
+
+    .downcontainer {
         height: 500px;
         background-size: cover;
         display: flex;
@@ -195,90 +201,160 @@ a {
         /* background-image: url('./static/pic12.png'); */
         background: #F0ECE3;
     }
-    .downcontainer .aboutus{
+
+    .downcontainer .aboutus {
         font-size: 40px;
         font-family: 'font4';
         color: #C7B198;
-        
+
     }
-    .downcontainer .info{
+
+    .downcontainer .info {
         width: 30%;
         font-size: 13px;
         line-height: 25px;
         color: #A68DAD;
         margin-top: 40px;
 
-        
+
     }
 
 
     /*managecourse*/
-    .submitwrapper{
+
+    .cswrapper {
         height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        box-sizing:border-box;
+    }
+    .mccon {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .mccon .titlecon .nav {
         display: flex;
-        align-items: center;
         flex-direction: row;
         justify-content: center;
-        background-size: cover;
-        background-image: url('./static/pic14.png');
+        align-items: center;
+        margin-top: 50px;
+
     }
-    .createcon{
+    .mccon .titlecon .title {
+        font-size: 50px;
+        font-family: "font4";
+        color: #064635;
+
+    }
+    .mccon .titlecon .nav .func {
+        padding: 10px;
+        margin: 0 20px;
+    }
+
+    .mccon .titlecon .nav .this {
+        border-bottom: 2px solid black;
+
+    }
+
+    .mccon .titlecon .nav .func a {
+        display: block;
+        color: #2E4C6D;
+        font-family: "font4";
+        font-size: 15px;
+    }
+
+    .mccon .titlecon .nav .this a {
+        color: #AE431E;
+
+    }
+
+    .mccon .titlecon {
+        width: 90vw;
+        
+     
+        background: #E1E5EA;
+       
+        height: 30%;
+        margin: 20px auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        overflow: hidden;
-       
-        
     }
-    .submitwrapper .createcon .title {
-        font-size: 50px;
-        font-family: "font4";
-        margin-bottom: 50px;
-        color: #F0ECE3;
+
+    .submitwrapper {
+        height: 50%;
+        
+       
+    }
+
+    .createcon {
+        margin: 0 auto;
+        width: 30%;
+       
+
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
     }
 
     .createcon form {
+        background: white;
+        box-shadow: -1px -1px 24px rgba(255, 255, 255, .8), 12px 12px 24px rgba(0, 6, 39, .2);
+        border-radius: 10px;
+        height: 60%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, .6);
         border-radius: 10px;
-        padding: 20px;
+        padding: 0 20px;
+        
 
     }
-    .batchupload{
+    
+
+    .batchupload {
+        height: 20%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         border-radius: 10px;
         padding: 20px;
-        margin-top: 30px;
        
 
+
     }
-    .batchupload .tips{
+
+    .batchupload .tips {
         margin: 20px 0;
         font-size: 20px;
-        font-family:'font4';
-        color: #F0ECE3;
+        font-family: 'font4';
+        color: #C7B198;
     }
-    .batchupload .uploadbtn{
-        padding:5px 10px;
-        background:#00ad2d;
-        border:1px solid #00ad2d;
-        position:relative;
-        color:#fff;
-        border-radius:2px;
-        text-align:center;
-        float:left;
-        cursor:pointer;
+
+    .batchupload .uploadbtn {
+        padding: 5px 10px;
+        background: #00ad2d;
+        border: 1px solid #00ad2d;
+        position: relative;
+        color: #fff;
+        border-radius: 2px;
+        text-align: center;
+        float: left;
+        cursor: pointer;
         border-radius: 10px;
     }
 
-    .batchupload .hide_file{
+    .batchupload .hide_file {
         position: absolute;
         z-index: 1000;
         opacity: 0;
@@ -288,21 +364,21 @@ a {
         height: 100%;
         font-size: 24px;
         width: 100%;
-       
+
     }
 
 
     .createcon form .form-group .subname,
     .createcon form .form-group .subcredit {
-        height: auto;
+        height: 30%;
         margin: 30px 0;
 
     }
 
     .createcon form .form-group .labelname {
         font-family: 'font4';
-        font-size: 15px;
-        width: 70px;
+        font-size: 18px;
+        width: 80px;
         display: inline-block;
         text-align: center;
         margin: 0 20px;
@@ -315,25 +391,25 @@ a {
         background: none;
         outline: none;
         border: none;
-        background: rgba(255, 255, 255, .2);
+        background: #F0ECE3;
         padding: 10px 20px;
         border-radius: 10px;
 
     }
 
     .createcon form button {
+        width: 80%;
+        height: 40px;
+        line-height: 30px;
         display: inline-block;
-        background: none;
         outline: none;
         border: none;
         border-radius: 5px;
         color: white;
-        background: rgba(56, 163, 165, .4);
         background: #3B3B98;
-        padding: 10px 100px;
         font-family: "font4";
         margin-top: 20px;
-        margin: 10px 0;
+       
         font-size: 15px;
 
     }
@@ -344,15 +420,416 @@ a {
         color: black;
         font-weight: bold;
     }
+    .mccon .buttomblock{
+        width: 100%;
+        background: #04293A;
+        height: 70px;
+        position: absolute;
+        bottom: 0;
+    }
 
 
 
+
+
+
+    /*course*/    
+    .courses_wrapper {
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        box-sizing:border-box;
+    }
+
+    .allcoursescon {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .allcoursescon .titlecon .nav {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+
+    }
+
+    .allcoursescon .titlecon .nav .func {
+        padding: 10px;
+        margin: 0 20px;
+
+    }
+
+    .allcoursescon .titlecon .nav .this {
+        border-bottom: 2px solid black;
+
+    }
+
+    .allcoursescon .titlecon .nav .func a {
+        display: block;
+        color: #2E4C6D;
+        font-family: "font4";
+        font-size: 15px;
+    }
+
+    .allcoursescon .titlecon .nav .this a {
+        color: #AE431E;
+
+    }
+
+    .allcoursescon .titlecon {
+        width: 90vw;
+        background: #EEEEEE;
+        background: #F5F5F5;
+        height: 30%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .allcoursescon .allcourses {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .allcoursescon .titlecon .title {
+        font-size: 50px;
+        font-family: "font4";
+        color: #064635;
+
+    }
+
+    .allcourses .courseslist {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        overflow: hidden;
+
+
+    }
+
+    .allcourses .courseslist .eachcourse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 10px 20px;
+        width: 300px;
+        height: 160px;
+        background-image: url('./static/ec.png');
+        background-size: cover;
+        position: relative;
+        /* background: #fff; */
+        box-shadow: -12px -12px 24px rgba(255, 255, 255, .8), 12px 12px 24px rgba(0, 6, 39, .1);
+        overflow: hidden;
+    }
+
+   
+    .allcourses .courseslist .eachcourse .mask {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        content: '';
+        width: 300px;
+        height: 160px;
+        background: rgba(101, 101, 101, 0.3);
+        opacity: 0;
+    }
     
-  
+    .allcourses .courseslist .eachcourse:hover .mask{
+        top:0;
+        opacity: 1;
+        transition: all 0.3s ease-out;
+    }
+
+    .allcourses .courseslist .eachcourse a {
+        
+        color: #22577E;
+        font-size: 25px;
+        font-family: 'font4';
+        z-index: 2;
+        width: 300px;
+        height: 160px;
+        display: block;
+        line-height: 160PX;
+
+
+    }
+    .allcoursescon .buttomblock{
+        width: 100%;
+        background: #04293A;
+        height: 70px;
+        position: absolute;
+        bottom: 0;
+    }
+    .allcoursescon .pagebox{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .allcoursescon .pagebox >div{
+        color: #192a56;
+        margin: 0 20px;
+        font-size: 20px;
+    }
 
 
 
+    /*viewcourse*/
+    .topnav{
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: white;
+        padding: 0 40px;
+    }
+    .topnav .topblock{
+        width: 20px;
+        height: 20px;
+        background: #22577E;
+    }
+    .topnav > div{
+       margin: 0 30px;
+    }
+    .topnav > div a{
+        display: block;
+        text-decoration: none;
+        font-family: 'font4';
+        color: #273c75;
+        font-size: 15px;
+        transition: all 0.2s ease-in;
+     }
+
+     .topnav > div a:hover{
+        color: #AE431E;
+     }
+
+    .courseinfowrapper{
+        height: 80vh;
+        overflow: hidden;
+        background: linear-gradient(to right, rgba(230,218,206) 0%,rgba(230,218,206) 50%,white 50%,white 100%);
+    }
+    .courseinfocon{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .courseinfocon .left{
+        margin-right: 120px;
+        width: 400px;
+        height: 500px;
+        background-color: rgba(243, 235, 229, 1);
+        box-shadow: -20px 12px 30px rgba(0, 6, 39, .2), 12px 12px 24px rgba(0, 6, 39, .1);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-image: url('./static/left3.png');
+
+    }
+    .courseinfocon .ori{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+   
+    .left .iconfont{
+        font-size: 50px;
+        color: #22577E;
+    }
+    .left .hide{
+        display: none;
+
+    }
+    .courseinfocon .title{
+        font-family: 'font4';
+        font-size: 30px;
+        margin: 40px 0;
+    }
+
+    .courseinfocon .divider{
+        height: 2px;
+        width: 30px;
+        background: #1E3163;
+    }
+    .courseinfocon .text{
+        width: 100px;
+        margin: 40px 0;
+
+        color: #889EAF;
+    }
+    .courseinfocon .functions{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        height: 70px;
+        background: white;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
     
+    .updatecourse,
+    .deletecourse{
+        line-height: 30px;
+        display: block;
+        height: 30px;
+        border: none;
+        margin: 0 30px;
+        width: 80px;
+        text-align: center;
+        background: #00ad2d;
+        text-decoration: none;
+        color: #04293A;
+        border-radius: 30px;
+        font-family: 'font4';
+        font-size: 13px;
+    }
+    .updatecourse{
+        background: #2D4263;
+        color: white;
+    }
+    .deletecourse{
+        background: #EEEBDD;
+        color: #2E4C6D;
+    }
+        .submitcon{
+            margin-bottom: 50px;
+        }
+
+    .submitcon form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .submitcon form > div,
+    .submitcon form .form-group > div{
+        margin: 20px 0;
+    }
+    
+    .createcon form .form-group .subname,
+    .createcon form .form-group .subcredit {
+        height: 30%;
+        margin: 30px 0;
+
+    }
+
+    .submitcon form .form-group .labelname {
+        font-family: 'font4';
+        font-size: 18px;
+        width: 80px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 20px;
+        color: #1E3163;
+        font-weight: bold;
+    }
+
+    .submitcon form .form-group input {
+        margin: 0 20px;
+        background: none;
+        outline: none;
+        border: none;
+        background: #DBD0C0;
+        padding: 10px 20px;
+        border-radius: 5px;
+
+    }
+
+    .submitcon form button {
+        width: 80%;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: #3B3B98;
+        font-family: "font4";
+        margin-top: 20px;
+       
+        font-size: 15px;
+
+    }
+
+    .submitcon form .err-msgs,
+    .submitcon form .suc-msgs {
+
+        color: black;
+        font-weight: bold;
+    }
+
+.showdelete{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.showdelete .warning{
+    color: #852747;
+    font-family: 'font4';
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.showdelete .options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.showdelete .options  button{
+    margin: 0 20px;
+    display: block;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    font-family: 'font4';
+    width: 80px;
+    border-radius: 20px;
+    
+    
+}
+.showdelete .options .sure{
+    color: white;
+    background:#C37B89 ;
+}
+.showdelete .options .cancel{
+    color: #192a56;
+    background: #C8C6C6;
+}
+
 
 
 
