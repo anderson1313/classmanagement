@@ -108,8 +108,6 @@ const HomeComponet = () => {
           </div>
           {courses.length < 0 ? (<div className='nocourse'><Link to='/create-course'>创建课程</Link></div>) : (<div className='havecourse' >已建立课程 开始管理</div>)}
 
-
-
         </div>
 
       </div>

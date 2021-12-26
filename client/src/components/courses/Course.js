@@ -20,27 +20,27 @@ const Courses = () => {
     const dispatch = useDispatch()
     // dispatch(createCourse({ name: 'TEST2', credit: 3 }));
     const { courses } = useSelector((state) => state.cou);
- 
+
     const [pageList, setpageList] = useState([]);
     const [all_pageList, setall_pageList] = useState([]);
     const [page_index, setpage_index] = useState(0);
     window.addEventListener("popstate", function (e) {
         dispatch(clearErros());//根据自己的需求实现自己的功能 
     }, false);
-    const forwardPage=()=>{
+    const forwardPage = () => {
         console.log(page_index)
-        if (page_index==0){
-            
+        if (page_index == 0) {
+
             return
         }
-        setpage_index(page_index-1)
-       
+        setpage_index(page_index - 1)
+
     }
-    const backwardPage=()=>{
-        if (page_index + 1 >= pageList.length){
+    const backwardPage = () => {
+        if (page_index + 1 >= pageList.length) {
             return
         }
-        setpage_index(page_index+1)
+        setpage_index(page_index + 1)
     }
 
 
@@ -66,49 +66,39 @@ const Courses = () => {
     return (
         <div className="container">
 
-            <div className='wrapper_left'>
-                <div className='content'>
-                <div className='webname' ><Link to='/'>课程管理系统</Link></div>
-                    <div className='avatarbox animated flipInX '>
-                        <Avatar style={{ width: '100px', height: '100px' }} {...config} />
-                    </div>
-                    <div className='stufflist'>
-                        <div className='title'>技术人员</div>
-                        <li>梁梓轩</li>
-                        <li>黄景增</li>
-                        <li>张信宇</li>
-                        <li>胡瀚文</li>
-                        <li>汪杰烽</li>
-                    </div>
-                </div>
-            </div>
+
 
             <div className='courses_wrapper'>
                 {courses.length > 0 ? (
                     <div className='allcoursescon'>
-                        <div className='title animated fadeInLeft '>你的课程</div>
-                        <div className='allcourses animated headShake'>
-                            <div className='seqlist'>
-                                <div className='stitle'></div>
-                                {courses.map((item, index) => {
-                                    return (
-                                        <div>
-                                        {index >= page_index * 6 && index < (6 * (page_index + 1)) == 1 ? ( <div className='seqnum'>{index + 1}</div>) : null}
-                                    </div>
-                                       
-                                    )
-                                })}
+
+                        <div className='titlecon animated  '>
+                            <div className='title'>你的课程</div>
+                            <div className='nav'>
+
+                                <div className='func'><Link to='/'>首页</Link></div>
+
+                                <div className='func'><Link to='/create-student'>创建学生</Link></div>
+                                <div className='func'><Link to='/students'>管理学生</Link></div>
+                                <div className='func'><Link to='/create-class'>创建班级</Link></div>
+                                <div className='func'><Link to='/classes'>管理班级</Link></div>
+                                <div className='func this'><Link to='/create-courses'>管理课程</Link></div>
+                                <div className='func'><Link to='/create-course'>创建课程</Link></div>
 
                             </div>
+                        </div>
+                        <div className='allcourses animated headShake'>
+                         
                             <div className='courseslist'>
-                                <div className='ctitle'></div>
+                                
                                 {courses.map((item, index) => {
                                     return (
-                                        <div>
+                                        <>
                                             {index >= page_index * 6 && index < (6 * (page_index + 1)) == 1 ? (<div key={index} className='eachcourse animated' >
+                                                <div className='mask'></div>
                                                 <div className='coursename animated flipInX'><Link to={`/about-course/${item.cno}`}>{item.cname}</Link></div>
                                             </div>) : null}
-                                        </div>
+                                        </>
                                     )
                                 })}
                             </div>
@@ -118,8 +108,9 @@ const Courses = () => {
                             <div className='btn iconfont icon-iconfontzuo' onClick={forwardPage}></div>
                             <div className='animated flipInX'>第{pageList[page_index]}页</div>
                             <div className='btn iconfont icon-xiayiyehouyiye' onClick={backwardPage}></div>
-                            
-
+                        </div>
+                        <div className='buttomblock'>
+                        
                         </div>
                     </div>
                 ) :
