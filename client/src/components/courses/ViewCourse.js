@@ -71,7 +71,7 @@ function ViewCourse() {
 
     const changedelete = () => {
         setshowuppdate(false)
-        
+
         if (showdelete == false) {
             setshowdelete(true)
         }
@@ -110,7 +110,7 @@ function ViewCourse() {
 
     return (
         <div className='container'>
-            <div className='topnav'>
+            <div className='topnav animated animate__fadeInDown'>
                 <div className='func topblock'></div>
 
                 <div className='func'><Link to='/'>首页</Link></div>
@@ -127,16 +127,16 @@ function ViewCourse() {
                     {courseDetail ? (<>
                         <div className='left'>
 
-                            <div className={showdelete == true && showuppdate==false? 'showdelete' : 'hide'}>
+                            <div className={showdelete == true && showuppdate == false ? 'showdelete' : 'hide'}>
                                 <div className='warning'>你确定要删除该课程吗？</div>
                                 <div className='options'>
-                                    <button  onClick={()=>onDelete(courseDetail.cno)} className='sure'>确定</button>
-                                    <button onClick={()=>changedelete()} className='cancel'>取消</button>
+                                    <button onClick={() => onDelete(courseDetail.cno)} className='sure'>确定</button>
+                                    <button onClick={() => changedelete()} className='cancel'>取消</button>
                                 </div>
                             </div>
 
 
-                            <div className={showuppdate == true && showdelete==false? 'showupdate' : 'hide'}>
+                            <div className={showuppdate == true && showdelete == false ? 'showupdate' : 'hide'}>
 
                                 <div className='submitcon animated animate__headShake'>
                                     <form  {...{ onSubmit }}>
@@ -186,9 +186,9 @@ function ViewCourse() {
 
                             </div>
 
-                            <div className={['ori animated  animate__zoomIn', showuppdate == false && showdelete == false? '' : 'hide'].join(' ')}>
+                            <div className={['ori animated  animate__zoomIn', showuppdate == false && showdelete == false ? '' : 'hide'].join(' ')}>
 
-                                <div className='iconfont icon-xuexiao_xuesheng'></div>
+                                <div className='iconfont icon-kecheng-'></div>
                                 <div className='title animated '>{courseDetail.cname}</div>
                                 <div className='divider animated '></div>
                                 <div className='text animated '>你可以点击下方按钮管理自己的课程</div>
@@ -212,27 +212,42 @@ function ViewCourse() {
                         </div>
 
                         <div className='basicinfo'>
-                            <div className='title'>
-                                <div className='iconfont icon-xuexiao_xuesheng'></div>
-                                <div>课程学生</div>
+
+
+                            <div className='ccreditcon'>
+                                <div className='subtitle'>
+                                    <div className='iconfont icon-chengji-'></div>
+                                    <div className='titletext'>课程学分:{courseDetail.ccredit}</div>
+                                </div>
+                                
                             </div>
-                            {courseStudents.length > 0 ? (
-                                <div className='studentscon  '>
-                                    {courseStudents.map((c) => (
-                                        <div className='eachs animated flipInX'>{c}</div>
-                                    ))}
+
+
+                            <div className='cscon'>
+                                <div className='subtitle'>
+                                    <div className='iconfont icon-xuesheng'></div>
+                                    <div className='titletext'>课程学生</div>
                                 </div>
-                            ) : (
-                                <div className='errcon'>
-                                    <div className='err'>你还未添加任何学生</div>
-                                </div>
-                            )}
+                                {courseStudents.length > 0 ? (
+                                    <div className='studentscon  '>
+                                        {courseStudents.map((c) => (
+                                            <div className='eachs animated flipInX'>{c}</div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <div className='errcon'>
+                                        <div className='err'>你还未添加任何学生</div>
+                                    </div>
+                                )}
+
+                            </div>
+
                         </div>
 
                     </>) : (<div className='infonotused'>课程信息不可用</div>)}
                 </div>
             </div>
-        </div>
+        </div >
 
     );
 
