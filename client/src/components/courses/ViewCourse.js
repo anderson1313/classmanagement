@@ -205,15 +205,9 @@ function ViewCourse() {
                                 </button>
                             </div>
 
-
-
-
-
                         </div>
 
                         <div className='basicinfo'>
-
-
                             <div className='ccreditcon'>
                                 <div className='subtitle'>
                                     <div className='iconfont icon-chengji-'></div>

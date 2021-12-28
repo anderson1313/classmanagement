@@ -148,18 +148,9 @@ const Managecourse = () => {
                             </div>
 
                         </div>
-
-
-
-
-
                     </div>
 
-
                     <div className='buttomblock'>
-
-
-
                     </div>
                 </div>
 
