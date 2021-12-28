@@ -46,18 +46,951 @@ a {
 }
 
 
-@media (min-width:500px) {}
+@media (max-width:1000px) {
 
-@media (min-width:640px) {}
-
-@media (min-width:768px) {}
-
-@media (min-width:992px) {}
-
-@media (min-width:1000px) {
+    /*app.js*/
     .topconatiner {
         position: relative;
-     
+
+        height: 700px;
+        background: url('./static/pic1.png') no-repeat 50% 50%;
+
+    }
+
+    .topconatiner .downblock {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.6);
+        height: 250px;
+        width: 700px;
+        bottom: 0;
+        left: 50%;
+        margin-left: -350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2 ease-in;
+
+    }
+
+    .topconatiner .downblock>div {
+        margin: 15px 0;
+
+    }
+
+    .topconatiner .downblock .pname {
+        font-size: 50px;
+        font-family: 'font4';
+        color: #192a56;
+
+
+    }
+
+    .downblock .pperson {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .downblock .per {
+        margin: 0 10px;
+        font-family: 'font3';
+        font-size: 15px;
+
+    }
+
+    .nocourse a {
+        text-decoration: none;
+        display: block;
+        color: #273c75;
+        font-size: 15px;
+        font-family: 'font4';
+
+    }
+
+    .nocourse,
+    .havecourse {
+        padding: 10px 20px;
+        border: 1px #273c75 solid;
+
+    }
+
+    .havecourse {
+        border: none;
+        color: #273c75;
+        font-size: 15px;
+        font-family: 'font4';
+        background: #C7B198;
+
+    }
+
+
+    .midwrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border: 1px solid rgba(220, 221, 225, .8);
+        width: 70%;
+        height: 500px;
+        margin: 50px auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .midwrapper>div {
+
+        background: white;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 33.3%;
+
+
+    }
+
+    .midwrapper>div .intro {
+        width: 20%;
+        text-align: center;
+        color: rgba(127, 143, 166, .8);
+
+    }
+
+    .midwrapper>div .title {
+        font-size: 50px;
+        font-family: 'font4';
+        color: rgba(64, 115, 158, 1.0);
+    }
+
+    .midwrapper>div .func {
+        padding: 10px 20px;
+        background: rgba(39, 60, 117, 1.0);
+    }
+
+    .midwrapper>div .func a {
+        display: block;
+        color: white;
+        font-size: 15px;
+        font-family: 'font3';
+        background: rgba(39, 60, 117, 1.0);
+    }
+
+    .midwrapper>div>div {
+        margin: 0px 20px;
+    }
+
+    .midwrapper .students,
+    .midwrapper .classes {
+        border-bottom: 1px solid rgba(220, 221, 225, .8);
+    }
+
+    .downcontainer {
+        height: 500px;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-image: url('./static/pic12.png'); */
+        background: #F0ECE3;
+    }
+
+    .downcontainer .aboutus {
+        font-size: 40px;
+        font-family: 'font4';
+        color: #C7B198;
+
+    }
+
+    .downcontainer .info {
+        width: 30%;
+        font-size: 13px;
+        line-height: 25px;
+        color: #A68DAD;
+        margin-top: 40px;
+
+
+    }
+
+
+    /*mc*/
+    .cswrapper {
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .mccon {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .mccon .titlecon .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        overflow: hidden;
+
+    }
+
+    .mccon .titlecon .title {
+        overflow: hidden;
+        width: 20%;
+        font-size: 40px;
+        font-family: "font4";
+        color: #064635;
+
+    }
+
+    .mccon .titlecon .nav .func {
+        width: 30px;
+
+        margin: 0 25px;
+    }
+
+    .mccon .titlecon .nav .this {
+        border-bottom: 2px solid black;
+
+    }
+
+    .mccon .titlecon .nav .func a {
+        display: block;
+        color: #2E4C6D;
+        font-family: "font4";
+        font-size: 15px;
+    }
+
+    .mccon .titlecon .nav .this a {
+        color: #AE431E;
+
+    }
+
+    .mccon .titlecon {
+        width: 100vw;
+        background: #E1E5EA;
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .submitwrapper {
+        height: 50%;
+    }
+
+    .createcon {
+        margin: 0 auto;
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+    }
+    .submitwrapper {
+        margin-top: 100px;
+        height: 50%;
+    }
+
+    .createcon {
+        margin: 0 auto;
+        width: 600px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    .createcon form {
+        width: 50%;
+        background: white;
+        box-shadow: -1px -1px 24px rgba(255, 255, 255, .8), 12px 12px 24px rgba(0, 6, 39, .2);
+        border-radius: 10px;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0 20px;
+        overflow: hidden;
+
+
+    }
+
+    .createcon form .form-group {
+        width: 100%;
+    }
+
+
+    .batchupload {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 20px;
+
+
+
+    }
+
+    .batchupload .tips {
+        margin: 20px 0;
+        font-size: 20px;
+        font-family: 'font4';
+        color: #C7B198;
+    }
+
+    .batchupload .uploadbtn {
+        padding: 5px 10px;
+        background: #00ad2d;
+        border: 1px solid #00ad2d;
+        position: relative;
+        color: #fff;
+        border-radius: 2px;
+        text-align: center;
+        float: left;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .batchupload .hide_file {
+        position: absolute;
+        z-index: 1000;
+        opacity: 0;
+        cursor: pointer;
+        right: 0;
+        top: 0;
+        height: 100%;
+        font-size: 24px;
+        width: 100%;
+
+    }
+
+
+    .createcon form .form-group .subname,
+    .createcon form .form-group .subcredit {
+        height: 30%;
+        margin: 30px 0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .createcon form .form-group .labelname {
+        font-family: 'font4';
+        font-size: 15px;
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        margin: 0 20px;
+        color: #1E3163;
+        font-weight: bold;
+    }
+
+    .createcon form .form-group input {
+        width: 40%;
+        margin: 0 5px;
+        background: none;
+        outline: none;
+        border: none;
+        background: #F0ECE3;
+        padding: 10px 5px;
+        border-radius: 10px;
+
+    }
+
+    .createcon form button {
+        width: 80%;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: #3B3B98;
+        font-family: "font4";
+        margin: 20px 0;
+        font-size: 15px;
+
+    }
+
+    .createcon form .err-msgs,
+    .createcon form .suc-msgs {
+
+        color: black;
+        font-weight: bold;
+    }
+
+    .mccon .buttomblock {
+        width: 100%;
+        background: #04293A;
+        height: 70px;
+        position: absolute;
+        bottom: 0;
+    }
+
+
+
+    /*courses*/
+
+    .courses_wrapper {
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .allcoursescon {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .allcoursescon .titlecon .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        overflow: hidden;
+
+    }
+
+    .allcoursescon .titlecon .title {
+        overflow: hidden;
+        width: 20%;
+        font-size: 40px;
+        font-family: "font4";
+        color: #064635;
+
+    }
+
+    .allcoursescon .titlecon .nav .func {
+        width: 30px;
+
+        margin: 0 25px;
+    }
+
+    .allcoursescon .titlecon .nav .this {
+        border-bottom: 2px solid black;
+
+    }
+
+    .allcoursescon .titlecon .nav .func a {
+        display: block;
+        color: #2E4C6D;
+        font-family: "font4";
+        font-size: 15px;
+    }
+
+    .allcoursescon .titlecon .nav .this a {
+        color: #AE431E;
+
+    }
+
+    .allcoursescon .titlecon {
+        width: 100vw;
+        background: #E1E5EA;
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .allcoursescon .allcourses {
+        height: 64%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+   
+
+    .allcourses .courseslist {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+
+
+    }
+
+    .allcourses .courseslist .eachcourse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 10px;
+        width: 40%;
+        height: 18%;
+        background-image: url('./static/ec.png');
+        background-size: cover;
+        position: relative;
+        box-shadow: -12px -12px 24px rgba(255, 255, 255, .8), 12px 12px 24px rgba(0, 6, 39, .1);
+        overflow: hidden;
+    }
+
+
+    .allcourses .courseslist .eachcourse .mask {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(101, 101, 101, 0.3);
+        opacity: 0;
+    }
+
+    .allcourses .courseslist .eachcourse:hover .mask {
+        top: 0;
+        opacity: 1;
+        transition: all 0.3s ease-out;
+    }
+
+    .allcourses .courseslist .eachcourse a {
+
+        color: #22577E;
+        font-size: 20px;
+        font-family: 'font4';
+        z-index: 2;
+        width: 300px;
+        height: 160px;
+        display: block;
+        line-height: 160PX;
+
+
+    }
+
+    .allcoursescon .buttomblock {
+        
+        width: 100%;
+        background: #04293A;
+        margin-top: 20px;
+        height: 100px;
+        bottom: 0;
+
+    }
+
+    .allcoursescon .pagebox {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .allcoursescon .pagebox>div {
+        color: #192a56;
+        margin: 0 20px;
+        font-size: 20px;
+    }
+
+    /*viewcourse*/
+    .topnav {
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: white;
+        padding: 0 40px;
+    }
+
+    .topnav .topblock {
+        width: 20px;
+        height: 20px;
+        background: #22577E;
+    }
+
+    .topnav>div {
+        margin: 0 15px;
+    }
+
+    .topnav>div a {
+        display: block;
+        text-decoration: none;
+        font-family: 'font4';
+        color: #273c75;
+        font-size: 15px;
+        transition: all 0.2s ease-in;
+    }
+
+    .topnav>div a:hover {
+        color: #AE431E;
+    }
+
+    .courseinfowrapper {
+        height: 80vh;
+        overflow: hidden;
+        background: linear-gradient(to right, rgba(230, 218, 206) 0%, rgba(230, 218, 206) 40%, white 40%, white 100%);
+    }
+
+    .courseinfocon {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .courseinfocon .left {
+        margin-right: 60px;
+        width: 300px;
+        height: 500px;
+        background-color: rgba(243, 235, 229, 1);
+        box-shadow: -20px 12px 30px rgba(0, 6, 39, .2), 12px 12px 24px rgba(0, 6, 39, .1);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-image: url('./static/left3.png');
+
+    }
+
+    .courseinfocon .ori {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    .left .iconfont {
+        font-size: 50px;
+        color: #22577E;
+    }
+
+    .left .hide {
+        display: none;
+
+    }
+
+    .courseinfocon .title {
+        font-family: 'font4';
+        font-size: 30px;
+        margin: 40px 0;
+    }
+
+    .courseinfocon .divider {
+        height: 2px;
+        width: 30px;
+        background: #1E3163;
+    }
+
+    .courseinfocon .text {
+        width: 100px;
+        margin: 40px 0;
+
+        color: #889EAF;
+    }
+
+    .courseinfocon .functions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        height: 70px;
+        background: white;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .updatecourse,
+    .deletecourse {
+        line-height: 30px;
+        display: block;
+        height: 30px;
+        border: none;
+        margin: 0 30px;
+        width: 80px;
+        text-align: center;
+        background: #00ad2d;
+        text-decoration: none;
+        color: #04293A;
+        border-radius: 30px;
+        font-family: 'font4';
+        font-size: 13px;
+    }
+
+    .updatecourse {
+        background: #2D4263;
+        color: white;
+    }
+
+    .deletecourse {
+        background: #EEEBDD;
+        color: #2E4C6D;
+    }
+
+    .submitcon {
+        margin-bottom: 50px;
+    }
+
+    .submitcon form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .submitcon form>div,
+    .submitcon form .form-group>div {
+        margin: 20px 0;
+    }
+
+    .createcon form .form-group .subname,
+    .createcon form .form-group .subcredit {
+        height: 30%;
+        margin: 30px 0;
+
+    }
+
+    .submitcon form .form-group .labelname {
+        font-family: 'font4';
+        font-size: 18px;
+        width: 80px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 20px;
+        color: #1E3163;
+        font-weight: bold;
+    }
+
+    .submitcon form .form-group input {
+        margin: 0 20px;
+        background: none;
+        outline: none;
+        border: none;
+        background: #DBD0C0;
+        padding: 10px 20px;
+        border-radius: 5px;
+
+    }
+
+    .submitcon form button {
+        width: 80%;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: #3B3B98;
+        font-family: "font4";
+        margin-top: 20px;
+
+        font-size: 15px;
+
+    }
+
+    .submitcon form .err-msgs,
+    .submitcon form .suc-msgs {
+
+        color: black;
+        font-weight: bold;
+    }
+
+    .showdelete {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .showdelete .warning {
+        color: #852747;
+        font-family: 'font4';
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+
+    .showdelete .options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .showdelete .options button {
+        margin: 0 20px;
+        display: block;
+        border: none;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+        font-family: 'font4';
+        width: 80px;
+        border-radius: 20px;
+
+
+    }
+
+    .showdelete .options .sure {
+        color: white;
+        background: #C37B89;
+    }
+
+    .showdelete .options .cancel {
+        color: #192a56;
+        background: #C8C6C6;
+    }
+
+    .basicinfo {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+       
+
+    }
+
+    .basicinfo>div {
+        margin: 30px 0;
+        width: 100%;
+
+    }
+
+    .basicinfo>div .subtitle {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .basicinfo>div .subtitle .iconfont {
+        font-size: 25px;
+        color: #22577E;
+        margin: 0 10px;
+
+    }
+
+    .basicinfo>div .subtitle .titletext {
+        font-size: 25px;
+        font-family: 'font4';
+        color: #DEBA9D;
+        position: relative;
+        z-index: 2;
+
+
+    }
+
+    .ccreditcon .subtitle .titletext:after {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 1px;
+        height: 40%;
+        width: 100%;
+        content: '';
+        background-color: #9e777725;
+
+
+    }
+
+    .cscon .subtitle .titletext:after {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 1px;
+        height: 40%;
+        width: 100%;
+        content: '';
+        background-color: #e7e0c975;
+
+
+    }
+
+    .cscon .errcon,
+    .cscon .studentscon {
+        padding-left: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+
+
+    }
+
+    .cscon .errcon {
+        font-family: 'font4';
+        font-size: 18px;
+        color: #4B6587;
+
+    }
+
+    .cscon .studentscon .eachs {
+        font-family: 'font4';
+        font-size: 13px;
+        color: #F0E5CF;
+        margin: 5px;
+        text-align: center;
+        width: 30%;
+        background: #4B6587;
+        padding: 10px 5px;
+        border-radius: 10px;
+    }
+
+    
+
+
+
+    
+
+
+
+
+
+
+}
+
+
+
+@media (min-width:1000px) {
+
+    /*app.js*/
+    .topconatiner {
+        position: relative;
+
         height: 700px;
         background: url('./static/pic1.png') no-repeat 50% 50%;
 
@@ -222,12 +1155,15 @@ a {
 
     /*managecourse*/
 
+    
+
     .cswrapper {
         height: 100vh;
         overflow: hidden;
         margin: 0;
-        box-sizing:border-box;
+        box-sizing: border-box;
     }
+
     .mccon {
         padding: 0;
         margin: 0;
@@ -235,20 +1171,41 @@ a {
         position: relative;
         overflow: hidden;
     }
+    .mccon .titlecon {
+        width: 90vw;
+        background: #E1E5EA;
+        height: 30%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+
+    }
+
     .mccon .titlecon .nav {
+
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
 
     }
-    .mccon .titlecon .title {
+
+
+    .mccon .titlecon .title {  
+        height: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+      
         font-size: 50px;
         font-family: "font4";
         color: #064635;
 
     }
+
     .mccon .titlecon .nav .func {
         padding: 10px;
         margin: 0 20px;
@@ -263,7 +1220,7 @@ a {
         display: block;
         color: #2E4C6D;
         font-family: "font4";
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .mccon .titlecon .nav .this a {
@@ -271,35 +1228,27 @@ a {
 
     }
 
-    .mccon .titlecon {
-        width: 90vw;     
-        background: #E1E5EA;
-        height: 30%;
-        margin: 20px auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
+    
 
     .submitwrapper {
-        height: 50%;       
+        height: 50%;
     }
 
     .createcon {
         margin: 0 auto;
-        width: 30%;
+        width: 600px;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        position: relative;
 
     }
 
     .createcon form {
+        width: 50%;
         background: white;
         box-shadow: -1px -1px 24px rgba(255, 255, 255, .8), 12px 12px 24px rgba(0, 6, 39, .2);
         border-radius: 10px;
@@ -311,10 +1260,14 @@ a {
         border-radius: 10px;
         padding: 0 20px;
         overflow: hidden;
-        
+
 
     }
-    
+
+    .createcon form .form-group {
+        width: 100%;
+    }
+
 
     .batchupload {
         height: 20%;
@@ -323,7 +1276,700 @@ a {
         justify-content: center;
         border-radius: 10px;
         padding: 20px;
+
+
+
+    }
+
+    .batchupload .tips {
+        margin: 20px 0;
+        font-size: 20px;
+        font-family: 'font4';
+        color: #C7B198;
+    }
+
+    .batchupload .uploadbtn {
+        padding: 5px 10px;
+        background: #00ad2d;
+        border: 1px solid #00ad2d;
+        position: relative;
+        color: #fff;
+        border-radius: 2px;
+        text-align: center;
+        float: left;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .batchupload .hide_file {
+        position: absolute;
+        z-index: 1000;
+        opacity: 0;
+        cursor: pointer;
+        right: 0;
+        top: 0;
+        height: 100%;
+        font-size: 24px;
+        width: 100%;
+
+    }
+
+
+    .createcon form .form-group .subname,
+    .createcon form .form-group .subcredit {
+        height: 30%;
+        margin: 30px 0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .createcon form .form-group .labelname {
+        font-family: 'font4';
+        font-size: 15px;
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        margin: 0 20px;
+        color: #1E3163;
+        font-weight: bold;
+    }
+
+    .createcon form .form-group input {
+        width: 40%;
+        margin: 0 5px;
+        background: none;
+        outline: none;
+        border: none;
+        background: #F0ECE3;
+        padding: 10px 5px;
+        border-radius: 10px;
+
+    }
+
+    .createcon form button {
+        width: 80%;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: #3B3B98;
+        font-family: "font4";
+        margin: 20px 0;
+        font-size: 15px;
+
+    }
+
+    .createcon form .err-msgs,
+    .createcon form .suc-msgs {
+
+        color: black;
+        font-weight: bold;
+    }
+
+    .mccon .buttomblock {
+        width: 100%;
+        background: #04293A;
+        height: 70px;
+        position: absolute;
+        bottom: 0;
+    }
+
+
+
+
+
+
+    /*course*/
+    .courses_wrapper {
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .allcoursescon {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .allcoursescon .titlecon .nav {
+      
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
        
+
+    }
+
+    .allcoursescon .titlecon .nav .func {
+        padding: 10px;
+        margin: 0 20px;
+
+    }
+
+    .allcoursescon .titlecon .nav .this {
+        border-bottom: 2px solid black;
+
+    }
+
+    .allcoursescon .titlecon .nav .func a {
+        display: block;
+        color: #2E4C6D;
+        font-family: "font4";
+        font-size: 18px;
+    }
+
+    .allcoursescon .titlecon .nav .this a {
+        color: #AE431E;
+
+    }
+
+    .allcoursescon .titlecon {
+        width: 90vw;
+        background: #E1E5EA;
+        height: 30%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+       
+        align-items: center;
+
+    }
+
+    .allcoursescon .allcourses {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .allcoursescon .titlecon .title {
+        font-size: 50px;
+        font-family: "font4";
+        color: #064635;
+        height: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .allcourses .courseslist {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        overflow: hidden;
+
+
+    }
+
+    .allcourses .courseslist .eachcourse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 10px 20px;
+        width: 25%;
+        height: 35%;
+        background-image: url('./static/ec.png');
+        background-size: cover;
+        position: relative;
+        box-shadow: -12px -12px 24px rgba(255, 255, 255, .8), 12px 12px 24px rgba(0, 6, 39, .1);
+        overflow: hidden;
+    }
+
+
+    .allcourses .courseslist .eachcourse .mask {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(101, 101, 101, 0.3);
+        opacity: 0;
+    }
+
+    .allcourses .courseslist .eachcourse:hover .mask {
+        top: 0;
+        opacity: 1;
+        transition: all 0.3s ease-out;
+    }
+
+    .allcourses .courseslist .eachcourse a {
+
+        color: #22577E;
+        font-size: 20px;
+        font-family: 'font4';
+        z-index: 2;
+        width: 300px;
+        height: 160px;
+        display: block;
+        line-height: 160PX;
+
+
+    }
+
+    .allcoursescon .buttomblock {
+        
+        width: 100%;
+        background: #04293A;
+        margin-top: 20px;
+        height: 100px;
+        
+    }
+
+    .allcoursescon .pagebox {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .allcoursescon .pagebox>div {
+        color: #192a56;
+        margin: 0 20px;
+        font-size: 20px;
+    }
+
+
+
+    /*viewcourse*/
+    .topnav {
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: white;
+        padding: 0 40px;
+    }
+
+    .topnav .topblock {
+        width: 20px;
+        height: 20px;
+        background: #22577E;
+    }
+
+    .topnav>div {
+        margin: 0 30px;
+    }
+
+    .topnav>div a {
+        display: block;
+        text-decoration: none;
+        font-family: 'font4';
+        color: #273c75;
+        font-size: 15px;
+        transition: all 0.2s ease-in;
+    }
+
+    .topnav>div a:hover {
+        color: #AE431E;
+    }
+
+    .courseinfowrapper {
+        height: 80vh;
+        overflow: hidden;
+        background: linear-gradient(to right, rgba(230, 218, 206) 0%, rgba(230, 218, 206) 40%, white 40%, white 100%);
+    }
+
+    .courseinfocon {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .courseinfocon .left {
+        margin-right: 120px;
+        width: 400px;
+        height: 500px;
+        background-color: rgba(243, 235, 229, 1);
+        box-shadow: -20px 12px 30px rgba(0, 6, 39, .2), 12px 12px 24px rgba(0, 6, 39, .1);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-image: url('./static/left3.png');
+
+    }
+
+    .courseinfocon .ori {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    .left .iconfont {
+        font-size: 50px;
+        color: #22577E;
+    }
+
+    .left .hide {
+        display: none;
+
+    }
+
+    .courseinfocon .title {
+        font-family: 'font4';
+        font-size: 30px;
+        margin: 40px 0;
+    }
+
+    .courseinfocon .divider {
+        height: 2px;
+        width: 30px;
+        background: #1E3163;
+    }
+
+    .courseinfocon .text {
+        width: 100px;
+        margin: 40px 0;
+
+        color: #889EAF;
+    }
+
+    .courseinfocon .functions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        height: 70px;
+        background: white;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .updatecourse,
+    .deletecourse {
+        line-height: 30px;
+        display: block;
+        height: 30px;
+        border: none;
+        margin: 0 30px;
+        width: 80px;
+        text-align: center;
+        background: #00ad2d;
+        text-decoration: none;
+        color: #04293A;
+        border-radius: 30px;
+        font-family: 'font4';
+        font-size: 13px;
+    }
+
+    .updatecourse {
+        background: #2D4263;
+        color: white;
+    }
+
+    .deletecourse {
+        background: #EEEBDD;
+        color: #2E4C6D;
+    }
+
+    .submitcon {
+        margin-bottom: 50px;
+    }
+
+    .submitcon form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .submitcon form>div,
+    .submitcon form .form-group>div {
+        margin: 20px 0;
+    }
+
+    .createcon form .form-group .subname,
+    .createcon form .form-group .subcredit {
+        height: 30%;
+        margin: 30px 0;
+
+    }
+
+    .submitcon form .form-group .labelname {
+        font-family: 'font4';
+        font-size: 18px;
+        width: 80px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 20px;
+        color: #1E3163;
+        font-weight: bold;
+    }
+
+    .submitcon form .form-group input {
+        margin: 0 20px;
+        background: none;
+        outline: none;
+        border: none;
+        background: #DBD0C0;
+        padding: 10px 20px;
+        border-radius: 5px;
+
+    }
+
+    .submitcon form button {
+        width: 80%;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: #3B3B98;
+        font-family: "font4";
+        margin-top: 20px;
+
+        font-size: 15px;
+
+    }
+
+    .submitcon form .err-msgs,
+    .submitcon form .suc-msgs {
+
+        color: black;
+        font-weight: bold;
+    }
+
+    .showdelete {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .showdelete .warning {
+        color: #852747;
+        font-family: 'font4';
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+
+    .showdelete .options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .showdelete .options button {
+        margin: 0 20px;
+        display: block;
+        border: none;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+        font-family: 'font4';
+        width: 80px;
+        border-radius: 20px;
+
+
+    }
+
+    .showdelete .options .sure {
+        color: white;
+        background: #C37B89;
+    }
+
+    .showdelete .options .cancel {
+        color: #192a56;
+        background: #C8C6C6;
+    }
+
+    .basicinfo {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+       
+
+    }
+
+    .basicinfo>div {
+        margin: 30px 0;
+        width: 100%;
+
+    }
+
+    .basicinfo>div .subtitle {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .basicinfo>div .subtitle .iconfont {
+        font-size: 25px;
+        color: #22577E;
+        margin: 0 10px;
+
+    }
+
+    .basicinfo>div .subtitle .titletext {
+        font-size: 25px;
+        font-family: 'font4';
+        color: #DEBA9D;
+        position: relative;
+        z-index: 2;
+
+
+    }
+
+    .ccreditcon .subtitle .titletext:after {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 1px;
+        height: 40%;
+        width: 100%;
+        content: '';
+        background-color: #9e777725;
+
+
+    }
+
+    .cscon .subtitle .titletext:after {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 1px;
+        height: 40%;
+        width: 100%;
+        content: '';
+        background-color: #e7e0c975;
+
+
+    }
+
+    .cscon .errcon,
+    .cscon .studentscon {
+        padding-left: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+
+
+    }
+
+    .cscon .errcon {
+        font-family: 'font4';
+        font-size: 18px;
+        color: #4B6587;
+
+    }
+
+    .cscon .studentscon .eachs {
+        font-family: 'font4';
+        font-size: 13px;
+        color: #F0E5CF;
+        margin: 5px;
+        text-align: center;
+        width: 20%;
+        background: #4B6587;
+        padding: 10px 5px;
+        border-radius: 10px;
+    }
+
+
+
+
+
+    /*manageclass*/
+    .cswrapper {
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .classcon .mccon {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+   .classcon .mccon .titlecon {
+      
+        background: #f8f8f4;;
+       
+
+    }
+
+    
+
+    .classcon .submitwrapper {
+        height: 50vh;
+    }
+
+    .classcon .createcon {
+        margin: 4vh auto;
+        width: 600px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    /* .createcon form {
+        background: white;
+        box-shadow: 0 0 16px 1px rgb(0 0 0 / 5%);
+        border-radius: 10px;
+        width: 50vh;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0 20px;
+        overflow: hidden;
+    } */
+
+
+    .batchupload {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 20px;
+
 
 
     }
@@ -391,8 +2037,8 @@ a {
 
     }
 
-    .createcon form button {
-        width: 80%;
+    .classcon .createcon form button {
+        width: 60%;
         height: 30px;
         line-height: 30px;
         display: inline-block;
@@ -413,7 +2059,8 @@ a {
         color: black;
         font-weight: bold;
     }
-    .mccon .buttomblock{
+
+    .mccon .buttomblock {
         width: 100%;
         background: #04293A;
         height: 70px;
@@ -426,114 +2073,97 @@ a {
 
 
 
-    /*course*/    
+    /*class*/
     .courses_wrapper {
         height: 100vh;
         overflow: hidden;
         margin: 0;
-        box-sizing:border-box;
+        box-sizing: border-box;
     }
 
-    .allcoursescon {
-        padding: 0;
-        margin: 0;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
+   
+
+     .allclassescon .titlecon {
+       
+        background: #f8f8f4;
+      
+
     }
 
-    .allcoursescon .titlecon .nav {
+     /* .allclassescon .titlecon .title {
+        font-size: 60px;
+        font-family: "font4";
+        color: #1E3163;
+        margin-top: 10vh;
+    }
 
+    .allclassescon .titlecon .nav {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
-
+        margin-bottom: 8px;
     }
 
-    .allcoursescon .titlecon .nav .func {
+    .allclassescon .titlecon .nav .func {
         padding: 10px;
         margin: 0 20px;
-
     }
 
-    .allcoursescon .titlecon .nav .this {
-        border-bottom: 2px solid black;
-
+    .allclassescon .titlecon .nav .this {
+        border-bottom: 4px solid #1f344b;
     }
 
-    .allcoursescon .titlecon .nav .func a {
+    .allclassescon .titlecon .nav .func a {
         display: block;
         color: #2E4C6D;
         font-family: "font4";
-        font-size: 15px;
+        font-size: 18px;
     }
 
-    .allcoursescon .titlecon .nav .this a {
-        color: #AE431E;
+    .allclassescon .titlecon .nav .this a {
+        color: #2e4c6dd0;
+        font-weight: bold;
+    } */
 
-    }
-
-    .allcoursescon .titlecon {
-        width: 90vw;
-        background: #EEEEEE;
-        background: #F5F5F5;
-        height: 30%;
-        margin: 20px auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .allcoursescon .allcourses {
+    /* .allcoursescon .allcourses {
         height: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-    }
+    } */
 
-    .allcoursescon .titlecon .title {
-        font-size: 50px;
-        font-family: "font4";
-        color: #064635;
 
-    }
 
-    .allcourses .courseslist {
+    .allclassescon .allcourses .courseslist {
         width: 60%;
         height: 100%;
         display: flex;
         justify-content: center;
-        
         flex-wrap: wrap;
-        
         overflow: hidden;
-
-
+        align-items: center;
     }
 
-    .allcourses .courseslist .eachcourse {
+    .allclassescon .allcourses .courseslist .eachcourse {
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin: 10px 20px;
+        margin: 0 20px;
         width: 25%;
         height: 35%;
         background-image: url('./static/ec.png');
         background-size: cover;
         position: relative;
         /* background: #fff; */
-        box-shadow: -12px -12px 24px rgba(255, 255, 255, .8), 12px 12px 24px rgba(0, 6, 39, .1);
+        box-shadow: 0 0 16px 1px rgb(0 0 0 / 5%);
         overflow: hidden;
     }
 
-   
+
     .allcourses .courseslist .eachcourse .mask {
         position: absolute;
         top: 90px;
@@ -544,373 +2174,30 @@ a {
         background: rgba(101, 101, 101, 0.3);
         opacity: 0;
     }
-    
-    .allcourses .courseslist .eachcourse:hover .mask{
-        top:0;
+
+    .allcourses .courseslist .eachcourse:hover .mask {
+        top: 0;
         opacity: 1;
         transition: all 0.3s ease-out;
     }
 
-    .allcourses .courseslist .eachcourse a {
-        
-        color: #22577E;
-        font-size: 25px;
-        font-family: 'font4';
-        z-index: 2;
-        width: 300px;
-        height: 160px;
-        display: block;
-        line-height: 160PX;
+    
 
 
-    }
-    .allcoursescon .buttomblock{
-        width: 100%;
-        background: #04293A;
-        margin-top: 20px;
-        height: 100px;
-        bottom: 0;
-        
-    }
-    .allcoursescon .pagebox{
-        
+    .allcoursescon .pagebox {
+
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-top: 30px;
     }
-    .allcoursescon .pagebox >div{
+
+    .allcoursescon .pagebox>div {
         color: #192a56;
         margin: 0 20px;
         font-size: 20px;
     }
-
-
-
-    /*viewcourse*/
-    .topnav{
-        height: 10vh;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background: white;
-        padding: 0 40px;
-    }
-    .topnav .topblock{
-        width: 20px;
-        height: 20px;
-        background: #22577E;
-    }
-    .topnav > div{
-       margin: 0 30px;
-    }
-    .topnav > div a{
-        display: block;
-        text-decoration: none;
-        font-family: 'font4';
-        color: #273c75;
-        font-size: 15px;
-        transition: all 0.2s ease-in;
-     }
-
-     .topnav > div a:hover{
-        color: #AE431E;
-     }
-
-    .courseinfowrapper{
-        height: 80vh;
-        overflow: hidden;
-        background: linear-gradient(to right, rgba(230,218,206) 0%,rgba(230,218,206) 40%,white 40%,white 100%);
-    }
-    .courseinfocon{
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-    .courseinfocon .left{
-        margin-right: 120px;
-        width: 400px;
-        height: 500px;
-        background-color: rgba(243, 235, 229, 1);
-        box-shadow: -20px 12px 30px rgba(0, 6, 39, .2), 12px 12px 24px rgba(0, 6, 39, .1);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        background-image: url('./static/left3.png');
-
-    }
-    .courseinfocon .ori{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-   
-    .left .iconfont{
-        font-size: 50px;
-        color: #22577E;
-    }
-    .left .hide{
-        display: none;
-
-    }
-    .courseinfocon .title{
-        font-family: 'font4';
-        font-size: 30px;
-        margin: 40px 0;
-    }
-
-    .courseinfocon .divider{
-        height: 2px;
-        width: 30px;
-        background: #1E3163;
-    }
-    .courseinfocon .text{
-        width: 100px;
-        margin: 40px 0;
-
-        color: #889EAF;
-    }
-    .courseinfocon .functions{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        bottom: 0;
-        height: 70px;
-        background: white;
-        width: 100%;
-        border-radius: 0 0 10px 10px;
-    }
-    
-    .updatecourse,
-    .deletecourse{
-        line-height: 30px;
-        display: block;
-        height: 30px;
-        border: none;
-        margin: 0 30px;
-        width: 80px;
-        text-align: center;
-        background: #00ad2d;
-        text-decoration: none;
-        color: #04293A;
-        border-radius: 30px;
-        font-family: 'font4';
-        font-size: 13px;
-    }
-    .updatecourse{
-        background: #2D4263;
-        color: white;
-    }
-    .deletecourse{
-        background: #EEEBDD;
-        color: #2E4C6D;
-    }
-        .submitcon{
-            margin-bottom: 50px;
-        }
-
-    .submitcon form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .submitcon form > div,
-    .submitcon form .form-group > div{
-        margin: 20px 0;
-    }
-    
-    .createcon form .form-group .subname,
-    .createcon form .form-group .subcredit {
-        height: 30%;
-        margin: 30px 0;
-
-    }
-
-    .submitcon form .form-group .labelname {
-        font-family: 'font4';
-        font-size: 18px;
-        width: 80px;
-        display: inline-block;
-        text-align: center;
-        margin: 0 20px;
-        color: #1E3163;
-        font-weight: bold;
-    }
-
-    .submitcon form .form-group input {
-        margin: 0 20px;
-        background: none;
-        outline: none;
-        border: none;
-        background: #DBD0C0;
-        padding: 10px 20px;
-        border-radius: 5px;
-
-    }
-
-    .submitcon form button {
-        width: 80%;
-        height: 30px;
-        line-height: 30px;
-        display: inline-block;
-        outline: none;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        background: #3B3B98;
-        font-family: "font4";
-        margin-top: 20px;
-       
-        font-size: 15px;
-
-    }
-
-    .submitcon form .err-msgs,
-    .submitcon form .suc-msgs {
-
-        color: black;
-        font-weight: bold;
-    }
-
-.showdelete{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.showdelete .warning{
-    color: #852747;
-    font-family: 'font4';
-    font-size: 25px;
-    margin-bottom: 40px;
-}
-.showdelete .options {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.showdelete .options  button{
-    margin: 0 20px;
-    display: block;
-    border: none;
-    height: 30px;
-    line-height: 30px;
-    font-size: 15px;
-    font-family: 'font4';
-    width: 80px;
-    border-radius: 20px;
-    
-    
-}
-.showdelete .options .sure{
-    color: white;
-    background:#C37B89 ;
-}
-.showdelete .options .cancel{
-    color: #192a56;
-    background: #C8C6C6;
-}
-
-.basicinfo{
-    display: flex;
-    flex-direction: column;
-    width: 15%;
-  
-}
-.basicinfo > div{
-   margin: 30px 0;
-   width: 100%;
-
-}
-
-.basicinfo > div .subtitle{
-    display: flex;
-    flex-direction: row;
-   
-}
-
-.basicinfo > div .subtitle .iconfont{
-    font-size:25px;
-    color: #22577E;
-    margin: 0 10px;
-
-}
-.basicinfo > div .subtitle .titletext{
-    font-size: 25px;
-    font-family: 'font4';
-    color: #DEBA9D;
-    position: relative;
-    z-index: 2;
-    
-
-}
-
-.ccreditcon .subtitle .titletext:after{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 1px;
-    height: 40%;
-    width: 100%;
-    content: '';
-    background-color: #9e777725;
-    
-
-}
-.cscon .subtitle .titletext:after{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 1px;
-    height: 40%;
-    width: 100%;
-    content: '';
-    background-color: #e7e0c975;
-    
-
-}
-.cscon .errcon,
-.cscon .studentscon{
-    padding-left: 20px;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    
-    
-}
-.cscon .errcon{
-    font-family: 'font4';
-    font-size: 18px;
-    color: #4B6587;
-
-}
-.cscon .studentscon .eachs{
-    font-family: 'font4';
-    font-size: 13px;
-    color: #F0E5CF;
-    margin: 5px;
-    text-align: center;
-    width: 20%;
-    background: #4B6587;
-    padding: 10px 5px;
-    border-radius: 10px;
-}
-
 
 
 }
