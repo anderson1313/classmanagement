@@ -66,29 +66,27 @@ const Courses = () => {
     return (
         <div className="container">
 
-
-
             <div className='courses_wrapper'>
-                {courses.length > 0 ? (
-                    <div className='allcoursescon'>
 
-                        <div className='titlecon animated  '>
-                            <div className='title'>你的课程</div>
-                            <div className='nav'>
+                <div className='allcoursescon'>
+                    <div className='titlecon animated  '>
+                        <div className='title'>你的课程</div>
+                        <div className='nav'>
+                            <div className='func'><Link to='/'>首页</Link></div>
+                            <div className='func'><Link to='/create-student'>创建学生</Link></div>
+                            <div className='func'><Link to='/students'>管理学生</Link></div>
+                            <div className='func'><Link to='/create-class'>创建班级</Link></div>
+                            <div className='func'><Link to='/classes'>管理班级</Link></div>
+                            <div className='func this'><Link to='/create-courses'>管理课程</Link></div>
+                            <div className='func'><Link to='/create-course'>创建课程</Link></div>
 
-                                <div className='func'><Link to='/'>首页</Link></div>
-
-                                <div className='func'><Link to='/create-student'>创建学生</Link></div>
-                                <div className='func'><Link to='/students'>管理学生</Link></div>
-                                <div className='func'><Link to='/create-class'>创建班级</Link></div>
-                                <div className='func'><Link to='/classes'>管理班级</Link></div>
-                                <div className='func this'><Link to='/create-courses'>管理课程</Link></div>
-                                <div className='func'><Link to='/create-course'>创建课程</Link></div>
-
-                            </div>
                         </div>
+                    </div>
+
+                    {
+                        courses.length > 0 ? ( 
+                            <>
                         <div className='allcourses animated headShake'>
-                         
                             <div className='courseslist'>
                                 
                                 {courses.map((item, index) => {
@@ -109,22 +107,24 @@ const Courses = () => {
                             <div className='animated flipInX'>第{pageList[page_index]}页</div>
                             <div className='btn iconfont icon-xiayiyehouyiye' onClick={backwardPage}></div>
                         </div>
-                        <div className='buttomblock'>
-                        
-                        </div>
-                    </div>
-                ) :
-                    (<div className='nocoursecon'>
-                        <div className='content'>
-                            <div className='tip animated bounce '>你还未建立任何课程</div>
-                            <Link to="/create-course">
-                                <div className='tocreate animated pulse infinite'>建立课程</div>
-                            </Link>
-                        </div>
-                    </div>
+                        </>) : (
 
+                            <>
+                                <div className='nocoursecon'>
+                                    <div className='content'>
+                                        <div className='tip animated bounce '>你还未建立任何课程</div>
+                                        
+                                    </div>
+                                </div>
+                            </>
+                        )
+                    }
 
-                    )}
+                    <div className='buttomblock'>
+
+                    </div>
+                </div>
+
             </div>
 
 

@@ -5,7 +5,9 @@ const pool = require("../config/pool.js")
 //创建课程
 router.post('/create', (req, res) => {
 	//解构赋值
+	console.log(req.body)
 	const { name,credit } = req.body;
+
 	const fcredit=parseFloat(credit)
 	if (!name) {
 		return res.status(400).json({ msg: "请输入课程名" })

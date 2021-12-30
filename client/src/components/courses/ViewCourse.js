@@ -112,7 +112,6 @@ function ViewCourse() {
         <div className='container'>
             <div className='topnav animated animate__fadeInDown'>
                 <div className='func topblock'></div>
-
                 <div className='func'><Link to='/'>首页</Link></div>
                 <div className='func'><Link to='/create-student'>创建学生</Link></div>
                 <div className='func'><Link to='/students'>管理学生</Link></div>

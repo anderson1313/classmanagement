@@ -21,7 +21,7 @@ app.use('/api/course/',require("./routes/courses.js"))
 app.use('/api/student/',require("./routes/students.js"))
 app.use('/api/teacher/',require("./routes/teachers.js"))
 app.use('/api/classes/',require("./routes/classes.js"))
-
+app.use('/api/user/',require("./routes/user.js"))
 const port = process.env.PORT || 8080; //react端口
 //*监听
 app.listen(port, () => console.log(`Server started on port ${port}`));

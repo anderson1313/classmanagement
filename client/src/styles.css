@@ -49,6 +49,127 @@ a {
 @media (max-width:1000px) {
 
     /*app.js*/
+    .nofun{
+        font-size: 40px;
+        font-family: 'font4';
+    }
+
+.logincontainer{
+   
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginwrapper{
+    padding: 20px 10px;
+    width: 400px;
+    height: 250px;
+    background: #5587763c;
+}
+.loginwrapper form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginwrapper form .form-group{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.loginwrapper form .form-group .uname,
+.loginwrapper form .form-group .uname {
+    width: 90%;
+    height: 20%;
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.loginwrapper form .form-group .labelname {
+    font-family: 'font4';
+    font-size: 15px;
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+    color: #1E3163;
+    font-weight: bold;
+}
+
+.loginwrapper form .form-group input {
+    width: 40%;
+    margin: 0 5px;
+    background: none;
+    outline: none;
+    border: none;
+    background: #55877627;
+    padding: 10px 5px;
+    border-radius: 10px;
+
+}
+
+.loginwrapper form button {
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: #3B3B98;
+    font-family: "font4";
+    margin: 20px 0;
+    font-size: 15px;
+
+}
+
+.loginwrapper form .err-msgs,
+.loginwrapper form .suc-msgs {
+
+    color: black;
+    font-weight: bold;
+}
+
+.logincontainer form .form-group .utype{
+    width: 90%;
+    height: 20%;
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logincontainer form .form-group .utype .option{
+    width: 20%;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.optionname{
+    font-family: 'font4';
+    font-size: 15px;
+    color: #064635;
+}
+
     .topconatiner {
         position: relative;
 
@@ -602,7 +723,7 @@ a {
         width: 100%;
         background: #04293A;
         margin-top: 20px;
-        height: 100px;
+        height: 70px;
         bottom: 0;
 
     }
@@ -988,6 +1109,128 @@ a {
 @media (min-width:1000px) {
 
     /*app.js*/
+        .nofun{
+            font-size: 40px;
+            font-family: 'font4';
+        }
+
+    .logincontainer{
+       
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loginwrapper{
+        padding: 20px 10px;
+        width: 400px;
+        height: 250px;
+        background: #5587763c;
+    }
+    .loginwrapper form{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .loginwrapper form .form-group{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+
+
+    .loginwrapper form .form-group .uname,
+    .loginwrapper form .form-group .uname {
+        width: 90%;
+        height: 20%;
+        margin: 10px 0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .loginwrapper form .form-group .labelname {
+        font-family: 'font4';
+        font-size: 15px;
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        margin: 0 20px;
+        color: #1E3163;
+        font-weight: bold;
+    }
+
+    .loginwrapper form .form-group input {
+        width: 40%;
+        margin: 0 5px;
+        background: none;
+        outline: none;
+        border: none;
+        background: #55877627;
+        padding: 10px 5px;
+        border-radius: 10px;
+
+    }
+
+    .loginwrapper form button {
+        width: 80%;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: #3B3B98;
+        font-family: "font4";
+        margin: 20px 0;
+        font-size: 15px;
+
+    }
+
+    .loginwrapper form .err-msgs,
+    .loginwrapper form .suc-msgs {
+
+        color: black;
+        font-weight: bold;
+    }
+
+    .logincontainer form .form-group .utype{
+        width: 90%;
+        height: 20%;
+        margin: 10px 0;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .logincontainer form .form-group .utype .option{
+        width: 20%;
+        margin: 0 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .optionname{
+        font-family: 'font4';
+        font-size: 15px;
+        color: #064635;
+    }
+
+
     .topconatiner {
         position: relative;
 
@@ -1473,9 +1716,8 @@ a {
         height: 100%;
         display: flex;
         justify-content: center;
-
+        align-items: center;
         flex-wrap: wrap;
-
         overflow: hidden;
 
 
@@ -1529,11 +1771,12 @@ a {
     }
 
     .allcoursescon .buttomblock {
-        
+        position: absolute;
+        bottom: 0;
         width: 100%;
         background: #04293A;
         margin-top: 20px;
-        height: 100px;
+        height: 70px;
         
     }
 
@@ -1551,6 +1794,20 @@ a {
         margin: 0 20px;
         font-size: 20px;
     }
+
+    .allcoursescon  .nocoursecon,
+    .mccon  .nocoursecon{
+        text-align: center;
+
+    }
+    .allcoursescon  .nocoursecon .content .tip,
+    .mccon  .nocoursecon .content .tip{
+        font-size: 30px;
+        font-family: 'font4';
+        margin-top: 100px;
+
+    }
+   
 
 
 
@@ -2147,7 +2404,7 @@ a {
         align-items: center;
     }
 
-    .allclassescon .allcourses .courseslist .eachcourse {
+    .allclassescon .allcourses .courseslist .eachclass {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2155,8 +2412,8 @@ a {
         margin: 0 20px;
         width: 25%;
         height: 35%;
-        background-image: url('./static/ec.png');
-        background-size: cover;
+        background-image: url('./static/cla.png');
+        background-size: contain;
         position: relative;
         /* background: #fff; */
         box-shadow: 0 0 16px 1px rgb(0 0 0 / 5%);
@@ -2198,6 +2455,242 @@ a {
         margin: 0 20px;
         font-size: 20px;
     }
+
+
+
+
+
+
+
+
+
+
+    /*managestudent*/
+
+    .mscon .titlecon{
+        background-color: #57837b64;
+    }
+    .cscon .form-group {
+        margin-top: 50px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+    .form-group-up {
+        
+        background: white;
+        box-shadow: -1px -1px 24px rgba(255, 255, 255, .8), 12px 12px 24px rgba(0, 6, 39, .2);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+    }
+
+    .form-group-up>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0px;
+    }
+
+    .up-left {
+        background: rgba(255, 255, 255, .2);
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .up-left>div {
+        height: 34px;
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        margin: 10px 0;
+    }
+
+    .up-left>div label {
+        line-height: 34px;
+
+        font-size: 15px;
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        margin: 0 20px;
+        color: #1E3163;
+        font-weight: bold;
+    }
+
+    .up-left input,
+    .up-right input,
+    .up-left select {
+        width: 30%;
+        margin: 0 20px;
+   
+        outline: none;
+        border: none;
+        background: #F0ECE3;;
+        padding: 10px 20px;
+        border-radius: 10px;
+
+    }
+
+    .up-left select {
+        width: 43%;
+    }
+
+    .up-right {
+        /* background: rgba(255, 255, 255, .2); */
+        border-radius: 10px;
+        padding: 20px;
+
+    }
+
+    .up-right>div label {
+        text-align: center;
+        font-size: 10px;
+        display: inline-block;
+        margin: 10px 0;
+        color: #1E3163;
+        font-weight: bold;
+    }
+
+    .up-right .subcourse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .up-right tags {
+        width: 70%;
+    }
+
+    .up-right .nocoursetip {
+        background: rgba(255, 255, 255, .2);
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .up-right .tiptext {
+        color: rgba(45, 52, 54, 1.0);
+    }
+
+    .up-right a {
+        color:#4B6587;
+    }
+    .form-group-down{
+        margin-top: 50px;
+    }
+    .form-group-down button {
+        display: inline-block;
+        background: none;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background: rgba(56, 163, 165, .4);
+        background: #3B3B98;
+        padding: 10px 100px;
+        font-family: "font2";
+        margin-top: 20px;
+        margin: 10px 0;
+
+    }
+
+    .form-group-down .err-msgs,
+    .form-group-down .suc-msgs {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        color: #3B3B98;
+        font-weight: bold;
+
+    }
+
+
+
+
+    /*Student*/
+    /* .mscon .allcourses{
+   
+
+    } */
+
+    .mscon .courseslist{
+        height: 90%;
+        display: flex;
+        flex-direction: initial;
+        justify-content: center;
+        align-items: center;      
+        overflow: scroll;    
+    }
+
+    .mscon .courseslist .eachcourse{
+        background: rgba(102, 102, 102, 0.111);
+        background-size: cover;
+        width: 70%;
+        height: 10%;
+        box-shadow: none;
+        margin: 1px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        
+        
+    }
+    
+
+    .mscon .courseslist .eachcourse >div{
+        font-family: 'font4';
+        font-size: 18px;
+        color: #22577E;
+    }
+    /* .mscon .courseslist .eachcourse .ssno{
+       flex: 1;
+        
+    }
+    .mscon .courseslist .eachcourse .coursename{
+        flex: 2;
+         
+     }
+     .mscon .courseslist .eachcourse .ssex{
+        flex: 1;
+         
+     } */
+
+    
+
+
+
+    .mscon .buttomblock{
+        height: 20px;
+    }
+    .mscon .searchstudent{
+        outline: none;
+        padding: 0 20px;
+        display: block;
+        margin: 0 auto;
+        border: none;
+        height: 50px;
+        background: #eeeeee85;
+        width: 300px;
+        
+
+    }
+
+
+
+
 
 
 }

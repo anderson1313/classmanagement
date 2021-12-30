@@ -34,6 +34,7 @@ export const createCourse =
             };
             // 请求
             const body = JSON.stringify({ name, credit });
+            
             await axios
                 .post("/api/course/create", body, config)
                 .then((res) => {
