@@ -56,16 +56,20 @@ a {
 
 .logincontainer{
    
-    height: 400px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .loginwrapper{
-    padding: 20px 10px;
+    padding: 30px 10px;
     width: 400px;
     height: 250px;
-    background: #5587763c;
+    background: #f0e8e363;
+    border-radius: 15px;
+    box-shadow: -1px -1px 24px 
+    rgb(255 255 255 / 80%), 5px 5px 20px 
+    rgb(0 6 39 / 20%);;
 }
 .loginwrapper form{
     width: 100%;
@@ -117,7 +121,7 @@ a {
     background: none;
     outline: none;
     border: none;
-    background: #55877627;
+    background: #876d5527;
     padding: 10px 5px;
     border-radius: 10px;
 
@@ -274,23 +278,29 @@ a {
 
 
     }
-
-    .midwrapper>div .intro {
-        width: 20%;
-        text-align: center;
-        color: rgba(127, 143, 166, .8);
-
-    }
-
     .midwrapper>div .title {
+        flex: none;
+        width: 100px;
         font-size: 50px;
         font-family: 'font4';
         color: rgba(64, 115, 158, 1.0);
     }
 
+    .midwrapper>div .intro {
+        flex: none;
+        width: 120px;
+        text-align: center;
+        color: rgba(127, 143, 166, .8);
+
+    }
+
+
+
     .midwrapper>div .func {
+        flex: none;
         padding: 10px 20px;
         background: rgba(39, 60, 117, 1.0);
+        margin-right: 0;
     }
 
     .midwrapper>div .func a {
@@ -329,7 +339,8 @@ a {
     }
 
     .downcontainer .info {
-        width: 30%;
+        flex: none;
+        width: 300px;
         font-size: 13px;
         line-height: 25px;
         color: #A68DAD;
@@ -760,7 +771,8 @@ a {
     }
 
     .topnav>div {
-        margin: 0 15px;
+        margin: 0 30px;
+        width: 30px;
     }
 
     .topnav>div a {
@@ -779,20 +791,21 @@ a {
     .courseinfowrapper {
         height: 80vh;
         overflow: hidden;
-        background: linear-gradient(to right, rgba(230, 218, 206) 0%, rgba(230, 218, 206) 40%, white 40%, white 100%);
+        background: linear-gradient(to bottom, rgba(230, 218, 206) 0%, rgba(230, 218, 206) 40%, white 40%, white 100%);
     }
 
     .courseinfocon {
         height: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
     .courseinfocon .left {
-        margin-right: 60px;
-        width: 300px;
+        margin-top: 150px;
+        margin-bottom: 30px;
+        width: 600px;
         height: 500px;
         background-color: rgba(243, 235, 229, 1);
         box-shadow: -20px 12px 30px rgba(0, 6, 39, .2), 12px 12px 24px rgba(0, 6, 39, .1);
@@ -811,24 +824,28 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+    }
+    .ori>div{
+        width: 200px;
+        text-align: center;
     }
 
 
     .left .iconfont {
+        margin-top: 20px;
         font-size: 50px;
         color: #22577E;
     }
 
     .left .hide {
         display: none;
-
     }
 
     .courseinfocon .title {
         font-family: 'font4';
         font-size: 30px;
-        margin: 40px 0;
+        margin: 20px 0;
+        height: 30px;
     }
 
     .courseinfocon .divider {
@@ -838,9 +855,9 @@ a {
     }
 
     .courseinfocon .text {
-        width: 100px;
+        width: 145px;
         margin: 40px 0;
-
+        height: 100px;
         color: #889EAF;
     }
 
@@ -1002,15 +1019,14 @@ a {
     .basicinfo {
         display: flex;
         flex-direction: column;
-        width: 200px;
-       
-
+        width: 800px;
+        height: 400px;
+        
     }
 
     .basicinfo>div {
-        margin: 30px 0;
+        margin: 15px 0;
         width: 100%;
-
     }
 
     .basicinfo>div .subtitle {
@@ -1116,16 +1132,20 @@ a {
 
     .logincontainer{
        
-        height: 400px;
+        height: 600px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .loginwrapper{
-        padding: 20px 10px;
+        padding: 30px 10px;
         width: 400px;
         height: 250px;
-        background: #5587763c;
+        background: #f0e8e363;
+        border-radius: 15px;
+        box-shadow: -1px -1px 24px 
+        rgb(255 255 255 / 80%), 5px 5px 20px 
+        rgb(0 6 39 / 20%);;
     }
     .loginwrapper form{
         width: 100%;
@@ -1177,7 +1197,7 @@ a {
         background: none;
         outline: none;
         border: none;
-        background: #55877627;
+        background: #876d5527;
         padding: 10px 5px;
         border-radius: 10px;
 
@@ -1331,23 +1351,26 @@ a {
 
 
     }
-
-    .midwrapper>div .intro {
-        width: 40%;
-        text-align: center;
-        color: rgba(127, 143, 166, .8);
-
+    .midwrapper>div>div {
+        margin: 40px 0;
     }
-
     .midwrapper>div .title {
         font-size: 50px;
         font-family: 'font4';
         color: rgba(64, 115, 158, 1.0);
     }
+    .midwrapper>div .intro {
+        width: 120px;
+        text-align: center;
+        color: rgba(127, 143, 166, .8);
+
+    }
 
     .midwrapper>div .func {
-        padding: 10px 20px;
+        padding: 10px 30px;
         background: rgba(39, 60, 117, 1.0);
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 
     .midwrapper>div .func a {
@@ -1358,9 +1381,7 @@ a {
         background: rgba(39, 60, 117, 1.0);
     }
 
-    .midwrapper>div>div {
-        margin: 40px 0;
-    }
+
 
     .midwrapper .students,
     .midwrapper .classes {
@@ -1859,7 +1880,7 @@ a {
     }
 
     .courseinfocon .left {
-        margin-right: 120px;
+        margin-right: 40px;
         width: 400px;
         height: 500px;
         background-color: rgba(243, 235, 229, 1);
@@ -2070,8 +2091,8 @@ a {
     .basicinfo {
         display: flex;
         flex-direction: column;
-        width: 300px;
-       
+        width: 500px;
+       margin-left: 40px;
 
     }
 
@@ -2694,3 +2715,109 @@ a {
 
 
 }
+
+
+
+
+
+/* 六个界面的背景颜色 */
+@media (max-width:1000px) {
+    /* student */
+    .studentbgc .titlecon{
+        background-color: rgb(230, 230, 230);
+    }
+    .studentbgc .titlecon .title{
+        color: rgb(150, 58, 58)
+    }
+    .studentbgc .buttomblock{
+        background-color: #2c3e50;
+    }
+    .studentbgc .titlecon .nav .this{
+        border-bottom: 0px;
+    }
+    .studentbgc .titlecon .nav .this a{
+        font-weight: bold;
+    }
+
+    /* class */
+    .classbgc .titlecon{
+        background-color: #E1E5EA;
+    }
+    .classbgc .titlecon .title{
+        color: #062046
+    }
+    .classbgc .buttomblock{
+        background-color: #2c3e50;
+    }
+    .classbgc .titlecon .nav .this{
+        border-bottom: 0px;
+    }
+    .classbgc .titlecon .nav .this a{
+        color: #1e50ae;
+        font-weight: bold;
+    }
+    
+    /* course */
+    .coursebgc .titlecon{
+        background-color: #e1eae7;
+    }
+    .coursebgc .titlecon .title{
+        color: #064635
+    }
+    .coursebgc .buttomblock{
+        background-color: #2c3e50;
+    }
+    .coursebgc .titlecon .nav .this a{
+        color: #7cae1e;
+    }
+    .coursebgc .titlecon .nav .this{
+        border-bottom: 0px;
+    }
+    .coursebgc .titlecon .nav .this a{
+        font-weight: bold;
+    }
+}
+
+@media (min-width:1000px) {
+    /* student */
+    .studentbgc .titlecon{
+        background-color: rgb(230, 230, 230);
+    }
+    .studentbgc .titlecon .title{
+        color: rgb(150, 58, 58)
+    }
+    .studentbgc .buttomblock{
+        background-color: #2c3e50;
+    }
+
+    /* class */
+    .classbgc .titlecon{
+        background-color: #E1E5EA;
+    }
+    .classbgc .titlecon .title{
+        color: #062046
+    }
+    .classbgc .buttomblock{
+        background-color: #2c3e50;
+    }
+    .classbgc .titlecon .nav .this a{
+        color: #1e50ae;
+    }
+    
+    /* course */
+    .coursebgc .titlecon{
+        background-color: #e1eae7;
+    }
+    .coursebgc .titlecon .title{
+        color: #064635
+    }
+    .coursebgc .buttomblock{
+        background-color: #2c3e50;
+    }
+    .coursebgc .titlecon .nav .this a{
+        color: #7cae1e;
+    }
+}
+
+
+/* 班级课程详细界面 */

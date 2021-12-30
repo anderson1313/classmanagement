@@ -117,8 +117,9 @@ function ViewCourse() {
                 <div className='func'><Link to='/students'>管理学生</Link></div>
                 <div className='func'><Link to='/create-class'>创建班级</Link></div>
                 <div className='func'><Link to='/classes'>管理班级</Link></div>
-                <div className='func this'><Link to='/courses'>管理课程</Link></div>
                 <div className='func'><Link to='/create-course'>创建课程</Link></div>
+                <div className='func this'><Link to='/courses'>管理课程</Link></div>
+
             </div>
 
             <div className='courseinfowrapper'>
@@ -241,7 +242,6 @@ function ViewCourse() {
                 </div>
             </div>
         </div >
-
     );
 
 }

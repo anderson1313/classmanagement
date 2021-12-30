@@ -224,7 +224,7 @@ const HomeComponet = () => {
 
                       <button onClick={userlogin}>登陆</button>
                       <div className='toregister'><Link onClick={(e) => {setuname();
-      setupasswd() ;setshowcreate(true)}}>没有用户，去注册</Link></div>
+                        setupasswd() ;setshowcreate(true)}}>没有用户，去注册</Link></div>
                     </div>
                   </form>
                 </div>
@@ -307,19 +307,19 @@ const HomeComponet = () => {
                     <div className='midwrapper'>
                       <div className='students'>
                         <div className='title'>学生</div>
-                        <div className='intro'>建立学生档案，查看学生信息，支持excel导入</div>
+                        <div className='intro'>建立学生档案；查看学生信息；支持excel导入。</div>
                         <div className='func'><Link to='/create-student'>创建学生</Link></div>
                         <div className='func'><Link to='/students'>管理学生</Link></div>
                       </div>
                       <div className='classes'>
                         <div className='title'>班级</div>
-                        <div className='intro'>建立学生档案，查看学生信息，支持excel导入</div>
+                        <div className='intro'>建立班级列表；查看班级信息；支持excel导入。</div>
                         <div className='func'><Link to='/create-class'>创建班级</Link></div>
                         <div className='func'><Link to='/classes'>管理班级</Link></div>
                       </div>
                       <div className='courses'>
                         <div className='title'>课程</div>
-                        <div className='intro'>建立学生档案，查看学生信息，支持excel导入</div>
+                        <div className='intro'>建立课程列表；查看课程信息；支持excel导入。</div>
                         <div className='func'><Link to='/create-course'>创建课程</Link></div>
                         <div className='func'><Link to='/courses'>管理课程</Link></div>
 
